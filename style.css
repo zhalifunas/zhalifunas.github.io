@@ -3,6 +3,10 @@
   font-feature-settings: 'liga';
 }
 
+.capital{
+  text-transform: capitalize;
+}
+
 .nodrag {
   user-select: none;
 }
