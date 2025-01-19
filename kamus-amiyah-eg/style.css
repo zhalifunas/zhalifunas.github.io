@@ -28,8 +28,6 @@ summary{
     padding-bottom:15px;
 }
 summary:hover{background-color: #00393a;color: #edfdf9;}
-summary:hover::after{content: "[Buka]";margin-left: 35%;text-decoration: none;opacity: .7;}
-details[open] summary:hover::after{content: "[tutup]";}
 summary i{
     margin-right: 10px;
 }
