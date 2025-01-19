@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ya</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&amp;display=swap">
+</head>
+<body>
+  <div class="spacer"></div>
+  <div class="alert alert-danger" role="alert">
+    <h4 class="alert-heading">mohon maaf</h4>
+    <p>kami sedang update</p>
+  </div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <h2 class="text-center">Kamus Online Bahasa Amiyah</h2>
+
+        <input placeholder="cari apapun" type="text" class="mb-3 form-control form-control-lg" id="filterkartu">
+        
+        <details open>
+          <summary>tutorial penggunaan</summary>
+          ini tulisan
+        </details>
+        <hr>
+          <ul class="list-group">
+            
+            <li class="list-group-item">
+              <mark>Verb</mark><mark>Verb</mark>
+              <h2>menonton </h2>
+              <p class="ar">اﺗﻔﺮﺝ ﻋﻠﻰ</p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>noun</mark>
+              <h2>download </h2>
+              <p class="ar">ﻞﻴﻤﺤﺗ </p>
+            </li>          
+            
+            <li class="list-group-item">
+              <mark>noun</mark>
+              <h2>upload </h2>
+              <p class="ar">تاةبل</p>
+            </li>
+
+            <li class="list-group-item">
+              <mark>noun</mark>
+              <h2>
+                belok <br>
+                bungkus
+              </h2>
+              <p class="ar">ﻒﻟ</p>
+            </li>
+            
+          </ul>
+          <div class="mb-5"></div>
+          <div class="mb-5"></div>
+          <div class="mb-5"></div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p class="copyright">2023 by Naufal Zhalifunas</p>
+    <i class="fa-brands fa-square-facebook fa-2x"></i>
+    <i class="fa-brands fa-square-twitter fa-2x"></i>
+    <i class="fa-brands fa-square-instagram fa-2x"></i>
+  </footer>
+  <script type="text/javascript">
+    const sarangan = document.getElementById("filterkartu");
+const bds = document.querySelectorAll("li.list-group-item");
+const kartu = document.querySelectorAll("div.card");
+
+sarangan.addEventListener("input", (e) => filterData(e.target.value));
+
+function filterData(search){
+  bds.forEach((bd) => {
+    if(bd.innerText.toLowerCase().includes(search.toLowerCase())){
+      bd.classList.remove("d-none")
+    } else{
+        bd.classList.add("d-none")
+    }
+  });
+}
+// Refresh the page after a delay of 3 seconds
+setTimeout(function(){
+    location.reload();
+}, 5000); // 3000 milliseconds = 3 seconds
+  </script>
+</body>
+</html>
