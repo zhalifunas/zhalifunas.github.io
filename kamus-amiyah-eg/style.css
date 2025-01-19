@@ -54,6 +54,6 @@ background: aquamarine;
 }
 p.footer a{
 text-transform: capitalize;
-color:;
+color:var(--dblue);
 }
 footer i{margin-bottom:10px;}
