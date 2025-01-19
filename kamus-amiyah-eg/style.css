@@ -21,9 +21,14 @@ input:focus{color:#e3e3e3;
     background:var(--lblue)!important;
 }
 summary{
+    color:#00393a;
     list-style: none;
     text-decoration: underline;
+    padding-top: 15px;
+    padding-bottom:15px;
 }
+summary:hover{background-color: #00393a;color: #edfdf9;}
+summary:hover::after{content: "[Buka]";margin-left: 40%;}
 summary i{
     margin-right: 10px;
 }
