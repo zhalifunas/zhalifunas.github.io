@@ -27,7 +27,7 @@ summary{list-style: none;}
     font-family: "Baloo Bhaijaan 2", sans-serif;
     font-size: 1.3em;
 }
-br.or:before{
+span.or:before{
     content: "atau";
 }
 p.tulisan{
