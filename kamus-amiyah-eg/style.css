@@ -43,6 +43,9 @@ mark{
     background: var(--lblue);
     border-radius:6px;
 }
+mark.formal:before{
+    content: "formal";
+}
 li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
 li.list-group-item:hover{background:#e3e3e3;color:#00393a;}
 li.list-group-item:hover mark{color:var(--lblue);background: var(--dgreen);}
