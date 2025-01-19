@@ -10,6 +10,7 @@ body{
     user-select:none
   }
 div.spacer{margin-top:30px;}
+div.alert [x]{display:none;}
 h2.header{
     margin-top:20px;
 }
