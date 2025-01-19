@@ -51,7 +51,7 @@ footer{
     padding:auto;
     text-align:center;
 }
-p.footer a{
+p.copyright a{
     text-transform: capitalize;
     color: var(--dblue)!important;
 }
