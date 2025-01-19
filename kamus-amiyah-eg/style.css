@@ -11,31 +11,31 @@ body{
   }
 div.spacer{margin-top:30px;}
 h2{
-margin-top:20px;
+    margin-top:20px;
 }
 .ar{
-direction: rtl!important;
-text-align: right;
-font-family: "Baloo Bhaijaan 2", sans-serif;
-font-size: 1.3em;
+    direction: rtl!important;
+    text-align: right;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-size: 1.3em;
 }
 p.tulisan{
-font-size:.94 vw;
+    font-size:.94 vw;
 }
 p.tulisan a:hover{
-background:var(--dblue); color: var(--lblue);
+    background:var(--dblue); color: var(--lblue);
 }
 mark:first-child{
-margin-right:10px;
+    margin-right:10px;
 }
 mark{
-background:#B8F3F4;
-border-radius:6px;
+    background:#B8F3F4;
+    border-radius:6px;
 }
 
 mark.tag:before{content:"#";}mark.tag{background:none;border:1.4px solid grey;}
 input{
-background-color:#e3e3e3!important;
+    background-color:#e3e3e3!important;
 }
 input:focus{color:#e3e3e3;
     background:var(--lblue)!important;
@@ -48,12 +48,12 @@ div.carousel-inner{
     border-radius:17px;
 }
 footer{
-padding:auto;
-text-align:center;
-background: aquamarine;
+    padding:auto;
+    text-align:center;
+    background: aquamarine;
 }
 p.footer a{
-text-transform: capitalize;
-color: var(--dblue)!important;;
+    text-transform: capitalize;
+    color: var(--dblue)!important;;
 }
 footer i{margin-bottom:10px;}
