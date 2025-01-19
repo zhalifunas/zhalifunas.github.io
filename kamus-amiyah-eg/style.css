@@ -38,14 +38,14 @@ input{
 background-color:#e3e3e3!important;
 }
 input:focus{color:#e3e3e3;
-background:#d3e3fd!important;
+    background:var(--lblue)!important;
 }
 summary{list-style: none;}
 li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
 li.list-group-item:hover{background:#e3e3e3;color:#1abd9b;}
 li.list-group-item:hover mark{color:var(--lblue);background: var(--dblue);}
 div.carousel-inner{
-border-radius:17px;
+    border-radius:17px;
 }
 footer{
 padding:auto;
