@@ -43,7 +43,7 @@ background:#d3e3fd!important;
 summary{list-style: none;}
 li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
 li.list-group-item:hover{background:#e3e3e3;color:#1abd9b;}
-li.list-group-item:hover mark{color:#1abd9b}
+li.list-group-item:hover mark{color:var(--lblue)}
 div.carousel-inner{
 border-radius:17px;
 }
