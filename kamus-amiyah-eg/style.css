@@ -1,0 +1,51 @@
+body{
+    background:#d3e3fd;
+    user-select:none
+  }
+  div.spacer{margin-top:30px;}
+  h2{
+    margin-top:20px;
+  }
+  .ar{
+    direction: rtl!important;
+    text-align: right;
+    font-family: "Baloo Bhaijaan 2", sans-serif;
+    font-size: 1.3em;
+  }
+  p.tulisan{
+    font-size:.94 vw;
+  }
+  p.tulisan a:hover{
+    background:pink; color: black;
+  }
+  mark:first-child{
+    margin-right:10px;
+  }
+  mark{
+    background:#B8F3F4;
+    border-radius:6px;
+  }
+  
+  mark.tag:before{content:"#";}mark.tag{background:none;border:1.4px solid grey;}
+  input{
+    background-color:#e3e3e3!important;
+  }
+  input:focus{color:#e3e3e3;
+    background:#d3e3fd!important;
+  }
+  summary{list-style: none;}
+  li.list-group-item{margin-bottom:10px;}
+  li.list-group-item:hover{color:#e3e3e3;background:black;}
+  li.list-group-item:hover mark.tag{color:grey}
+  div.carousel-inner{
+    border-radius:17px;
+  }
+  footer{
+    padding:auto;
+    text-align:center;
+    background: aquamarine;
+  }
+  p.footer:before{
+    content: ;;
+  }
+  footer i{margin-bottom:10px;}
