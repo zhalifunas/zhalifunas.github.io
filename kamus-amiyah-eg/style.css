@@ -1,5 +1,12 @@
+:root{
+    --dblue:#00393a;
+    --lblue:#ebffff;
+    --grey:#fcfcfc;
+    --dgreen: #1abd9b;
+    --lgreen: #edfdf9;
+}
 body{
-    background:#d3e3fd;
+    background:#fcfcfc;
     user-select:none
   }
   div.spacer{margin-top:30px;}
@@ -16,7 +23,7 @@ body{
     font-size:.94 vw;
   }
   p.tulisan a:hover{
-    background:pink; color: black;
+    background:var(--dblue); color: var(--lblue);
   }
   mark:first-child{
     margin-right:10px;
@@ -45,7 +52,8 @@ body{
     text-align:center;
     background: aquamarine;
   }
-  p.footer:before{
-    content: ;;
+  p.footer a{
+    text-transform: capitalize;
+    color:
   }
   footer i{margin-bottom:10px;}
