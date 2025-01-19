@@ -29,7 +29,7 @@ mark:first-child{
     margin-right:10px;
 }
 mark{
-    background:#B8F3F4;
+    background: var(--lblue);
     border-radius:6px;
 }
 
