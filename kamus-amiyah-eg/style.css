@@ -20,7 +20,10 @@ input{
 input:focus{color:#e3e3e3;
     background:var(--lblue)!important;
 }
-summary{list-style: none;}
+summary{
+    list-style: none;
+    text-decoration: underline;
+}
 .ar{
     direction: rtl!important;
     text-align: right;
