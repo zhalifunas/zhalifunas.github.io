@@ -41,7 +41,7 @@ body{
     background:#d3e3fd!important;
   }
   summary{list-style: none;}
-  li.list-group-item{margin-bottom:10px;}
+  li.list-group-item{margin-bottom:10px;background-color: #00393a;color: #ebffff;}
   li.list-group-item:hover{color:#e3e3e3;background:black;}
   li.list-group-item:hover mark.tag{color:grey}
   div.carousel-inner{
