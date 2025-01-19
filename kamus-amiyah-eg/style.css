@@ -43,7 +43,7 @@ mark{
     background: var(--lblue);
     border-radius:6px;
 }
-mark.formal:before{
+mark.formal:after{
     content: "formal";
 }
 li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
