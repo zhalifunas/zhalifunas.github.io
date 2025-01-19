@@ -27,6 +27,12 @@ summary{
 summary i{
     margin-right: 10px;
 }
+li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
+li.list-group-item:hover{background:#e3e3e3;color:#00393a;}
+li.list-group-item:hover mark{color:var(--lblue);background: var(--dgreen);}
+div.carousel-inner{
+    border-radius:17px;
+}
 .ar{
     direction: rtl!important;
     text-align: right;
@@ -35,12 +41,6 @@ summary i{
 }
 span.or:before{
     content: "atau";
-}
-p.tulisan{
-    font-size:.94 vw;
-}
-p.tulisan a:hover{
-    background:var(--dblue); color: var(--lblue);
 }
 mark:first-child{
     margin-right:10px;
@@ -52,13 +52,8 @@ mark{
 mark.formal:after{
     content: "formal";
 }
-li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
-li.list-group-item:hover{background:#e3e3e3;color:#00393a;}
-li.list-group-item:hover mark{color:var(--lblue);background: var(--dgreen);}
-div.carousel-inner{
-    border-radius:17px;
-}
-
+p.note{color:darkred;}
+p.note i{margin-right: 10px;}
 footer{
     padding:auto;
     text-align:center;
