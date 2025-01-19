@@ -53,6 +53,6 @@ footer{
 }
 p.footer a{
     text-transform: capitalize;
-    color: var(--dblue)!important;;
+    color: var(--dblue)!important;
 }
 footer i{margin-bottom:10px;}
