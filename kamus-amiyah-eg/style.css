@@ -52,7 +52,7 @@ mark{
 mark.formal:after{
     content: "formal";
 }
-p.note{color:darkred;}
+p.note{color:darkblue;background-color: lightblue;}
 p.note i{margin-right: 10px;}
 footer{
     padding:auto;
