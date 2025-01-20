@@ -22,7 +22,7 @@ input{
 }
 @media only screen and (max-width: 992px){
     input{
-        width: 60dvw;
+        width: 60dvw !important;
         height: 20px;
         position: fixed;
         bottom: 15px;
