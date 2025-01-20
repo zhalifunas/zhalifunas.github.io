@@ -18,6 +18,7 @@ input{
     background-color:#e3e3e3!important;
     position: sticky;
     top: 0;
+    z-index: 11;
 }
 input:focus{
     color:#e3e3e3;
