@@ -17,8 +17,8 @@ h2{
 input{
     background-color:#e3e3e3!important;
     position: sticky;
-    top: 0;
-    z-index: 11;
+    top: 10px;
+    z-index: 100;
 }
 input:focus{
     color:#e3e3e3;
