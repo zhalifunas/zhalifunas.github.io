@@ -23,6 +23,7 @@ input{
 @media only screen and (max-width: 992px){
     input{
         width: 60dvw;
+        height: 20px;
         position: fixed;
         bottom: 15px;
         z-index: 100;
