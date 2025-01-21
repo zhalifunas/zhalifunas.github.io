@@ -11,7 +11,7 @@
 </head>
 <body>
   <div class="spacer"></div>
-  <div class="alert alert-danger" role="alert">
+  <div class="alert alert-danger" role="alert" x>
     <h4 class="alert-heading">mohon maaf</h4>
     <p>sedang kami update</p>
   </div>
@@ -21,9 +21,9 @@
         <h2 class="text-center">Kamus Online Bahasa Amiyah</h2>
 
         <input placeholder="cari apapun" type="text" class="mb-3 form-control form-control-lg" id="filterkartu">
-        
+
         <details>
-          <summary><i class='bx bxs-book-open'></i>tutorial penggunaan</summary>
+          <summary><i class="bx bxs-book-open"></i>panduan penggunaan</summary>
           <ul>
             <li>dalam kotak pencarian, kata yang ingin kamu cari cukup masukkan sebagian katanya dan dia akan secara otomatis ter-filter</li>
             <li>cara kerja kotak pencarian dengan mem-filter huruf pada kata yang ada pada kotak kosa-kata berdasarkan apa yang kamu ketik di kolom pencarian. contoh: jika kamu menuliskan <code>kerja</code>, maka yang akan muncul adalah kata "kerja" dan juga kategori "kata kerja"</li>
@@ -39,11 +39,27 @@
               <li>(مذ\) muzakkar</li>
               <li>(مؤ\) muannas</li>
               <li>(<i class="bx bxs-star"></i>) lebih sering dipakai</li>
+              <li>(<i class="bx bxs-comment-detail"></i>) komentar dan/atau contoh</li>
             </ul>
+        </details>
+        <details>
+          <summary><i class="bx bxs-info-circle"></i>pengetahuan dasar ammiyah</summary>
+          <ul>
+            <li>Pada amiyah Mesir, ada perubahan pengucapan ق, ج, dan أ dimana jim diucapkan sebagai G, qof diucapkan sebagai hamzah, dan dalam beberapa kasus hamzah dicapkan sebagai و atau ي</li>
+            <li>dalam penulisannya, di semua pengguna bahasa amiyah menyingkat penulisan konjungsi, seperti menulis ع untuk على, menulis م untuk ما, dan menulis ف untuk في.</li>
+            <li>
+              dalam dialek mesir, huruf ب dibubuhkan kepada fiil mudhori untuk 2 kondisi: 
+              <ol>
+                <li>ketika kegiatan itu sedang kamu lakukan;</li>
+                <li>ketika kegiatan itu selalu kamu lakukan</li>
+              </ol>
+            </li>
+            <li>dalam dialek mesir, huruf هـ dibubuhkan kepada fiil mudhori untuk menyatakan pekerjaan yang akan kamu lakukan di masa datang.</li>
+          </ul>
         </details>
         <hr>
           <ul class="list-group">
-            
+
             <li class="list-group-item">
               <mark>kata kerja</mark>
               <h2>menonton </h2>
@@ -56,13 +72,16 @@
                 belok <br>
                 bungkus
               </h2>
-              <p class="ar">لف</p>
+              <p class="ar">
+                <span class="mh">لف</span><br>
+                <span class="mr">يلف</span>
+              </p>
             </li>
 
             <li class="list-group-item">
               <mark>kata kerja</mark>
               <h2>
-                santai aja <br> <span class="or"></span> tenang aja
+                santai aja <br> <span class="or"></span>tenang aja
               </h2>
               <p class="ar">
                 خد راحتك <br> عادي <br> و لا يهمك
@@ -90,11 +109,51 @@
             </li>
             
             <li class="list-group-item">
+              <mark>kata konjungsi</mark>
+              <h2>
+                yang
+              </h2>
+              <p class="ar">
+                اللي
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>kata kerja</mark>
+              <h2>
+                datang
+              </h2>
+              <p class="ar">
+                <span class="mh">جه</span><br>
+                <span class="mr">يجي</span>
+                <span class="fa">جاي</span>
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>kata konjungsi</mark>
+              <h2>
+                punya <span class="or">yang di*</span>
+              </h2>
+              <p class="ar">
+                <span class="md">بتاع</span><br>
+                <span class="ms">بتاعت</span>
+                <br>
+                <span class="jm">بتوع</span>
+              </p>
+              <p class="note"><br>
+                *penggunaannya untuk menunjuk tempat, contoh <br>
+                <code class="ar">عايز اروح مول الجمله بتاع صلاح سالم</code><br>
+                <i>aku mau ke mall gomla yang di (jalan) sholah salim</i>
+              </p>
+            </li>
+
+            <li class="list-group-item">
               <mark>kata benda</mark>
               <h2>download </h2>
               <p class="ar">تحميل </p>
             </li>
-            
+
             <li class="list-group-item">
               <mark>kata benda</mark>
               <h2>upload </h2>
@@ -108,7 +167,7 @@
               </h2>
               <p class="ar">دور على</p>
             </li>
-            
+
             <li class="list-group-item">
               <mark>kata kerja</mark><mark>instruksi</mark>
               <h2>
@@ -116,6 +175,20 @@
                 ambil
               </h2>
               <p class="ar">خد</p>
+            </li>
+
+            <li class="list-group-item">
+              <mark>kata kerja</mark>
+              <h2>
+                mendapatkan <br>
+                membeli* <br>
+              </h2>
+              <p class="ar">
+                جاب
+              </p>
+              <p class="note"><br>
+                *) bukan makna sebenarnya, dia hanya diguakan untuk makna tidak langsung, sebagaimana kita kalau nanya <code>kamu beli ini di maan?</code> bisa bilang juga dengan <code>kamu dapet ini di mana?</code>
+              </p>
             </li>
 
             <li class="list-group-item">
@@ -159,13 +232,10 @@
             <li class="list-group-item">
               <mark>kata ekspresi</mark>
               <h2>
-                serius? <br> serisan?
+                serius? <br> seriusan?
               </h2>
               <p class="ar">
                 بجد؟ <br> جد
-              </p>
-              <p class="note">
-                
               </p>
             </li>
 
@@ -229,7 +299,17 @@
               </p>
               <p class="note">
                 dhomir tergantung untuk siapa, contoh: <br>
-                <code>بقالك قد ايه ف مصر؟ <br> berapa lama kamu tinggal di mesir?</code>
+                <code class="ar">بقالك قد ايه ف مصر؟</code><br><i> berapa lama kamu tinggal di mesir?</i>
+              </p>
+            </li>
+
+            <li class="list-group-item">
+              <mark>kata istilah</mark>
+              <h2>
+                orang kaya <br> <span class="or">orang terpandang</span>
+              </h2>
+              <p class="ar">
+                ابن الناس
               </p>
             </li>
 
@@ -291,7 +371,7 @@
               <p class="ar">
                 وسخ
               </p>
-              <p class="note"><i class="bx bxs-error"></i>sebaiknya tidak digunakan, sebaiknya gunakan kata nafi seperti: <code>مش نظيف</code> atau <code>مش حلو</code></p>
+              <p class="note"><i class="bx bxs-error"></i>sebaiknya tidak digunakan, sebaiknya gunakan kata nafi seperti: <br><code class="ar">مش نظيف</code> atau <code class="ar">مش حلو</code></p>
             </li>
 
             <li class="list-group-item">
@@ -365,7 +445,7 @@
               </p>
               <p class="note"><i class="bx bxs-comment-detail"></i> tergantung objek</p>
             </li>
-            
+
             <li class="list-group-item">
               <mark>ungkapan</mark>
               <h2>
@@ -374,9 +454,45 @@
               <p class="ar">
                 آسف <br> معلش <br> حقك عليا
               </p>
-              <p class="note"><i class="bx bxs-comment-detail"></i> tergantung objek</p>
+              <p class="note">tergantung objek</p>
             </li>
             
+            <li class="list-group-item">
+              <mark>ungkapan</mark>
+              <h2>
+                terima kasih
+              </h2>
+              <p class="ar">
+                شكرا <br> متشكر <br> تسلم ايدك <br> كتر خيرك
+              </p>
+              <p class="note">
+                semua sama maknanya dan penggunaannya.
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>ungkapan</mark>
+              <h2>
+                jumpa esok hari <br>
+                ketemu besok lagi <br>
+                <i>see you later</i>
+              </h2>
+              <p class="ar">
+                نشوفك على خير
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>ungkapan</mark>
+              <h2>
+                senang berjumpa denganmu <br>
+                <i>nice to meet you</i>
+              </h2>
+              <p class="ar">
+                مبسوط نشوفك
+              </p>
+            </li>
+
             <li class="list-group-item">
               <mark>kata sifat</mark>
               <h2>
@@ -385,7 +501,48 @@
               <p class="ar">
                 براحتك <br> على كيفك*
               </p>
-              <p class="note"><i class="bx bxs-comment-detail"></i><br> *belum pernah dengar orang mesir pake ini tapi dipake di amiyah syam, mungkin dapat dipahami</p>
+              <p class="note"><br> *belum pernah dengar orang mesir pake ini tapi dipake di amiyah syam, tapi dapat dipahami</p>
+            </li>
+
+            <li class="list-group-item">
+              <mark>kata kerja</mark>
+              <h2>
+                memberikan <br>
+                mengasihkan <br>
+                <i>kasih</i>
+              </h2>
+              <p class="ar">
+                ادي لـ+ضمير
+              </p>
+            </li>
+
+            <li class="list-group-item">
+              <mark>kata sifat</mark>
+              <h2>
+                yakin
+              </h2>
+              <p class="ar">
+                متأكد
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>kata sifat</mark>
+              <h2>
+                banyak
+                <span class="or">jauh</span> <span class="or">lama</span>
+              </h2>
+              <p class="ar">
+                كتير
+              </p>
+              <p class="note">
+                ya, dalam dialek Mesir, kata ini juga bisa berarti lama dan jauh, contoh: <br><br>
+                <code class="ar">الحته اللى انت عاوز تروح هتكون كتير من هنا؟</code><br>
+                <i>tempat yang mau kamu tuju itu jauh ngga dari sini</i><br><br>
+                contoh lain: <br>
+                <code class="ar">قدامك لسه كتير ولا لأ؟</code><br>
+                <i>kamu masih lama lagi ndak?</i>
+              </p>
             </li>
 
             <li class="list-group-item">
@@ -502,8 +659,32 @@
                 سعتاشر
               </p>
             </li>
-
-
+          
+            <li class="list-group-item">
+              <mark>kata konjungsi</mark>
+              <h2>
+                barusan
+              </h2>
+              <p class="ar">
+                لسه
+              </p>
+              <p class="note"><br>
+                bermakna ini jika bersanding dengan fiil madhi setelah atau sebelumnya, contoh: <br><br>
+                <code class="ar">انا اكلت لسه</code><br>
+                <i>saya barusan makan</i>
+              </p>
+              <hr>
+              <h2>
+                belum
+              </h2>
+              <p class="ar">
+                لسه
+              </p>
+              <p class="note">
+                bermakna ini kata kerja 
+              </p>
+            </li>
+            
           </ul>
           <div class="mb-5"></div>
           <div class="mb-5"></div>

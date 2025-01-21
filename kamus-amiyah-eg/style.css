@@ -1,4 +1,4 @@
-@import url(https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css);
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
 :root{
     --dblue:#00393a;
     --lblue:#ebffff;
@@ -11,12 +11,13 @@ body{
     user-select:none
   }
 div.spacer{margin-top:30px;}
-div.alert [x]{display:none;}
+div.alert[x]{display:none;}
 h2{
     margin-top:20px;
 }
 input{
-    background-color:#e3e3e3!important;
+    background-color:rgba(227, 227, 227,0.4)!important;
+    background-filter:blur(2px);
     position: sticky;
     top: 15px;
     z-index: 100;
@@ -41,18 +42,23 @@ summary{
     color:#00393a;
     list-style: none;
     text-decoration: underline;
-    padding-top: 15px;
-    padding-bottom:15px;
+    padding-top: 10px;
+    padding-bottom:10px;
     margin-bottom: 10px;
 }
 summary:hover{background-color: #00393a;color: #edfdf9;}
 summary i{
-    margin-right: 10px;
+  margin-right: 10px;
+  font-variant:normal;
+  font-style:normal;
 }
+hr{color:black;}
 
 li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
 li.list-group-item:hover{background:#e3e3e3;color:#00393a;}
 li.list-group-item:hover mark{color:var(--lblue);background: var(--dgreen);}
+li.list-group-item hr{color:white}
+li.list-group-item:hover hr{color:black;}
 div.carousel-inner{
     border-radius:17px;
 }
@@ -63,7 +69,7 @@ div.carousel-inner{
     font-size: 1.3em;
 }
 span.or:before{
-    content: "atau";
+    content: "atau ";
 }
 mark:first-child{
     margin-right:10px;
@@ -76,8 +82,23 @@ mark.formal:after{
     content: "formal";
 }
 p.note{color:darkblue;background-color: lightblue;padding: 3px;}
-p.note.notice::before{content: "\ed5d";}
+p.note::before{
+  content: "\ed5a";
+  font-family: boxicons;
+  font-weight: 400;
+  margin-right:10px;
+}
 p.note i{margin-right: 10px;}
+p.note i.bxs-error{color:darkred;}
+p.note code{color: lightblue;background: darkblue;padding-right:5px;padding-left:5px;}
+span.ma::before,span.ms::before{content:"مؤ\005C  ";}
+span.md::before,span.mz::before{content:"مذ\005C  ";}
+span.jm::before{content:"ج\005C  ";}
+span.mf::before{content:"م\005C  ";}
+span.mh::before{content:"ماض\005C  ";}
+span.mr::before{content:"مضارع\005C  ";}
+span.fa::before{content:"فاعل\005C  ";}
+
 footer{
     padding:auto;
     text-align:center;
