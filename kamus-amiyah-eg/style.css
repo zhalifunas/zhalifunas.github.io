@@ -6,6 +6,8 @@
     --dgreen: #1abd9b;
     --lgreen: #edfdf9;
 }
+body::-webkit-scrollbar{width:7px;background-color:var(--dgreen);}
+body::-webkit-scrollbar-thumb{border-radius:3px;background-color:var(--dblue);}
 body{
     background:#fcfcfc;
     user-select:none
