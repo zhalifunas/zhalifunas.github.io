@@ -10,16 +10,21 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <div class="spacer"></div>
+  <!-- <div class="spacer"></div> -->
   <div class="alert alert-danger" role="alert" x>
     <h4 class="alert-heading">mohon maaf</h4>
     <p>sedang kami update</p>
   </div>
+  <div class="alert alert-info" role="" >
+    <h4 id="updateinfo">21/01/2025, 13:30S</h4>
+  </div>
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8">
-        <h2 class="text-center">Kamus Online Bahasa Amiyah</h2>
+        <h2 class="text-center" id="headline">Kamus Online Bahasa Amiyah</h2>
 
+        <div id="sharelink">bagikan tautan: <code id="link">https://zhalifunas.github.io/kamus-amiyah-eg/</code></div>
+        
         <input placeholder="cari apapun" type="text" class="mb-3 form-control form-control-lg" id="filterkartu">
 
         <details>
@@ -29,6 +34,8 @@
             <li>cara kerja kotak pencarian dengan mem-filter huruf pada kata yang ada pada kotak kosa-kata berdasarkan apa yang kamu ketik di kolom pencarian. contoh: jika kamu menuliskan <code>kerja</code>, maka yang akan muncul adalah kata "kerja" dan juga kategori "kata kerja"</li>
             <li>daftar kosa kata yang tertampil tidak diurutkan berdasarkan abjad atau apapun, melainkan tertampil secara acak</li>
             <li>semua kata yang ada di dalam kotak kosa-kata bisa dijadikan kata kunci pencarian, termasuk yang ada di kolom comment (<i class="bx bxs-comment-detail"></i>)</li>
+            <li>mohon maaf, kotak pencarian tidak menolerir <i>typo</i> (kesalahan pengetikan) sehingga kata yang kamu cari tidak muncul.</li>
+            <li>ada beberapa kata tidak baku yang kami tambahkan sebagai kunci pencarian dan untuk mencarinya masukkan 3 huruf pertama dari kata tersebut.</li>
           </ul>
         </details>
         <details>
@@ -55,6 +62,7 @@
               </ol>
             </li>
             <li>dalam dialek mesir, huruf هـ dibubuhkan kepada fiil mudhori untuk menyatakan pekerjaan yang akan kamu lakukan di masa datang.</li>
+            <li>dalam dialek mesir, huruf هـ dibubuhkan kepada fiil mudhori untuk menyatakan pekerjaan yang akan kamu lakukan di masa datang.</li>
           </ul>
         </details>
         <hr>
@@ -69,7 +77,7 @@
             <li class="list-group-item">
               <mark>kata kerja</mark>
               <h2>
-                belok <br>
+                putar balik <br>
                 bungkus
               </h2>
               <p class="ar">
@@ -92,6 +100,7 @@
               <mark>kata kerja</mark>
               <h2>
                 bosan
+                <span class="hide">bosen</span>
               </h2>
               <p class="ar">
                 زهق
@@ -125,7 +134,7 @@
               </h2>
               <p class="ar">
                 <span class="mh">جه</span><br>
-                <span class="mr">يجي</span>
+                <span class="mr">يجي</span><br>
                 <span class="fa">جاي</span>
               </p>
             </li>
@@ -181,6 +190,7 @@
               <mark>kata kerja</mark>
               <h2>
                 mendapatkan <br>
+                mengambil <br>
                 membeli* <br>
               </h2>
               <p class="ar">
@@ -378,7 +388,7 @@
               <mark>kata benda</mark><mark>pekerjaan</mark>
               <h2>
                 supir
-                <!-- sopir -->
+                <span class="hide">sopir</span>
               </h2>
               <p class="ar">
                 م\ سواق <br> ج\ سواقين
@@ -447,7 +457,7 @@
             </li>
 
             <li class="list-group-item">
-              <mark>ungkapan</mark>
+              <mark>kata ekspresi</mark><mark>ungkapan</mark>
               <h2>
                 maaf
               </h2>
@@ -458,6 +468,56 @@
             </li>
             
             <li class="list-group-item">
+              <mark>ungkapan</mark>
+              <h2>
+                <span class="hide"> segera</span>
+                cepetan (selesaikan)!
+              </h2>
+              <p class="ar">
+                متخلص يا عم
+              </p>
+              <p class="note">tergantung objek</p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>ungkapan</mark>
+              <h2>
+                ku sumpahin kamu apes!
+              </h2>
+              <p class="ar">
+                جاتك النيله
+              </p>
+              <p class="note">hehe bingung nerjemahinnya, keknya sih gitu ya wkwk</p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>ungkapan</mark><mark>kata ekspresi</mark>
+              <h2>
+                <i>oh my god!</i>
+              </h2>
+              <p class="ar">
+                يالهوي <br> يانهار اببض
+              </p>
+              <p class="note">
+                buat terkejut yang netral lah situasinya, klo salah mon maap, kurang <i>experience</i> soalnya saya
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>ungkapan</mark><mark>kata ekspresi</mark>
+              <h2>
+                ah, sial!
+              </h2>
+              <p class="ar">
+                يادي النيله <br> يانهار اسود و منيل
+              </p>
+              <p class="hote">
+                intinya untuk terkejut yang berbau musibah, klo salah mon maap, kurang <i>experience</i> soalnya saya
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>kata ekspresi</mark>
               <mark>ungkapan</mark>
               <h2>
                 terima kasih
@@ -475,10 +535,12 @@
               <h2>
                 jumpa esok hari <br>
                 ketemu besok lagi <br>
-                <i>see you later</i>
               </h2>
               <p class="ar">
                 نشوفك على خير
+              </p>
+              <p class="note"><br>
+                terjemahan secara leterlek dari <code>see you later</code>
               </p>
             </li>
             
@@ -490,6 +552,16 @@
               </h2>
               <p class="ar">
                 مبسوط نشوفك
+              </p>
+            </li>
+            
+            <li class="list-group-item">
+              <mark>ungkapan</mark>
+              <h2>
+                basa-basi
+              </h2>
+              <p class="ar">
+                عزومة مركبية
               </p>
             </li>
 
@@ -660,7 +732,7 @@
               </p>
             </li>
           
-            <li class="list-group-item">
+            <li class="list-group-item" hide>
               <mark>kata konjungsi</mark>
               <h2>
                 barusan
@@ -671,7 +743,22 @@
               <p class="note"><br>
                 bermakna ini jika bersanding dengan fiil madhi setelah atau sebelumnya, contoh: <br><br>
                 <code class="ar">انا اكلت لسه</code><br>
-                <i>saya barusan makan</i>
+                <i>saya barusan sudah makan</i><br>
+                contoh lain: <br><br>
+                <code class="ar">جيبت الاكل ولا لسه؟</code><br>
+                <i>udah ambil (atau dapet, tergantung konteks) atau belum?</i>
+              </p>
+              <hr>
+              <h2>
+                masih <i class="bx bxs-star"></i>
+              </h2>
+              <p class="ar">
+                لسه
+              </p>
+              <p class="note">
+                bermakna ini jika bersanding kata kerja nafi, contoh: <br><br>
+                <code class="ar"></code><br>
+                <i>aku masih belum belajar bahasa inggris sampai sekarang</i>
               </p>
               <hr>
               <h2>
@@ -680,8 +767,10 @@
               <p class="ar">
                 لسه
               </p>
-              <p class="note">
-                bermakna ini kata kerja 
+              <p class="note"><br>
+                jika bersanding dengan fiil madhi nafi, contoh: <br><br>
+                <code class="ar">انا لسه مخلصش شغلي</code><br>
+                <i>aku belum menyelesaikan kerjaanku.</i>
               </p>
             </li>
             
@@ -697,6 +786,7 @@
     <i class="fa-brands fa-square-facebook fa-2x"></i>
     <i class="fa-brands fa-square-twitter fa-2x"></i>
     <i class="fa-brands fa-square-instagram fa-2x"></i>
+    <a id="linktop" href="#headline"><i class="bx bxs-chevron-up"></i></a>
   </footer>
   <script type="text/javascript">
     const sarangan = document.getElementById("filterkartu");

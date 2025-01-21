@@ -6,21 +6,35 @@
     --dgreen: #1abd9b;
     --lgreen: #edfdf9;
 }
-body::-webkit-scrollbar{width:7px;background-color:var(--dgreen);}
-body::-webkit-scrollbar-thumb{border-radius:3px;background-color:var(--dblue);}
+::-webkit-scrollbar{width:7px;background-color:var(--dgreen);}
+::-webkit-scrollbar-thumb{border-radius:3px;background-color:var(--dblue);}
 body{
     background:#fcfcfc;
     user-select:none
   }
 div.spacer{margin-top:30px;}
 div.alert[x]{display:none;}
+div.alert h4#updateinfo{margin-bottom:0;text-align:center}
+div.alert h4#updateinfo::before{content:"terakhir update: "}
+div.alert h4#updateinfo::after{content:" clt"}
 h2{
     margin-top:20px;
+}
+#sharelink{margin-bottom:12px;margin-top:12px;}
+code#link{
+  align-content:center;
+  cursor:text;
+  user-select:all;
+  text-decoration:underline;
+  background:var(--dgreen);
+  color:var(--dblue);
+  overflow:hidden;
 }
 input{
     background-color:rgba(227, 227, 227,0.4)!important;
     background-filter:blur(2px);
     position: sticky;
+    min-width:40px!important;
     top: 15px;
     z-index: 100;
 }
@@ -73,6 +87,7 @@ div.carousel-inner{
 span.or:before{
     content: "atau ";
 }
+span.hide, [hide]{display:none;}
 mark:first-child{
     margin-right:10px;
 }
@@ -110,3 +125,21 @@ p.copyright a{
     color: var(--dblue)!important;
 }
 footer i{margin-bottom:10px;}
+footer a#linktop{
+  position:fixed;
+  bottom: 6dvh;
+  right:10px;
+  z-index:101;
+  color: var(--dblue);
+  background: var(--dgreen);
+  padding:5px;
+  text-decoration:none;
+}
+@media only screen and (min-width: 993px){
+  footer a#linktop::after{
+    content: "top";
+  }
+}
+footer a#linktop i{
+  display:inline;
+}
