@@ -149,7 +149,7 @@ section.badan{
 	height:100%;
 	min-height:100vh;
 	padding:10px;
-  padding-bottom:40px;
+  padding-bottom:10px;
   border-radius:20px 20px 0 0;
   background-image:url("https://i.ibb.co/8LN9fCn5/Untitled-Photoroom-1.png");
   background-size:250px;
@@ -165,7 +165,7 @@ div.tombol-list details{
 div.tombol-list details[disabled]{
 	display:none;
 }
-div.tombol-list details summary.youtube{
+div.tombol-list details summary{
 	background:#fafafa;
 	text-align:center;
 	user-select:none;
@@ -175,13 +175,67 @@ div.tombol-list details summary.youtube{
 	list-style:none;
 	list-style-type:none;
 }
-div.tombol-list details summary.youtube:hover{
+div.tombol-list details summary:hover{
 	cursor:pointer;
+  background:var(--coklatbanget);
+  color:var(--fafa);
+  font-weight:600;
+  animation-name:tombol;
+  animation-duration:.3s;
+  animation-timing-function:ease-in-out;
 }
-div.tombol-list details summary.youtube:focus{
+div.tombol-list details summary:focus{
 	border:none;
 	outline:none;
 }
+
+/* isi details */
+div.isian{
+  display:;
+	background:#fafafa;
+	margin-top:10px;
+	padding-top:15px;
+	padding-bottom:15px;
+	border-radius:13.2px;
+  padding-left:10px;
+  padding-right:10px;
+}
+div.isian p{
+  color:var(--semihitam);
+}
+div.isian p::selection,
+div.isian p i::selection{
+  background:var(--coklatbanget);
+  color:var(--fafa);
+}
+div.isian p.info{
+  padding-bottom:6px;
+  border-bottom: var(--biruandalan) 2px solid;
+  width: 400px;
+  max-width:80%;
+  user-select:none;
+}
+div.isian p.info i[icon]{color: var(--biruandalan);margin-right:5px;}
+div.isian a{
+  display:inline-block;
+  user-select:none;
+  background:var(--biruandalan);
+  border: var(--biruandalan) 2px solid;
+  color: var(--fafa);
+  padding:5px;
+  margin-top:5px;
+  border-radius:4px;
+  word-break:keep-all;
+}
+div.isian a:hover{
+  border: var(--biruandalan) 2px solid;
+  background: transparent;
+  color:var(--biruandalan);
+}
+div.isian a i{
+  margin-right:4px;
+}
+/* akhir isi details */
 
 /* inside div youtube content box*/
 div.youtube.content-box{
@@ -193,7 +247,7 @@ div.youtube.content-box{
 	border-radius:13.2px;
 }
 div.youtube.content-box p{
-	color:#fafafa;
+	color:var(--semihitam);
 }
 div.youtube.content-box span:nth-child(1){
 	background:#bda473;
@@ -211,22 +265,10 @@ div.youtube.content-box span:nth-child(1){
 	font-family:"poppins",sans-serif;
 }
 @media only screen and (min-width:300px), (max-width:500px){
-	div.youtube.content-box span:nth-child(1){
+	div.youtube.content-box span:nth-child(1),
+	div.content-box span:nth-child(1){
 		font-size:15.2pt;
 	}
-}
-div.youtube.content-box div{
-	display:flex;
-	justify-content:center;
-	margin-left:20px;
-	margin-right:20px;
-}
-div.youtube.content-box div iframe.youtube.podcast{
-	height:100%;
-	min-height:400px;/* harus ada */
-	width:100%;
-	max-width:600px;
-	border-radius:13.2px;
 }
 div.youtube.content-box h3{
 	text-align:center;
@@ -256,6 +298,20 @@ div.youtube.content-box p a:hover{
 div.youtube.content-box p a i{
 	margin-left:10px;
 }
+div.youtube.content-box div,
+div.content-box div{
+	display:flex;
+	justify-content:center;
+	margin-left:20px;
+	margin-right:20px;
+}
+div.youtube.content-box div iframe.youtube.podcast{
+	height:100%;
+	min-height:400px;/* harus ada */
+	width:100%;
+	max-width:600px;
+	border-radius:13.2px;
+}
 /* akhir inside div youtube content box*/
 
 div.tombol-list button:hover{
@@ -272,6 +328,7 @@ div.tombol-list button:hover{
 }
 div.tombol-list button{
 	display:block;
+  position:relative;
 	width:100%;
 	background:#fafafa;
   color:var(--ijogelap);
@@ -284,12 +341,14 @@ div.tombol-list button:nth-child(6){
 	margin-bottom:0;
 }
 div.tombol-list button span{
-  position:relative;
   font-size:10pt;
   background:yellow;
   color:var(--semihitam);
   padding:2px;
-  top:-6px;
+  border-radius:3.3px;
+  position:absolute;
+  top:-7px;
+  left:0;
 }
 div.tombol-list button[del],div.tombol-list button[delete]{
   display:none;
@@ -298,17 +357,14 @@ div.tombol-list button[del],div.tombol-list button[delete]{
 
 /*credit*/
 footer.credit{
-  width:100%;
   padding:10px;
 	text-align:center;
 	background:var(--coklatbanget);
 	color:#fafafa;
 	font-family:sans-serif;
-  position:fixed;
-  bottom:0;
 }
 footer.credit::selection{
-	background:var(--coklatbanget);
+	background:var(--ijogelap);
 }
 footer.credit a{
 	text-decoration:underline;
