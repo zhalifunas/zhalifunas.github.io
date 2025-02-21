@@ -62,7 +62,8 @@ div.pitcure img#wallpaper{
 	position: fixed;
   right:8px;
   background:#fafafa;
-  opacity:.7
+  opacity:.7;
+  z-index:100;
 }
 div.profil{
 	background:;
