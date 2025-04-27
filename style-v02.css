@@ -88,6 +88,7 @@ div.profil p{
 }
 div.profil a.link{
 	font-size:19px;
+  padding-bottom:3px;
 	margin:auto 10px;
 	color:#004040;
 }
@@ -98,46 +99,50 @@ div.profil a.link.instagram:hover{
 	background:#be2edd;
 	color:var(--fafa);
 }
-div.profil a.link.instagram:hover:after{
+/* div.profil a.link.instagram:hover:after{
 	content:"instagram";
 	padding-left:4px;
 	padding-right:2px;
-}
+} */
 div.profil a.link.facebook:hover{
 	background:#2980b9;
 	color:var(--fafa);
 }
-div.profil a.link.facebook:hover:after{
+/* div.profil a.link.facebook:hover:after{
 	content:"facebook";
 	padding-left:4px;
 	padding-right:2px;
-}
+} */
 div.profil a.link.twitter:hover{
 	background:#0abde3;
 	color:var(--fafa);
 }
-div.profil a.link.twitter:hover:after{
+/* div.profil a.link.twitter:hover:after{
 	content:"twitter";
 	padding-left:4px;
 	padding-right:2px;
-}
+} */
 div.profil a.link.linkedin:hover{
 	background:#0077b5;
 	color:var(--fafa);
 }
-div.profil a.link.linkedin:hover:after{
+/* div.profil a.link.linkedin:hover:after{
 	content:"linkedin";
 	padding-left:4px;
 	padding-right:2px;
-}
+} */
 div.profil a.link.codepen:hover{
 	background:#2c3e50;
 	color:var(--fafa);
 }
-div.profil a.link.codepen:hover:after{
+/* div.profil a.link.codepen:hover:after{
 	content:"codepen";
 	padding-left:4px;
 	padding-right:2px;
+} */
+div.profil a.link.threads:hover{
+	background:#2c3e50;
+	color:var(--fafa);
 }
 div.profil a.link[disable]{display:none;}
 /* end header */
