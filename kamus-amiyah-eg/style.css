@@ -67,6 +67,12 @@ div.filter{
   padding: 10px; /* opsional, untuk ruang di dalam */
   scrollbar-width: thin; /* untuk scroll bar tipis (di Firefox) */
 }
+div.filter{scrollbar-width: none;-ms-overflow-style: none;}
+div.filter::-webkit-scrollbar{
+  display:none;
+  width: 0;
+  height: 0;
+}
 button.filter-btn{
   color:var(--lgreen);
   background:var(--dblue);
