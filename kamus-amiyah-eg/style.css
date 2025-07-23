@@ -3,6 +3,7 @@
     --dblue:#00393a;
     --lblue:#ebffff;
     --grey:#fcfcfc;
+    --greybg:#e3e3e3;
     --dgreen: #1abd9b;
     --lgreen: #edfdf9;
 }
@@ -12,6 +13,9 @@ body{
     background:#fcfcfc;
     user-select:none
   }
+a{color:var(--dblue)}
+a:hover{color:var(--dgreen)}
+a:focus{color:var(--greybg)}
 div.spacer{margin-top:30px;}
 div.alert[x]{display:none;}
 div.alert h4#updateinfo{margin-bottom:0;text-align:center}
@@ -27,24 +31,24 @@ code#link{
   user-select:all;
   text-decoration:underline;
   background:var(--dgreen);
-  color:var(--dblue);
+  color:var(--lblue);
   overflow:hidden;
 }
 input{
     background-color:rgba(227, 227, 227,0.4)!important;
-    background-filter:blur(2px);
+    background-filter:blur(1px);
     position: sticky;
     min-width:40px!important;
     top: 15px;
-    z-index: 100;
+    z-index: 2;
 }
 @media only screen and (max-width: 992px){
     input{
         width: 60dvw !important;
         height: 20px;
         position: fixed;
-        bottom: 15px;
-        z-index: 100;
+        bottom: 3.4dvh;
+        z-index: 2;
         left: 10%;
         margin: auto;
         translate: 15%;
@@ -54,15 +58,101 @@ input:focus{
     color:#e3e3e3;
     background:var(--lblue)!important;
 }
+div.filter{
+  margin-bottom:10px;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px; /* opsional, untuk jarak antar tombol */
+  padding: 10px; /* opsional, untuk ruang di dalam */
+  scrollbar-width: thin; /* untuk scroll bar tipis (di Firefox) */
+}
+button.filter-btn{
+  color:var(--lgreen);
+  background:var(--dblue);
+  border:none;
+  border-radius:6px;
+}
+button.filter-btn:hover{
+  background:var(--dgreen);
+  color:var(--grey)
+}
+
+/* modal */
+/* Gaya dasar untuk modal */
+.modal {
+  display: none; /* Disembunyikan secara default */
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4); /* Latar gelap */
+}
+.modal-title {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-transform:capitalize;
+  border-radius:8px;
+  text-align:center;
+  color:var(--lgreen);
+  background:var(--dblue);
+}
+.modal-title i{margin-right:10%;vertical-align:-3px;}
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 380px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+#profil p{text-align:center;}
+#profil p span{color:var(--dgreen)}
+.modal-content p{margin:0;}
+.modal-content p:first-letter{text-transform:capitalize;}
+.modal-content p i.hgi{margin-right:10px;color:var(--dgreen);vertical-align:-2.5px;}
+.close {
+  color: #aaa;
+  float: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+}
+button.moda{
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background:var(--dblue);
+  color:var(--lblue);
+  border:none;
+  border-radius:7px;
+}
+button.moda:last-of-type{margin-top:4px;}
+button.moda:hover{background:var(--dgreen);color:var(--dblue)}
+button.moda i{margin-right:9px;vertical-align:-2px;}
+/* end modal */
+
 summary{
     color:#00393a;
     list-style: none;
-    text-decoration: underline;
+/*     text-decoration: underline; */
     padding-top: 10px;
     padding-bottom:10px;
     margin-bottom: 10px;
 }
-summary:hover{background-color: #00393a;color: #edfdf9;}
+summary:hover{
+  background-color: #00393a;
+  color: #edfdf9;
+  text-decoration:underline;
+}
 summary i{
   margin-right: 10px;
   font-variant:normal;
@@ -94,6 +184,11 @@ mark:first-child{
 mark{
     background: var(--lblue);
     border-radius:6px;
+  margin-right:10px;
+}
+mark.no{
+  background:transparent;
+  color: var(--lblue);
 }
 mark.formal:after{
     content: "formal";
@@ -117,19 +212,28 @@ span.mr::before{content:"مضارع\005C  ";}
 span.fa::before{content:"فاعل\005C  ";}
 
 footer{
-    padding:auto;
-    text-align:center;
+  padding:auto;
+  margin-bottom:40px;
+  text-align:center;
 }
-p.copyright a{
+footer p.copyright a{
     text-transform: capitalize;
-    color: var(--dblue)!important;
+    color: var(--dblue);
 }
-footer i{margin-bottom:10px;}
+footer p.copyright a:hover{
+  color:var(--dgreen);
+  text-decoration:underline;
+}
+footer a{
+  color: var(--dblue);
+  text-decoration:none;
+}
+footer a i{margin-bottom:10px;font-size:15pt;padding:5px;}
 footer a#linktop{
   position:fixed;
   bottom: 6dvh;
   right:10px;
-  z-index:101;
+  z-index:3;
   color: var(--dblue);
   background: var(--dgreen);
   padding:5px;
@@ -143,3 +247,8 @@ footer a#linktop{
 footer a#linktop i{
   display:inline;
 }
+p.count{
+  text-align:center;
+  color: var(--dblue)
+}
+p.count strong{color:var(--dgreen)}

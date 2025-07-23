@@ -27,19 +27,30 @@
       
       <input placeholder="cari apapun" type="text" class="mb-3 form-control form-control-lg" id="filterkartu">
 
-      <details>
-        <summary><i class="bx bxs-book-open"></i>panduan penggunaan</summary>
-        <ul>
-          <li>dalam kotak pencarian, kata yang ingin kamu cari cukup masukkan sebagian katanya dan dia akan secara otomatis ter-filter</li>
-          <li>cara kerja kotak pencarian dengan mem-filter huruf pada kata yang ada pada kotak kosa-kata berdasarkan apa yang kamu ketik di kolom pencarian. contoh: jika kamu menuliskan <code>kerja</code>, maka yang akan muncul adalah kata "kerja" dan juga kategori "kata kerja"</li>
-          <li>daftar kosa kata yang tertampil tidak diurutkan berdasarkan abjad atau apapun, melainkan tertampil secara acak</li>
-          <li>semua kata yang ada di dalam kotak kosa-kata bisa dijadikan kata kunci pencarian, termasuk yang ada di kolom comment (<i class="bx bxs-comment-detail"></i>)</li>
-          <li>mohon maaf, kotak pencarian tidak menolerir <i>typo</i> (kesalahan pengetikan) sehingga kata yang kamu cari tidak muncul.</li>
-          <li>ada beberapa kata tidak baku yang kami tambahkan sebagai kunci pencarian dan untuk mencarinya masukkan 3 huruf pertama dari kata tersebut.</li>
-        </ul>
-      </details>
-      <details>
-        <summary><i class="bx bxs-book-content"></i>glosary</summary>
+      <!-- modal button -->
+      <button class="moda" data-modal="panduan"><i class="hgi hgi-stroke hgi-book-open-01"></i>Panduan</button>
+      <button class="moda" data-modal="glosary"><i class="hgi hgi-stroke hgi-information-circle"></i>Glosary</button>
+      <button class="moda" data-modal="pengetahuan"><i class="hgi hgi-stroke hgi-idea"></i>dasar amiyah</button>
+      <button class="moda" data-modal="changelog"><i class="hgi hgi-stroke hgi-stars"></i>changelog</button>
+      <button class="moda" data-modal="profil"><i class="hgi hgi-stroke hgi-waving-hand-02"></i>developer</button>
+      <button class="moda" data-modal="credit"><i class="hgi hgi-stroke hgi-tag-02"></i>credit</button>
+      <!--     Modal     -->
+      <div id="panduan" class="modal">
+        <div class="modal-content">
+          <div class="modal-title"><i class="hgi hgi-stroke hgi-book-open-01"></i> Panduan</div>
+          <ul>
+            <li>dalam kotak pencarian, kata yang ingin kamu cari cukup masukkan sebagian katanya dan dia akan secara otomatis ter-filter</li>
+            <li>cara kerja kotak pencarian dengan mem-filter huruf pada kata yang ada pada kotak kosa-kata berdasarkan apa yang kamu ketik di kolom pencarian. contoh: jika kamu menuliskan <code>kerja</code>, maka yang akan muncul adalah kata "kerja"</li>
+            <li>daftar kosa kata yang tertampil tidak diurutkan berdasarkan abjad atau apapun, melainkan tertampil secara acak</li>
+  <!--           <li>semua kata yang ada di dalam kotak kosa-kata bisa dijadikan kata kunci pencarian, termasuk yang ada di kolom comment (<i class="bx bxs-comment-detail"></i>)</li> -->
+            <li>mohon maaf, kotak pencarian tidak menolerir <i>typo</i> (kesalahan pengetikan) sehingga kata yang kamu cari tidak muncul.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div id="glosary" class="modal">
+        <div class="modal-content">
+          <div class="modal-title"><i class="hgi hgi-stroke hgi-information-circle"></i>Glosary</div>
           <ul>
             <li>(م\) mufrod</li>
             <li>(ج\) jamak</li>
@@ -48,24 +59,73 @@
             <li>(<i class="bx bxs-star"></i>) lebih sering dipakai</li>
             <li>(<i class="bx bxs-comment-detail"></i>) komentar dan/atau contoh</li>
           </ul>
-      </details>
-      <details>
-        <summary><i class="bx bxs-info-circle"></i>pengetahuan dasar ammiyah</summary>
-        <ul>
-          <li>Pada amiyah Mesir, ada perubahan pengucapan ق, ج, dan أ dimana jim diucapkan sebagai G, qof diucapkan sebagai hamzah, dan dalam beberapa kasus hamzah dicapkan sebagai و atau ي</li>
-          <li>dalam penulisannya, di semua pengguna bahasa amiyah menyingkat penulisan konjungsi, seperti menulis ع untuk على, menulis م untuk ما, dan menulis ف untuk في.</li>
-          <li>
-            dalam dialek mesir, huruf ب dibubuhkan kepada fiil mudhori untuk 2 kondisi: 
-            <ol>
-              <li>ketika kegiatan itu sedang kamu lakukan;</li>
-              <li>ketika kegiatan itu selalu kamu lakukan</li>
-            </ol>
-          </li>
-          <li>dalam dialek mesir, huruf هـ dibubuhkan kepada fiil mudhori untuk menyatakan pekerjaan yang akan kamu lakukan di masa datang.</li>
-          <li>dalam dialek mesir, huruf هـ dibubuhkan kepada fiil mudhori untuk menyatakan pekerjaan yang akan kamu lakukan di masa datang.</li>
+          </div>
+        </div>
+      
+    
+      <div id="pengetahuan" class="modal">
+        <div class="modal-content">
+          <div class="modal-title">tentang amiyah mesir</div>
+          <ul>
+            <li>Pada amiyah Mesir, ada perubahan pengucapan ق, ج, dan أ dimana jim diucapkan sebagai G, qof diucapkan sebagai hamzah, dan dalam beberapa kasus hamzah dicapkan sebagai و atau ي</li>
+            <li>dalam penulisannya, di semua pengguna bahasa amiyah menyingkat penulisan konjungsi, seperti menulis ع untuk على, menulis م untuk ما, dan menulis ف untuk في.</li>
+            <li>
+              dalam dialek mesir, huruf ب dibubuhkan kepada fiil mudhori untuk 2 kondisi: 
+              <ol>
+                <li>ketika kegiatan itu sedang kamu lakukan;</li>
+                <li>ketika kegiatan itu selalu kamu lakukan</li>
+              </ol>
+            </li>
+            <li>dalam dialek mesir, huruf هـ dibubuhkan kepada fiil mudhori untuk menyatakan pekerjaan yang akan kamu lakukan di masa datang.</li>
+            <li>untuk membuat kata kerja pasif (fiil majhul), lumrahnya menggunakan alif ta pada awal kata </li>
         </ul>
-      </details>
+        </div>
+      </div>
+      
+      <div class="modal" id="changelog">
+        <div class="modal-content">
+        <div class="modal-title"><i class="hgi hgi-stroke hgi-stars"></i>catatan perubahan</div>
+          <b>21/07/2025</b>
+          <p><i class="hgi hgi-stroke hgi-plus-sign"></i>entri 29 kata</p>
+          <p><i class="hgi hgi-stroke hgi-wrench-01"></i>pembaruan antarmuka</p>
+          <br><b>27/01/2025</b>
+          <p><i class="hgi hgi-stroke hgi-plus-sign"></i>entri 30 kata</p>
+          <br><b>20/01/2025</b>
+          <p><i class="hgi hgi-stroke hgi-web-validation"></i>publikasi pertama</p>
+          <p><i class="hgi hgi-stroke hgi-plus-sign"></i>entri 20 kata</p>
+        </div>
+      </div>
+      
+      <div id="profil" class="modal">
+        <div class="modal-content">
+        <div class="modal-title">pengembang</div>
+          <p>Halo, aku <span>Naufal Zhalifunas</span>, panggil aja Zed, di Mesir masih 5 tahun sih tapi ya bisa lah dikit ngomong bahasa Mesir, kadang ngobrol sama orang mesir soalnya hehe. <br><br> aku ngembangin web statis kamus ini bermula dari ketertarikanku nonton konten instagram, YouTube, ataupun baca komentar orang Mesir di platform itu, aku selalu dapat kosakata baru dari situ tapi belom punya tempat yang proper untuk menyimpan itu semua entah untuk sekadar ku baca sendiri (soalnya kadang suka lupa lupa inget wkwk) atau buat dibagikan ke orang-orang, iya tau ada whatsapp channel, ada telegram channel tapi yang jelas kalo pake website lebih menarik diliat. <br><br><b>dah gitu aja, selamat menggunakan.</b></p>
+        </div>
+      </div>
+      
+      <div class="modal" id="credit">
+        <div class="modal-content">
+        <div class="modal-title">Credit</div>
+          <b>icon set:</b><a href="https://hugeicons.com/icons?style=Stroke&type=Rounded">Huge icons</a>
+        </div>
+      </div>
+      
+      <p>Mau kasih saran kata? revisi? kolaborasi? <a href="https://instagram.com/n.zhalifunas">DM saya</a></p>
+      
       <hr>
+      <div class="filter">filter
+        <button class="filter-btn" data-category="all">Semua</button>
+        <button class="filter-btn" data-category="kata benda">K. Benda</button>
+        <button class="filter-btn" data-category="kata sifat">K. sifat</button>
+        <button class="filter-btn" data-category="kata tanya">K. Tanya</button>
+        <button class="filter-btn" data-category="kata kerja">K. kerja</button>
+        <button class="filter-btn" data-category="kata ekspresi">K. Ekspresi</button>
+        <button class="filter-btn" data-category="ungkapan">ungkapan</button>
+        <button class="filter-btn" data-category="kata konjungsi">K. konjungsi</button>
+        <button class="filter-btn" data-category="angka">angka</button>
+      </div>
+      
+
         <ul class="list-group">
 
           <li class="list-group-item">
@@ -73,17 +133,33 @@
             <h2>menonton </h2>
             <p class="ar">اتفرج على</p>
           </li>
+          
+          <li class="list-group-item">
+            <mark>kata konjungsi</mark>
+            <h2>
+              yang
+            </h2>
+            <p class="ar">
+              اللي
+            </p>
+          </li>
 
           <li class="list-group-item">
             <mark>kata kerja</mark>
             <h2>
               putar balik <br>
-              bungkus
+              <i>wrap</i>
             </h2>
             <p class="ar">
               <span class="mh">لف</span><br>
               <span class="mr">يلف</span>
             </p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark>
+            <h2>lampu</h2>
+            <p class="ar">لمبه <br> نور</p>
           </li>
 
           <li class="list-group-item">
@@ -104,9 +180,50 @@
             </h2>
             <p class="ar">
               زهق
+              <br><span class="fa">زهقان</span>
             </p>
           </li>
 
+          <li class="list-group-item">
+            <mark>kata kerja</mark>
+            <h2>ngga peduli <br> bukan urusan <br><i>bodo amat</i></h2>
+            <p class="ar">مالـ+ضمير+ـش دعوة</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata sifat</mark>
+            <h2>tidak penting</h2>
+            <p class="ar">
+              مالوش <span class="or"></span> مالهاش لازمه
+            </p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark>
+            <h2>bundaran</h2>
+            <p class="ar">دواران*</p>
+            <p class="note"><br>yang saya dengar sepanjang berbincang dengan orang mesir menggunakan kata ini, silakan <a href="">koreksi</a> kalau ada yang lebih meyakinkan</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata kerja</mark>
+            <h2>operasi pemeriksaan</h2>
+            <p class="ar">كمين</p>
+            <p class="note">kalau di indo itu kayak operasi ketupat, operasi patuh, dan sejenisnya.</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata kerja</mark><mark>kedokteran</mark>
+            <h2>operasi</h2>
+            <p class="ar">عملية</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark>
+            <h2>prosedur</h2>
+            <p class="ar">اجراءات</p>
+          </li>
+          
           <li class="list-group-item">
             <mark>kata kerja</mark>
             <h2>
@@ -118,16 +235,6 @@
           </li>
           
           <li class="list-group-item">
-            <mark>kata konjungsi</mark>
-            <h2>
-              yang
-            </h2>
-            <p class="ar">
-              اللي
-            </p>
-          </li>
-          
-          <li class="list-group-item">
             <mark>ungkapan</mark>
             <h2>
               ga ada bedanya buat kamu
@@ -135,6 +242,48 @@
             <p class="ar">
               ما بيفرق معاك
             </p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>uslub</mark><mark>ungkapan</mark>
+            <h2>seumur-umur kamu pernah ...</h2>
+            <p class="ar">عمرك + فعل ماض</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata kerja</mark>
+            <h2>jatuh</h2>
+            <p class="ar">وقع</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark><mark>orang</mark><mark>pekerjaan</mark>
+            <h2>juru parkir</h2>
+            <p class="ar">سايس</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata kerja</mark>
+            <h2>parkir</h2>
+            <p class="ar">ركن</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata kerja</mark>
+            <h2>tekan<br>pencet <br> injak</h2>
+            <p class="ar">دوس</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata keterangan</mark>
+            <h2>sayangnya</h2>
+            <p class="ar">للأسف</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata sifat</mark>
+            <h2>tidak engaja</h2>
+            <p class="ar">بالغلط</p>
           </li>
           
           <li class="list-group-item">
@@ -150,7 +299,7 @@
           </li>
           
           <li class="list-group-item">
-            <mark>kata konjungsi</mark>
+            <mark>kata konjungsi</mark><mark class="no">13</mark>
             <h2>
               punya <span class="or">yang di*</span>
             </h2>
@@ -168,13 +317,13 @@
           </li>
 
           <li class="list-group-item">
-            <mark>kata benda</mark>
+            <mark>kata kerja</mark>
             <h2>download </h2>
             <p class="ar">تحميل </p>
           </li>
 
           <li class="list-group-item">
-            <mark>kata benda</mark>
+            <mark>kata kerja</mark>
             <h2>upload </h2>
             <p class="ar">تنزيل</p>
           </li>
@@ -185,6 +334,13 @@
               mencari
             </h2>
             <p class="ar">دور على</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata keterangan</mark><mark>tempat</mark>
+            <h2>di seberang</h2>
+            <p class="ar">قصاد <br> ناحية تانية*</p>
+            <p class="note"><br>maknanya lebih kepada "di sisi lain"</p>
           </li>
 
           <li class="list-group-item">
@@ -229,6 +385,43 @@
             </p>
           </li>
 
+          <li class="list-group-item">
+            <mark>keterangan waktu</mark>
+            <h2>kadang-kadang</h2>
+            <p class="ar">اوقات <span class="or"></span> ساعات</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark>
+            <h2>mood</h2>
+            <p class="ar">مزاج</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark>
+            <h2>spesifikasi</h2>
+            <p class="ar">مواصفات</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata kerja</mark><mark>harian</mark>
+            <h2>mandi <span class="hide">madni</span></h2>
+            <p class="ar">اخد دوش* <br> استحمام</p>
+            <p class="note">*diserap dari bahasa inggris "take a shower"</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark>
+            <h2>shower</h2>
+            <p class="ar">دوش</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark>
+            <h2>kebisingan <br> keributan</h2>
+            <p class="ar">دوشة</p>
+          </li>
+          
           <li class="list-group-item">
             <mark>kata tanya</mark>
             <h2>
@@ -344,6 +537,28 @@
           </li>
 
           <li class="list-group-item">
+            <mark>kata kerja</mark>
+            <h2>ternyata <br> naik <br> keluar <span class="or">pergi</span> <br> mengeluarkan</h2>
+            <p class="ar">طلع</p>
+            <p class="note">cara bedainnya? kayak biasanya, tergantung konteks <br> 
+              هو طلع الشغل
+              Dia pergi kerja. <br><br>
+              اطلع من السلم
+              naik lewat tangga! <br><br>
+              شوفتك زي صاحبي طلع غلط
+              aku tadi liat kamu mirip temanku, ternyata salah <br><br>
+              اطلعو من جيبك
+              keluarin benda itu dari sakumu! <br><br>
+            </p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>kata kerja</mark>
+            <h2>tau <br> kenal <br> bisa</h2>
+            <p class="ar">عارف</p>
+          </li>
+          
+          <li class="list-group-item">
             <mark>kata ekspresi</mark>
             <h2>
               wah (keren, bagus)
@@ -434,6 +649,18 @@
               بلطجي <br> حرامي
             </p>
           </li>
+          
+          <li class="list-group-item">
+            <mark>kata benda</mark><mark>orang</mark>
+            <h2>penipu</h2>
+            <p class="ar">نصاب</p>
+          </li>
+          
+          <li class="list-group-item">
+            <mark>uslub</mark>
+            <h2>aku akan segera di sana <br><i>I'll be there</i></h2>
+            <p class="ar">هكون هناك</p>
+          </li>
 
           <li class="list-group-item">
             <mark>kata benda</mark><mark>pekerjaan</mark>
@@ -480,7 +707,7 @@
           <li class="list-group-item">
             <mark>ungkapan</mark>
             <h2>
-              <span class="hide"> segera</span>
+              <span class="hide">segera</span>
               cepetan (selesaikan)!
             </h2>
             <p class="ar">
@@ -521,7 +748,7 @@
             <p class="ar">
               يادي النيله <br> يانهار اسود و منيل
             </p>
-            <p class="hote">
+            <p class="note">
               intinya untuk terkejut yang berbau musibah, klo salah mon maap, kurang <i>experience</i> soalnya saya
             </p>
           </li>
@@ -624,6 +851,48 @@
               contoh lain: <br>
               <code class="ar">قدامك لسه كتير ولا لأ؟</code><br>
               <i>kamu masih lama lagi ndak?</i>
+            </p>
+          </li>
+          
+          <li class="list-group-item" >
+            <mark>kata konjungsi</mark>
+            <h2>
+              barusan
+            </h2>
+            <p class="ar">
+              لسه
+            </p>
+            <p class="note"><br>
+              bermakna ini jika bersanding dengan fiil madhi setelah atau sebelumnya, contoh: <br><br>
+              <code class="ar">انا اكلت لسه</code><br>
+              <i>saya barusan sudah makan</i><br>
+              contoh lain: <br><br>
+              <code class="ar">جيبت الاكل ولا لسه؟</code><br>
+              <i>udah ambil (atau dapet, tergantung konteks) atau belum?</i>
+            </p>
+            <hr>
+            <h2>
+              masih <i class="bx bxs-star"></i>
+            </h2>
+            <p class="ar">
+              لسه
+            </p>
+            <p class="note">
+              bermakna ini jika bersanding kata kerja nafi, contoh: <br><br>
+              <code class="ar"></code><br>
+              <i>aku masih belum belajar bahasa inggris sampai sekarang</i>
+            </p>
+            <hr>
+            <h2>
+              belum
+            </h2>
+            <p class="ar">
+              لسه
+            </p>
+            <p class="note"><br>
+              jika bersanding dengan fiil madhi nafi, contoh: <br><br>
+              <code class="ar">انا لسه مخلصش شغلي</code><br>
+              <i>aku belum menyelesaikan kerjaanku.</i>
             </p>
           </li>
 
@@ -741,48 +1010,6 @@
               سعتاشر
             </p>
           </li>
-        
-          <li class="list-group-item" hide>
-            <mark>kata konjungsi</mark>
-            <h2>
-              barusan
-            </h2>
-            <p class="ar">
-              لسه
-            </p>
-            <p class="note"><br>
-              bermakna ini jika bersanding dengan fiil madhi setelah atau sebelumnya, contoh: <br><br>
-              <code class="ar">انا اكلت لسه</code><br>
-              <i>saya barusan sudah makan</i><br>
-              contoh lain: <br><br>
-              <code class="ar">جيبت الاكل ولا لسه؟</code><br>
-              <i>udah ambil (atau dapet, tergantung konteks) atau belum?</i>
-            </p>
-            <hr>
-            <h2>
-              masih <i class="bx bxs-star"></i>
-            </h2>
-            <p class="ar">
-              لسه
-            </p>
-            <p class="note">
-              bermakna ini jika bersanding kata kerja nafi, contoh: <br><br>
-              <code class="ar"></code><br>
-              <i>aku masih belum belajar bahasa inggris sampai sekarang</i>
-            </p>
-            <hr>
-            <h2>
-              belum
-            </h2>
-            <p class="ar">
-              لسه
-            </p>
-            <p class="note"><br>
-              jika bersanding dengan fiil madhi nafi, contoh: <br><br>
-              <code class="ar">انا لسه مخلصش شغلي</code><br>
-              <i>aku belum menyelesaikan kerjaanku.</i>
-            </p>
-          </li>
           
         </ul>
         <div class="mb-5"></div>
@@ -793,8 +1020,9 @@
 </div>
 <footer class="justify-content-center">
   <p class="copyright">dikembangkan oleh <a href="https://zhalifunas.github.io">naufal zhalifunas</a></p>
-  <i class="fa-brands fa-square-facebook fa-2x"></i>
-  <i class="fa-brands fa-square-twitter fa-2x"></i>
+  <a href="https://instagram.com/n.zhalifunas"><i class="hgi hgi-stroke hgi-instagram"></i></a>
+  <a href="https://x.com/zaidunrebahun"><i class="hgi hgi-stroke hgi-twitter-square"></i></a>
+  <a href="https://facebook.com/"><i class="hgi hgi-stroke hgi-facebook-01"></i></a>
   <i class="fa-brands fa-square-instagram fa-2x"></i>
   <a id="linktop" href="#headline"><i class="bx bxs-chevron-up"></i></a>
 </footer>
@@ -804,7 +1032,6 @@ const bds = document.querySelectorAll("li.list-group-item");
 const kartu = document.querySelectorAll("div.card");
 
 sarangan.addEventListener("input", (e) => filterData(e.target.value));
-
 function filterData(search){
   bds.forEach((bd) => {
     if(bd.innerText.toLowerCase().includes(search.toLowerCase())){
@@ -812,6 +1039,107 @@ function filterData(search){
     } else{
         bd.classList.add("d-none")
     }
+  });
+}
+
+// Fungsi untuk menghapus harakat (diakritik Arab)
+  function removeArabicDiacritics(text) {
+    const diacriticsRegex = /[\u064B-\u065F\u0670]/g; // rentang harakat Arab
+    return text.replace(diacriticsRegex, "");
+  }
+
+  // Fungsi untuk normalisasi teks Arab & Latin
+  function normalizeText(text) {
+    text = text.toLowerCase(); // untuk Latin
+    text = removeArabicDiacritics(text); // untuk Arab
+    return text;
+  }
+
+  document.getElementById("filterkartu").addEventListener("input", function () {
+    const keyword = normalizeText(this.value);
+    const words = keyword.split(" ").filter(Boolean); // Memisahkan kata kunci (multikata)
+  
+
+    const items = document.querySelectorAll(".list-group .list-group-item");
+
+    items.forEach(function (item) {
+      const h2Text = normalizeText(item.querySelector("h2")?.innerText || "");
+      const arText = normalizeText(item.querySelector(".ar")?.innerText || "");
+      const hiddenText = normalizeText(item.querySelector("span.hide")?.innerText || "");
+
+      // Cek apakah semua kata kunci ada di h2Text atau arText
+      const isMatch = words.every(word => h2Text.includes(word) || arText.includes(word) || hiddenText.includes(word));
+
+      if (isMatch) {
+        item.style.display = ""; // tampilkan item
+      } else {
+        item.style.display = "none"; // sembunyikan item
+      }
+    });
+  });
+
+
+// filter berdasarkan mark
+// Mendapatkan semua tombol filter
+const filterButtons = document.querySelectorAll('.filter-btn');
+
+// Menambahkan event listener untuk setiap tombol filter
+filterButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    const category = this.getAttribute('data-category'); // Mendapatkan kategori yang dipilih
+
+    // Mendapatkan semua item list-group
+    const items = document.querySelectorAll('.list-group-item');
+
+    // Looping melalui semua item list-group
+    items.forEach(item => {
+      const markText = item.querySelector('mark')?.innerText.trim(); // Mendapatkan teks dari <mark>
+
+      // Menyembunyikan atau menampilkan item berdasarkan kategori
+      if (category === 'all' ||category === markText) {
+        item.style.display = ''; // Tampilkan item
+      } else {
+        item.style.display = 'none'; // Sembunyikan item
+      }
+    });
+  });
+});
+
+// Ganti 'li' dengan nama tag HTML yang ingin dihitung
+const tagName = 'li.list-group-item';
+const count = document.querySelectorAll(tagName).length;
+
+// Buat elemen <p> untuk menampilkan hasilnya
+const output = document.createElement('p');
+output.innerHTML = `Jumlah log kosakata: <strong>${count}</strong>`;
+output.className = 'count';
+
+// Tambahkan ke dalam body (atau bagian lain sesuai kebutuhan)
+document.body.appendChild(output);
+
+//    modal panduan
+  // Buka modal sesuai tombol
+  document.querySelectorAll('[data-modal]').forEach(button => {
+    button.addEventListener('click', function() {
+      const modalId = this.getAttribute('data-modal');
+      document.getElementById(modalId).style.display = 'block';
+    });
+  });
+
+  // Tutup modal jika klik tombol close
+  document.querySelectorAll('.modal .close').forEach(closeBtn => {
+    closeBtn.addEventListener('click', function() {
+      this.closest('.modal').style.display = 'none';
+    });
+  });
+
+  // Tutup modal jika klik di luar isi
+  window.addEventListener('click', function(e) {
+    document.querySelectorAll('.modal').forEach(modal => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
   });
 }
 // Refresh the page after a delay of 3 seconds
