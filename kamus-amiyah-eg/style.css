@@ -171,6 +171,7 @@ li.list-group-item:hover{background:#e3e3e3;color:#00393a;}
 li.list-group-item:hover mark{color:var(--lblue);background: var(--dgreen);}
 li.list-group-item hr{color:white}
 li.list-group-item:hover hr{color:black;}
+li.list-group-item i{vertical-align:-5px;}
 div.carousel-inner{
     border-radius:17px;
 }
