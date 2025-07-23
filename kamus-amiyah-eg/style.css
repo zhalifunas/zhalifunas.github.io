@@ -35,12 +35,12 @@ code#link{
   overflow:hidden;
 }
 input{
-    background-color:rgba(227, 227, 227,0.4)!important;
-    background-filter:blur(1px);
-    position: sticky;
-    min-width:40px!important;
-    top: 15px;
-    z-index: 2;
+  background-color:rgba(227, 227, 227,0.4)!important;
+  background-filter:blur(1px);
+  position: sticky;
+  min-width:40px!important;
+  top: 15px;
+  z-index: 2;
 }
 @media only screen and (max-width: 992px){
     input{
