@@ -50,7 +50,7 @@ function filterData(search){
   });
 
 
-// filter berdasarkan mark
+//        filter berdasarkan mark
 // Mendapatkan semua tombol filter
 const filterButtons = document.querySelectorAll('.filter-btn');
 
@@ -64,10 +64,11 @@ filterButtons.forEach(button => {
 
     // Looping melalui semua item list-group
     items.forEach(item => {
-      const markText = item.querySelector('mark')?.innerText.trim(); // Mendapatkan teks dari <mark>
+      const marks = item.querySelectorAll('mark'); // Mendapatkan teks dari <mark>
+      const markTexts = Array.from(marks).map(m => m.innerText.trim());
 
       // Menyembunyikan atau menampilkan item berdasarkan kategori
-      if (category === 'all' ||category === markText) {
+      if (category === 'all' || markTexts.includes(category)) {
         item.style.display = ''; // Tampilkan item
       } else {
         item.style.display = 'none'; // Sembunyikan item
@@ -76,6 +77,7 @@ filterButtons.forEach(button => {
   });
 });
 
+//              counter li
 // Ganti 'li' dengan nama tag HTML yang ingin dihitung
 const tagName = 'li.list-group-item';
 const count = document.querySelectorAll(tagName).length;
@@ -112,3 +114,76 @@ document.body.appendChild(output);
       }
     });
   });
+
+//   ======    filter
+  const toggleButton = document.getElementById('toggle-dropdown');
+  const dropdown = document.getElementById('dropdown-filter');
+
+  // Toggle show/hide dropdown
+  toggleButton.addEventListener('click', () => {
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+  });
+
+  // Tutup dropdown jika klik di luar area dropdown dan tombol toggle
+  document.addEventListener('click', function (event) {
+    const isClickInsideDropdown = dropdown.contains(event.target);
+    const isClickOnToggle = toggleButton.contains(event.target);
+
+    if (!isClickInsideDropdown && !isClickOnToggle) {
+      dropdown.style.display = 'none';
+    }
+  });
+
+  // Ambil semua <mark> dan buat set kategori unik
+  const allMarks = document.querySelectorAll('li.list-group-item mark');
+  const categories = [...new Set(Array.from(allMarks).map(mark => mark.innerText.trim()))]
+  .sort((a, b) => a.localeCompare(b));
+
+  // Buat checkbox otomatis ke dalam dropdown
+  categories.forEach(cat => {
+    const label = document.createElement('label');
+    label.style.display = 'block'; // Agar rapi ke bawah
+    label.style.marginBottom = '0.3em';
+    
+    const icon = document.createElement('i');
+    icon.className = 'hgi hgi-stroke hgi-pin';
+    icon.style.display = 'none';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value = cat;
+
+    checkbox.addEventListener('change', function () {
+      icon.style.display = this.checked ? 'inline-block' : 'none';
+      filterList(); // Tetap jalankan filter
+    });
+    
+    label.appendChild(checkbox);
+    label.appendChild(icon);
+    label.append(' ' + cat);
+    dropdown.appendChild(label);
+  });
+
+  // Pasang event listener untuk filter
+  const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+
+  checkboxes.forEach(cb => {
+    cb.addEventListener('change', filterList);
+  });
+
+  function filterList() {
+    const selected = Array.from(checkboxes)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    const items = document.querySelectorAll('li.list-group-item');
+
+    items.forEach(item => {
+      const marks = Array.from(item.querySelectorAll('mark')).map(m => m.innerText.trim());
+      const match = selected.length === 0 || selected.some(cat => marks.includes(cat));
+      item.style.display = match ? '' : 'none';
+    });
+  }
+
+  // Jalankan awal
+  filterList();
