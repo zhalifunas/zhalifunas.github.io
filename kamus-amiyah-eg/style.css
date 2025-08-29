@@ -1,4 +1,5 @@
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+@import url("https://cdn.hugeicons.com/font/hgi-stroke-rounded.css");
 :root{
     --dblue:#00393a;
     --lblue:#ebffff;
@@ -34,30 +35,50 @@ code#link{
   color:var(--lblue);
   overflow:hidden;
 }
-input{
-  background-color:rgba(227, 227, 227,0.4)!important;
-  background-filter:blur(1px);
-  position: sticky;
-  min-width:40px!important;
-  top: 15px;
-  z-index: 2;
+input#filterkartu{
+    background-color:rgba(227, 227, 227,0.4)!important;
+    background-filter:blur(1px);
+    position: sticky;
+    min-width:40px!important;
+    top: 15px;
+    z-index:6;
 }
 @media only screen and (max-width: 992px){
-    input{
+    input#filterkartu{
         width: 60dvw !important;
         height: 20px;
         position: fixed;
-        bottom: 3.4dvh;
+        bottom: 3dvh;
         z-index: 2;
         left: 10%;
         margin: auto;
         translate: 15%;
     }
 }
-input:focus{
-    color:#e3e3e3;
+input#filterkartu:focus{
+    color:var(--dblue);
     background:var(--lblue)!important;
 }
+button#toggle-dropdown{position:fixed;bottom:36px;left:13px;z-index:2;border:none;background:var(--dgreen);padding:6px 0.6em;}
+button#toggle-dropdown i.hgi{vertical-align:-3px;}
+div#dropdown-filter{
+  display: none;
+  position:fixed;
+  height:190px;
+  width:9.9em;
+  overflow:auto;
+  background:var(--grey);
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  bottom:75px;
+  left:12px;
+  z-index:5;
+}
+div#dropdown-filter input[type="checkbox"]{appearance:none;-webkit-appearance:none;}
+div#dropdown-filter label:hover{background:var(--dgreen)}
+div#dropdown-filter i.hgi{color:var(--dgreen);vertical-align:-3px;}
+div#dropdown-filter label:hover i.hgi{color:var(--grey)}
 div.filter{
   margin-bottom:10px;
   display: flex;
@@ -67,7 +88,7 @@ div.filter{
   padding: 10px; /* opsional, untuk ruang di dalam */
   scrollbar-width: thin; /* untuk scroll bar tipis (di Firefox) */
 }
-div.filter{scrollbar-width: none;-ms-overflow-style: none;}
+div.filter{display:none;scrollbar-width: none;-ms-overflow-style: none;position:sticky;top:1vh;z-index:10;background:var(--lblue);}
 div.filter::-webkit-scrollbar{
   display:none;
   width: 0;
@@ -78,6 +99,7 @@ button.filter-btn{
   background:var(--dblue);
   border:none;
   border-radius:6px;
+  opacity:100%
 }
 button.filter-btn:hover{
   background:var(--dgreen);
@@ -92,36 +114,51 @@ button.filter-btn:hover{
   z-index: 10;
   left: 0;
   top: 0;
-  width: 100%;
+  width: 101%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.4); /* Latar gelap */
 }
+  /* Judul tetap di atas */
 .modal-title {
   font-size: 20px;
-  margin-bottom: 15px;
   font-weight: bold;
-  text-transform:capitalize;
-  border-radius:8px;
-  text-align:center;
-  color:var(--lgreen);
-  background:var(--dblue);
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--lgreen);
+  background: var(--dblue);
+  padding: 12px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 .modal-title i{margin-right:10%;vertical-align:-3px;}
 .modal-content {
   background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
+  margin: 5% auto;
   border-radius: 8px;
   width: 380px;
   text-align: left;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh; /* <-- Batas tinggi modal */
+  overflow: hidden;  /* penting untuk kontrol scroll di body saja */
+}
+  /* Konten yang bisa discroll */
+.modal-body {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 13px;
 }
 #profil p{text-align:center;}
 #profil p span{color:var(--dgreen)}
 .modal-content p{margin:0;}
 .modal-content p:first-letter{text-transform:capitalize;}
 .modal-content p i.hgi{margin-right:10px;color:var(--dgreen);vertical-align:-2.5px;}
+.modal-content li i.hgi{vertical-align:-3px;}
+.modal-content img{width:350px;border-radius:10px;}
 .close {
   color: #aaa;
   float: center;
@@ -147,12 +184,12 @@ button.moda i{margin-right:9px;vertical-align:-2px;}
 /* end modal */
 
 summary{
-    color:#00393a;
-    list-style: none;
+  color:#00393a;
+  list-style: none;
 /*     text-decoration: underline; */
-    padding-top: 10px;
-    padding-bottom:10px;
-    margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  margin-bottom: 10px;
 }
 summary:hover{
   background-color: #00393a;
@@ -164,33 +201,35 @@ summary i{
   font-variant:normal;
   font-style:normal;
 }
+p#kotaksaran{margin-top:10px;}
+p#kotaksaran{margin-top:10px;margin-bottom:auto;}
 hr{color:black;}
-
 li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
 li.list-group-item:hover{background:#e3e3e3;color:#00393a;}
 li.list-group-item:hover mark{color:var(--lblue);background: var(--dgreen);}
 li.list-group-item hr{color:white}
 li.list-group-item:hover hr{color:black;}
-li.list-group-item i{vertical-align:-5px;}
+li.list-group-item i.hgi{vertical-align:-5px;}
+li.list-group-item i.en:after{content:"[en]";padding-left:10px;font-style:normal;text-transform:capitalize;}
 div.carousel-inner{
     border-radius:17px;
 }
 .ar{
-    direction: rtl!important;
-    text-align: right;
-    font-family: "Baloo Bhaijaan 2", sans-serif;
-    font-size: 1.3em;
+  direction: rtl!important;
+  text-align: right;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-size: 1.3em;
 }
 span.or:before{
-    content: "atau ";
+  content: "atau ";
 }
 span.hide, [hide]{display:none;}
 mark:first-child{
-    margin-right:10px;
+  margin-right:10px;
 }
 mark{
-    background: var(--lblue);
-    border-radius:6px;
+  background: var(--lblue);
+  border-radius:6px;
   margin-right:10px;
 }
 mark.no{
@@ -198,24 +237,25 @@ mark.no{
   color: var(--lblue);
 }
 mark.formal:after{
-    content: "formal";
+  content: "formal";
 }
 p.note{color:darkblue;background-color: lightblue;padding: 3px;}
 p.note::before{
-  content: "\ed5a";
-  font-family: boxicons;
-  font-weight: 400;
+  content: "㸿";
+  font-family: hgi-stroke-rounded;
+  font-weight: 600;
   margin-right:10px;
+  vertical-align:-3px;
 }
 p.note i{margin-right: 10px;}
 p.note i.bxs-error{color:darkred;}
 p.note code{color: lightblue;background: darkblue;padding-right:5px;padding-left:5px;}
-span.ma::before,span.ms::before{content:"مؤ\005C  ";}
-span.md::before,span.mz::before{content:"مذ\005C  ";}
+span.ms::before,span.ms::before{content:"مؤ\005C  ";}
+span.mr::before,span.mz::before{content:"مذ\005C  ";}
 span.jm::before{content:"ج\005C  ";}
 span.mf::before{content:"م\005C  ";}
-span.mh::before{content:"ماض\005C  ";}
-span.mr::before{content:"مضارع\005C  ";}
+span.md::before{content:"ماض\005C  ";}
+span.me::before{content:"مضارع\005C  ";}
 span.fa::before{content:"فاعل\005C  ";}
 
 footer{
@@ -224,8 +264,8 @@ footer{
   text-align:center;
 }
 footer p.copyright a{
-    text-transform: capitalize;
-    color: var(--dblue);
+  text-transform: capitalize;
+  color: var(--dblue);
 }
 footer p.copyright a:hover{
   color:var(--dgreen);
@@ -233,12 +273,12 @@ footer p.copyright a:hover{
 }
 footer a{
   color: var(--dblue);
-  text-decoration:none;
+  text-decoration:none;;
 }
 footer a i{margin-bottom:10px;font-size:15pt;padding:5px;}
 footer a#linktop{
   position:fixed;
-  bottom: 6dvh;
+  bottom: 6.5dvh;
   right:10px;
   z-index:3;
   color: var(--dblue);
