@@ -11,19 +11,17 @@
   <link href='https://cdn.hugeicons.com/font/hgi-stroke-rounded.css' rel='stylesheet'>
 </head>
 <body>
-<!-- li.list-group-item>mark{kata benda}/h2{.}/p.ar{.} -->
-<!-- <div class="spacer"></div> -->
 <div class="alert alert-danger" role="alert" x>
   <h4 class="alert-heading">mohon maaf</h4>
   <p>sedang kami update</p>
 </div>
 <div class="alert alert-info" role="" >
-  <h4 id="updateinfo">29/07/2025, 03:25</h4>
+  <h4 id="updateinfo">07/10/2025, 22:25</h4>
 </div>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <h2 class="text-center" id="headline">Kamus Online Dialek Mesir</h2>
+      <h1 class="text-center" id="headline">Kamus Online Dialek Mesir</h1>
 
       <div id="sharelink">bagikan tautan: <code id="link">https://zhalifunas.github.io/kamus-amiyah-eg/</code></div>
      
@@ -42,7 +40,7 @@
           <div class="modal-title"><i class="hgi hgi-stroke hgi-book-open-01"></i> Panduan</div>
           <div class="modal-body">
             <ul>
-              <li>dalam kotak pencarian, kata yang ingin kamu cari cukup masukkan sebagian katanya dan dia akan secara otomatis ter-filter</li>
+              <li data-icon="\43b1">dalam kotak pencarian, kata yang ingin kamu cari cukup masukkan sebagian katanya dan dia akan secara otomatis ter-filter</li>
               <li>cara kerja kotak pencarian dengan mem-filter huruf pada kata yang ada pada kotak kosa-kata berdasarkan apa yang kamu ketik di kolom pencarian. contoh: jika kamu menuliskan <code>kerja</code>, maka yang akan muncul adalah kata "kerja"</li>
               <li>daftar kosa kata yang tertampil tidak diurutkan berdasarkan abjad atau apapun, melainkan tertampil secara acak</li>
     <!--           <li>semua kata yang ada di dalam kotak kosa-kata bisa dijadikan kata kunci pencarian, termasuk yang ada di kolom comment (<i class="bx bxs-comment-detail"></i>)</li> -->
@@ -64,6 +62,10 @@
               <li>(مؤ\) muannas</li>
               <li>(<i class="bx bxs-star"></i>) lebih sering dipakai</li>
               <li>(<i class="hgi hgi-stroke hgi-comment-01"></i>) komentar dan/atau contoh</li>
+              <li>(<i class="en"></i>) bahasa inggris</li>
+              <li>(<i class="msa"></i>) bahasa arab standaar</li>
+              <li>(<i class="eg"></i>) dialek mesir</li>
+              <li>(<abbr> <span class="popup"> </span></abbr>) cara baca atau keterangan</li>
             </ul>
           </div>
         </div>
@@ -93,18 +95,33 @@
       
       <div class="modal" id="changelog">
         <div class="modal-content">
-          <div class="modal-title"><i class="hgi hgi-stroke hgi-stars"></i>catatan perubahan</div>
+          <div class="modal-title">
+            <i class="hgi hgi-stroke hgi-stars"></i>catatan perubahan
+          </div>
           <div class="modal-body">
+            <b soon="">segera hadir</b>
+            <p>cara pengucapan dengan menggunakan suara.</p>
+            <p></p>
+            <br><b>07/10/2025</b>
+            <p><i class="ri-add-line"></i>entri 3 kata</p>
+            <p><i class="ri-add-line"></i>menambahkan gambar untuk beberapa kosakata</p><br>
+            <b>30/09/2025</b>
+              <p><i class="ri-add-line"></i>entri 5 kata</p>
+            <p><i class="ri-tools-line"></i>penyegaran tampilan tatap muka</p>
+            <p><i class="ri-tools-line"></i>fitur <i>filter</i> dipindah ke pojok kiri bawah</p>
+            <br>
             <b>29/07/2025</b>
-            <p><i class="hgi hgi-stroke hgi-plus-sign"></i>entri 29 kata</p>
+            <p><i class="ri-add-line"></i>entri 29 kata</p>
             <br><b>21/07/2025</b>
-            <p><i class="hgi hgi-stroke hgi-plus-sign"></i>entri 29 kata</p>
-            <p><i class="hgi hgi-stroke hgi-wrench-01"></i>pembaruan antarmuka</p>
+            <p><i class="ri-add-line"></i>entri 29 kata</p>
+            <p><i class="ri-tools-line"></i>pembaruan antarmuka</p>
             <br><b>27/01/2025</b>
-            <p><i class="hgi hgi-stroke hgi-plus-sign"></i>entri 30 kata</p>
-            <br><b>20/01/2025</b>
-            <p><i class="hgi hgi-stroke hgi-web-validation"></i>publikasi pertama</p>
-            <p><i class="hgi hgi-stroke hgi-plus-sign"></i>entri 20 kata</p>
+            <p><i class="ri-add-line"></i>entri 30 kata</p>
+            <p><i class="ri-add-line"></i>menambahkan fitur <i>filter bar</i></p>
+            <br>
+            <b>20/01/2025</b>
+            <p><i class="ri-window-line"></i>publikasi pertama</p>
+            <p><i class="ri-add-line"></i>entri 20 kata</p>
           </div>
         </div>
       </div>
@@ -113,7 +130,7 @@
         <div class="modal-content">
           <div class="modal-title">pengembang</div>
           <div class="modal-body">
-            <p>Halo, aku <span>Naufal Zhalifunas</span>, panggil aja Zed, di Mesir masih 5 tahun sih tapi ya bisa lah dikit ngomong bahasa Mesir, kadang ngobrol sama orang mesir soalnya hehe. <br><br> aku ngembangin web statis kamus ini bermula dari ketertarikanku nonton konten instagram, YouTube, ataupun baca komentar orang Mesir di platform itu, aku selalu dapat kosakata baru dari situ tapi belom punya tempat yang proper untuk menyimpan itu semua entah untuk sekadar ku baca sendiri (soalnya kadang suka lupa lupa inget wkwk) atau buat dibagikan ke orang-orang, iya tau ada whatsapp channel, ada telegram channel tapi yang jelas kalo pake website lebih menarik diliat. <br><br><b>dah gitu aja, selamat menggunakan.</b></p>
+            <p>Halo, panggil aja aku <span>Naufal</span>, aku ngembangin web statis kamus ini buat bantu aku dan teman-teman mencari kosakata dialek Mesir supaya lebih efisien dan cepat. <br><br>Web ini aku bangun hanya modal HTML, CSS, dan sedikit JS tanpa menggunakan tekonologi lain karena aku emang baru belajar ini, kalau teman-teman mau bantu aku ngembangin ini (dan barangkali ngajarin aku juga hehe) boleh kabari aku via Direct Message Instagram ya :D<br><br><b>dah gitu aja, selamat menggunakan.</b></p>
           </div>
         </div>
       </div>
@@ -122,7 +139,14 @@
         <div class="modal-content">
           <div class="modal-title">Credit</div>
           <div class="modal-body">
-            <b>icon set:</b> <a href="https://hugeicons.com/icons?style=Stroke&type=Rounded">Huge icons</a> <a href="https://remixicon.com/">Remix icons</a>
+            <b>icon set:</b>
+            <a href="https://hugeicons.com/icons?style=Stroke&type=Rounded">Huge icons Free</a>
+            <a href="https://v2.boxicons.com/">Box icons</a>
+            <a href="https://remixicon.com/">Remix icons</a><br>
+            <b>font:</b>
+            <a href="https://fonts.google.com/specimen/Baloo+Bhaijaan+2">Baloo Bhaijaan 2</a><br>
+            <b>css framework:</b>
+            <a href="http://bootstrap.com">bootstrap 5.3.2</a>
           </div>
         </div>
       </div>
@@ -150,242 +174,631 @@
 
         <ul class="list-group">
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>menonton </h2>
+            <h3>menonton </h3>
             <p class="ar"><span class="md">اتفرج على</span></p>
           </li>
           
-          <li class="list-group-item" data-modal="coba">
+          <li class="list-kata" data-modal="coba">
             <mark>kata konjungsi</mark>
-            <h2>
+            <h3>
               yang
-            </h2>
+            </h3>
             <p class="ar">
               اللي
             </p>
+            <p class="note">
+              kadang ditulis <code>الي</code> kadang ditulis <code>ال</code>, kalo sebelum fiil kadang-kadang disambung
+            </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>cermin</h2>
+            <h3>cermin</h3>
             <p class="ar">مرايا</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>kaca</h2>
+            <h3>kaca</h3>
             <p class="ar">ازاز</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>botol</h2>
+            <h3>botol</h3>
             <p class="ar">ازازة</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
+            <h3>
               putar balik <br>
-              <i>wrap</i>
-            </h2>
+              <i class="en">wrap</i>
+            </h3>
             <p class="ar">
               <span class="md">لف</span><br>
               <span class="me">يلف</span>
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3 class="list">
+              <span>mengatur</span>
+              <span>membenarkan (sesuatu)</span>
+            </h3>
+            <p class="ar">ضبط</p>
+          </li>
+          
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>lampu</h2>
-            <p class="ar">لمبه <br> نور</p>
+            <h3>lampu</h3>
+            <p class="ar"><abbr>لمبه<span class="popup">lamba</span></abbr>
+               <br> نور</p>
             <p class="note">dua-duanya dipakai</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
+            <h3>
               santai aja <br> <span class="or"></span>tenang aja
-            </h2>
-            <p class="ar">
-              خد راحتك <br> عادي <br> و لا يهمك
+            </h3>
+            <p class="ar list">
+              <span>خد راحتك</span>
+              <span>عادي</span>
+              <span>و لا يهمك</span>
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
+            <h3>
               bosan
               <span class="hide">bosen</span>
-            </h2>
+            </h3>
             <p class="ar">
-              <span class="md">زهق</span>
-              <br><span class="fa">زهقان</span>
+              <span class="md"><abbr>زهق<span class="popup">zihi2</span></abbr>
+              </span><br>
+              <span class="fa">زهقان</span>
             </p>
           </li>
 
-          <li class="list-group-item">
-            <mark>kata kerja</mark>
-            <h2>ngga peduli <br> bukan urusan <br><i>bodo amat</i></h2>
+          <li class="list-kata">
+            <mark>uslub</mark><mark>kata kerja</mark>
+            <h3 class="list">
+              <span>ngga peduli</span>
+              <span>bukan urusan</span>
+              <span><i>bodo amat</i></span>
+            </h3>
             <p class="ar">مالـ+ضمير+ـش دعوة</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark>
-            <h2>tidak penting</h2>
+            <h3>tidak penting</h3>
             <p class="ar">
               مالوش <span class="or"></span> مالهاش لازمه
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>bundaran</h2>
-            <p class="ar">دوران*</p>
-            <p class="note">bacanya 'dawaran'</p>
+            <h3>bundaran</h3>
+            <p class="ar"><abbr>دوران<span class="popup">dawaran</span></abbr></p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>operasi pemeriksaan</h2>
+            <h3>operasi pemeriksaan</h3>
             <p class="ar">كمين</p>
             <p class="note">kalau di indo itu kayak operasi ketupat, operasi patuh, dan sejenisnya.</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>nampan</h2>
+            <h3>nampan</h3>
             <p class="ar">صينية</p>
           </li>
+            
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>
+              impresi <span class="or"></span>kesan
+            </h3>
+            <p class="ar"><abbr>انطباع<span class="popup">intiba3</span></abbr></p>
+          </li>
           
-          <li class="list-group-item">
-            <mark>kata kerja</mark><mark>kedokteran</mark>
-            <h2>operasi</h2>
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>kedokteran</mark>
+            <h3>operasi</h3>
             <p class="ar">عملية</p>
           </li>
           
-          <li class="list-group-item">
-            <mark>kata benda</mark><mark>kendaraan</mark>
-            <h2>mobil derek</h2>
-            <p class="ar">وينش</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata istilah</mark>
-            <h2>nggak usah muter muter <br>to the point aja <br>ga usah basa-basi</h2>
-            <p class="ar">بلاش لف و دوران</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata benda</mark>
-            <h2>prosedur</h2>
-            <p class="ar">اجراءات</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata kerja</mark>
-            <h2>
-              mengganggu
-            </h2>
+          <li class="list-kata">
+            <mark>kedokteran</mark>
+            <h3><abbr>anestesi<span class="popup">bius</span></abbr>
+            </h3>
             <p class="ar">
-              ازعج <br> ضايق <i class="bx bxs-star"></i>
+              <abbr>بنج<span class="popup">bing</span></abbr>
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
+            <mark>kedokteran</mark>
+            <h3>endoskopi</h3>
+            <p class="ar">
+              <span class="mf">منظار</span><br>
+              <span class="jm">مناظير</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kedokteran</mark>
+            <h3>sinus</h3>
+            <p class="ar">جيوب انفية</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata sifat</mark>
+            <h3>resiko</h3>
+            <p class="ar"><abbr>خطورة<span class="popup">khatura</span></abbr></p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>kendaraan</mark>
+            <h3>mobil derek</h3>
+            <p class="ar">
+              <span class="mf">وينش</span><br>
+              <span class="jm">أوناش</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata istilah</mark>
+            <h3 class="list">
+              <span>nggak usah muter muter</span>
+              <span>to the point aja</span>
+              <span>ga usah basa-basi</span>
+            </h3>
+            <p class="ar">بلاش لف و دوران</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark>
+            <h3>prosedur</h3>
+            <p class="ar">اجراءات</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>
+              mengganggu
+            </h3>
+            <p class="ar list">
+              <span class="eg">ازعج</span>
+              <span class="msa">ضايق <i class="ri-star-fill"></i></span>
+               <br>
+            </p>
+          </li>
+          
+          <li class="list-kata">
             <mark>ungkapan</mark>
-            <h2>
+            <h3>
               ga ada bedanya buat kamu
-            </h2>
+            </h3>
             <p class="ar">
               ما بيفرق معاك
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>uslub</mark><mark>ungkapan</mark>
-            <h2>seumur-umur kamu pernah ...</h2>
+            <h3>seumur-umur kamu pernah ...</h3>
             <p class="ar">عمرك + فعل ماض</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>jatuh</h2>
+            <h3>jatuh</h3>
             <p class="ar">وقع</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>orang</mark><mark>pekerjaan</mark>
-            <h2>juru parkir</h2>
+            <h3>juru parkir</h3>
             <p class="ar">سايس</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>selesai <span class="or"></span>capek</h2>
+            <h3>
+              selesai <span class="or"></span>capek <span class="or"></span>lelah
+            </h3>
             <p class="ar"><span class="mr">خلصان</span><br><span class="ms">خلصانه</span></p>
-            <p class="note">konteksnya: kalau sebelumnya orang maka maknanya capek banget, kalau benda berarti habis</p>
+            <p class="note">
+              konteksnya: <br>
+              seperti bahasa inggris (<abbr><span class="en">exhausted</span><span class="popup">lelah</span></abbr>), kalau sebelumnya orang maka maknanya capek banget,
+              kalau benda berarti habis
+            </p>  
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>parkir</h2>
-            <p class="ar">ركن</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>kentang</h2>
-            <p class="ar">بطاطس</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>ubi <br> umbi</h2>
-            <p class="ar">بطاطا</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>timun</h2>
-            <p class="ar">خيار</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>wortel</h2>
-            <p class="ar">جزر</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>bawang merah</h2>
-            <p class="ar">بصل احمر</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata kerja</mark>
-            <h2>kok pas <br> kebetulan banget nih <br>
-              datang di waktu yang tepat
-            </h2>
-            <p class="ar">جيت بوقتك</p>
-          </li>
-          
-          <li class="list-group-item">
-            <mark>kata kerja</mark>
-            <h2><i class="en">let</i><br><i class="en">keep</i> </h2>
-            <p class="ar">خلي</p>
-            <p class="note"><i>bantu saya terjemahkan ini ke bahasa indonesia</i><br><br>
-              contoh: <br>
-              <code class="ar">خليك معايا</code><br><i>keep with me</i><br><br>
-              <code class="ar">خلي الباقي معاك</code><br><i>keep the change on you</i>
+            <h3>berdiri</h3>
+            <p class="ar">
+              <span class="md">وِقِف</span>
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
+            <mark>kata keterangan</mark>
+            <h3 class="list">
+              <span>lagi</span>
+              <span>juga</span>
+            </h3>
+            <p class="ar list">
+              <span>كمان</span>
+              <span>برضو</span>
+            </p>
+            <p class="note">dua kata itu kadang saling sharing makna</p>
+          </li>
+          
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>mengambil <br>singkirkan</h2>
+            <h3>parkir</h3>
+            <p class="ar">ركن</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>sayuran</mark>
+            <h3>kentang</h3>
+            <p class="ar">بطاطس</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>sayuran</mark>
+            <h3>ubi <br> umbi</h3>
+            <p class="ar">بطاطا</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark>
+            <h3>sedotan</h3>
+            <p class="ar">
+              <abbr>شفاطة<span class="popup">shafata</span></abbr>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark>
+            <h3>gelas</h3>
+            <p class="ar">كوبية</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark>
+            <h3>sofa</h3>
+            <p class="ar">
+              <abbr>كنبة<span class="popup">kanaba</span></abbr>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark>
+            <h3>meja</h3>
+            <p class="ar">ترابيزه</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>satuan</mark>
+            <h3 class="list">
+              <span>pack</span>
+              <span>box kecil</span>
+            </h3>
+            <p class="ar">علبة</p>
+          </li>
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>satuan</mark>
+            <h3>kardus besar</h3>
+            <p class="ar">كرتون</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>satuan</mark>
+            <h3>piece <span class="or"></span>bijian</h3>
+            <p class="ar">قطعة</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>satuan</mark>
+            <h3>grosir <span class="or"></span>borongan</h3>
+            <p class="ar">جملة</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>satuan</mark>
+            <h3>pack</h3>
+            <p class="ar">باكو</p>
+            <p class="note">
+              ini biasanya dipake untuk barang yang bundling gitu (gimana ya ngomongnya?)
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>satuan</mark><mark>kedokteran</mark>
+            <h3>pil</h3>
+            <p class="ar">قرص</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>uslub</mark><mark>angka</mark>
+            <h3>angka berulang</h3>
+            <p class="ar">عدد مذكر + رقم مؤنث</p>
+            <p class="note">
+              contoh: <br>
+              <code>تلات انينات</code><br>
+              2 tiga kali
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>sayuran</mark>
+            <h3>timun</h3>
+            <p class="ar">خيار</p>
+          </li>
+          
+          <li class="list-kata" data-modal="en-spinach" img>
+            <mark>kata benda</mark><mark>sayuran</mark>
+            <h3>bayam air</h3>
+            <p class="ar">سبانخ</p>
+            <p class="note">diambil dari bahasa inggris <span class="en" data-modal="en-spinach">spinach</span></p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="en-spinach">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ14KcIj3_FB9X4wMaJM5k9eZY_dbU4bCgVA&s" alt=""></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>sayuran</mark>
+            <h3>wortel</h3>
+            <p class="ar">جزر</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>sayuran</mark>
+            <h3>bawang merah</h3>
+            <p class="ar">بصل احمر</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>boleh</h3>
+            <p class="ar list">
+              <span>يِنفَع</span>
+              <span>ممكن</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3 class="list">
+              <span>hati-hati</span>
+              <span>pelan-pelan</span>
+            </h3>
+            <p class="ar list">
+              <span>على مهلك</span>
+              <span>خلي بالك</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>kok pas <br> kebetulan banget nih <br>
+              datang di waktu yang tepat
+            </h3>
+            <p class="ar">جيت بوقتك</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark><mark>instruksi</mark>
+            <h3><i class="en" data-modal="en-let">let</i><br><i class="en">keep</i> </h3>
+            <p class="ar">خلي</p>
+            <p class="note"><i>bantu saya terjemahkan ini ke bahasa indonesia</i><br><br>
+              contoh: <br>
+              <code class="ar">خليك معايا</code><br><i>keep with me</i><br>
+              tetap bersamaku<br><br>
+              <code class="ar">خلي الباقي معاك</code><br><i>keep the change on you</i><br>
+              ambil aja kembaliannya
+            </p>
+          </li>
+          
+          <li class="list-kata" img>
+            <mark>kata kerja</mark>
+            <h3>disepakati</h3>
+            <p class="ar">اتفق معـ+مفعول على ...</p>
+            <p class="note"><span data-modal="im-sepakat">cara menggunakan</span></p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="im-sepakat">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="https://i.ibb.co/rf7X3c3Q/bahasa-amiyah.jpg" alt="bahasa-amiyah"></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark>
+            <mark>kendaraan</mark>
+            <h3>mobil</h3>
+            <p class="ar">عربية</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark><mark>kendaraan</mark>
+            <h3>kereta api</h3>
+            <p class="ar">قَطرَة</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>makanan</mark>
+            <h3 class="">
+              telur mata sapi <span class="or"></span>telur ceplok
+            </h3>
+            <p class="ar">بيض عين</p>
+            <img src="" alt="" class="fitur">
+          </li>
+          
+          <li class="list-kata">
+            <mark>makanan</mark>
+            <mark>ungkapan</mark>
+            <h3 class="list">
+              <span>krim</span>
+              <span>baik</span>
+            </h3>
+            <p class="ar">قشطه</p>
+            <p class="note">
+              kalau sebagai makanan, artinya nomer 1, kalau sebagai ungkapan, artinya nomer 2
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>makanan</mark>
+            <mark>ungkapan</mark>
+            <h3 class="list">
+              <span>madu</span>
+              <span>baik</span>
+            </h3>
+            <p class="ar">عسل</p>
+            <p class="note">kalau sebagai makanan, artinya nomer 1, kalau sebagai ungkapan, artinya nomer 2</p>
+          </li>
+          
+          <li class="list-kata" data-modal="im-kofta" img>
+            <mark>makanan</mark>
+            <h3>kuftah</h3>
+            <p class="ar">كفتة</p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="im-kofta">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="https://www.youm7.com%2Fstory%2F2018%2F7%2F6%2F%25D8%25B7%25D8%25B1%25D9%258A%25D9%2582%25D8%25A9-%25D8%25B9%25D9%2585%25D9%2584-%25D9%2583%25D9%2581%25D8%25AA%25D8%25A9-%25D8%25A7%25D9%2584%25D9%2584%25D8%25AD%25D9%2585-%25D8%25A7%25D9%2584%25D9%2585%25D8%25B4%25D9%2588%25D9%258A%25D8%25A9%2F3861322&psig=AOvVaw3RM_WF-Yw0mdFkZdpkuKcJ&ust=1760194335388000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCNiwl4TxmZADFQAAAAAdAAAAABAE" alt=""></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata" data-modal="im-sugok" img>
+            <mark>makanan</mark>
+            <h3 class="list">
+              <span>sosis</span>
+              <span>sugok</span>
+            </h3>
+            <p class="ar">سجق</p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="im-sugok">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="" alt=""></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata" data-modal="im-baneh" img>
+            <mark>makanan</mark>
+            <h3 class="list">
+              <span>baneh</span>
+              <span>nugget</span>
+            </h3>
+            <p class="ar">بانيه</p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="im-baneh">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="" alt=""></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata" data-modal="im-kunafa" img>
+            <mark>makanan</mark>
+            <h3 class="list">
+              <span>arem-arem</span>
+              <span>mahsyi</span>
+            </h3>
+            <p class="ar">محشي</p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="im-mahsyi">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="" alt=""></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata" data-modal="im-kunafa" img>
+            <mark>makanan</mark>
+            <h3 class="list">
+              <span>syisy towuk</span>
+              <span>sate daging</span>
+            </h3>
+            <p class="ar">شيش طاووق</p>
+            <img src="" alt="" class="fitur">
+            <div class="modal">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body">
+                  <img src="" alt="">
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata" data-modal="im-kunafa" img>
+            <mark>makanan</mark>
+            <h3>kunafah</h3>
+            <p class="ar">كنافة</p>
+            <img src="" class="fitur"></img>
+            <div class="modal" id="im-kunafa">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body">lagi mager, cari sendiri, dah besar</div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata">
+            <mark>makanan</mark>
+            <h3>telur dadar</h3>
+            <p class="ar">عِجة</p>
+            <img src="" alt="" class="fitur">
+          </li>
+          
+          <li class="list-kata" data-modal="telur-orakarik" img>
+            <mark>makanan</mark>
+            <h3>telur orak arik</h3>
+            <p class="ar">شكشوكه</p>
+            <p class="note">lebih ke telur orak-arik yang dibumbui tomat gitu
+            </p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="telur-orakarik">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body">
+                  <img src="https://i.pinimg.com/474x/a5/19/10/a519108b06fffc0217a13d399f4cbba1.jpg" alt="telur orak-arik">
+                </div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3 class="list">
+              <span>mengambil</span>
+              <span>singkirkan</span>
+            </h3>
             <p class="ar">
               <span class="md">شال</span>
               <br>
@@ -394,15 +807,15 @@
             <p class="note">tergantung konteks, kadang untuk arti "singkirkan" berpasangan dengan من kadang tidak dipakai (karena sudah bisa dipahami)</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>meminjam</h2>
+            <h3>meminjam</h3>
             <p class="ar"><span class="md">استلف</span></p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>ada hutang pada</h2>
+            <h3>ada hutang pada</h3>
             <p class="ar">عليـ+مفعول <span class="or"></span>لي+فاعل</p>
             <p class="note">contoh: <br>
               <code class="ar">عليك ميت جنيه بتاعت كرتونة مايه</code><br>
@@ -412,75 +825,84 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata keterangan</mark>
-            <h2>
-              beberapa <br>
-              sedikit <br>
-            </h2>
-            <p class="ar">حبة</p>
+            <h3 class="list">
+              <span>beberapa</span>
+              <span>sedikit</span>
+            </h3>
+            <p class="ar list">
+              <span>حبة</span>
+              <span>شوية</span>
+            </p>
+            <p class="note">yang pertama lebih kalcer <br> perbedaan artinya mengikuti konteks
+            </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>bawang bombay</h2>
+            <h3>bawang bombay</h3>
             <p class="ar">بصل ابيض</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>bawang putih</h2>
+            <h3>bawang putih</h3>
             <p class="ar">توم</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>paprika</h2>
+            <h3>paprika</h3>
             <p class="ar">فلفل رومي</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>sayuran</mark>
-            <h2>cabai</h2>
+            <h3>cabai</h3>
             <p class="ar">فلفل</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>stapler</h2>
+            <h3>stapler</h3>
             <p class="ar">دباسة</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>isi stapler</h2>
+            <h3>isi stapler</h3>
             <p class="ar">دبوس</p>
             <p class="note">kata دبوس juga bisa bermakna <a href="#peniti">peniti</a>, untuk memperuncing maknanya jadi isi stapler, bisa pake دبوس بتاع دباسة atau mungkin دبابيس bisa dipahami</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>tekan<br>pencet <br> injak</h2>
+            <h3 class="list">
+             <span>tekan</span>
+             <span>pencet</span>
+             <span>injak</span>
+            </h3>
             <p class="ar">دوس</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata keterangan</mark>
-            <h2>sayangnya</h2>
+            <h3>sayangnya</h3>
             <p class="ar">للأسف</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark>
-            <h2>tidak engaja</h2>
+            <h3>tidak engaja</h3>
             <p class="ar">بالغلط</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
+            <h3>
               datang
-            </h2>
+            </h3>
             <p class="ar">
               <span class="mh">جه</span><br>
               <span class="mr">يجي</span><br>
@@ -488,11 +910,11 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata konjungsi</mark>
-            <h2>
+            <h3>
               punya <span class="or">yang di*</span>
-            </h2>
+            </h3>
             <p class="ar">
               <span class="mr">بتاع</span><br>
               <span class="ms">بتاعت</span>
@@ -506,55 +928,109 @@
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>download </h2>
+            <h3>download </h3>
             <p class="ar">تحميل </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>upload </h2>
+            <h3>upload </h3>
             <p class="ar">تنزيل</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
+            <h3>
               mencari
-            </h2>
+            </h3>
             <p class="ar">دور على</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata keterangan</mark><mark>tempat</mark>
-            <h2>di seberang</h2>
+            <h3>di seberang</h3>
             <p class="ar">قصاد <br> ناحية تانية*</p>
             <p class="note"><br>maknanya lebih kepada "di sisi lain"</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark><mark>instruksi</mark>
-            <h2>
+            <h3>
               ke sini <br>
               ambil
-            </h2>
+            </h3>
             <p class="ar">خد</p>
           </li>
           
-          <li class="list-group-item" id="peniti">
+          <li class="list-kata" id="peniti">
             <mark>kata benda</mark>
-            <h2>peniti</h2>
+            <h3>peniti</h3>
             <p class="ar"><span class="mf">دبوس</span><br><span class="jm">دبابيس</span></p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
-              mendapatkan <br>
-              mengambil <br>
-              membeli* <br>
-            </h2>
+            <h3>cek <br>periksa </h3>
+            <p class="ar">كشف</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata benda</mark>
+            <h3><i class="en">list</i> <br>daftar</h3>
+            <p class="ar">كشف</p>
+            <p class="note">
+              contoh: <br><br><code class="ar">كشف النتيجة</code><br>daftar nilai 
+            </p>
+          </li>
+          
+          <li class="list-kata" data-modal="buah-tamarind" img>
+            <mark>kata benda</mark><mark>buah</mark><mark>minuman</mark>
+            <h3>Tamarind</h3>
+            <p class="ar">تمر هندي</p>
+            <p class="note">ga tau bahasa indonesianya apa hehe, tapi rasanya asem kayak asam jawa dikit</p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="buah-tamarind">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="https://static.webteb.net/images/content/tbl_articles_article_29222_62070fb2270-93e8-4d96-9e9d-6d8b004edc2d.jpg" alt=""></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata" data-modal="subiya" img>
+            <mark>kata benda</mark><mark>minuman</mark>
+            <h3>santan manis</h3>
+            <p class="ar">سوبيا</p>
+            <p class="note">
+              wkwk ini bahan dasarnya emang dari kelapa tua dicampur susu dan bahan lain.
+            </p>
+            <img src="" alt="" class="fitur">
+            <div class="modal" id="subiya">
+              <div class="modal-content">
+                <div class="modal-title">gambar</div>
+                <div class="modal-body"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-m3Yeg4lcvFm-aBzZB96U3aZxBLLlBOAoSQ&s" alt=""></div>
+              </div>
+            </div>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>batal <br><i>cancel</i></h3>
+            <p class="ar list">
+              <span class="eg">كنسل</span>
+              <span class="msa">ألغى</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3 class="list">
+              <span>mendapatkan</span>
+              <span>mengambil</span>
+              <span>membeli*</span>
+            </h3>
             <p class="ar">
               جاب
             </p>
@@ -563,127 +1039,137 @@
             </p>
           </li>
 
-          <li class="list-group-item">
-            <mark>kata instruksi</mark>
-            <h2>
+          <li class="list-kata">
+            <mark>instruksi</mark>
+            <h3>
               awas <br> minggir
-            </h2>
-            <p class="ar">اوعى</p>
+            </h3>
+            <p class="ar list">
+              <span>اوعى</span>
+              <span>وسّع</span>
+              <span>حاسب*</span>
+            </p>
+            <p class="note">
+              *) lebih bermakna <code>pay attention!</code> (perhatikan jalanmu)
+            </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata keterangan</mark>
-            <h2>libur</h2>
+            <h3>libur</h3>
             <p class="ar">اجازة</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               berapaan (harga)
-            </h2>
+            </h3>
             <p class="ar">
               بكام <br> عامل كام <br> ماشي على كام
             </p>
           </li>
   
-          <li class="list-group-item" data-modal="microbus">
+          <li class="list-kata" data-modal="microbus" img>
             <mark>kata benda</mark><mark>kendaraan</mark>
-            <h2>elf <br>L300 <br>mikrobus</h2>
+            <h3>elf <br>L300 <br>mikrobus</h3>
             <p class="ar">ميكروباص</p>
+            <img src="" alt="" class="fitur">
             <div class="modal" id="microbus">
               <div class="modal-content">
                 <div class="modal-title">gambar</div>
-                <div class="modal-body"><img src="https://capitalnewseg.com/wp-content/uploads/2023/03/%D9%85%D9%8A%D9%83%D8%B1%D9%88%D8%A8%D8%A7%D8%B5-%D9%85%D8%B5%D8%B1-1024x576.jpg" alt=""></div>
+                <div class="modal-body"><img src="https://capitalnewseg.com/wp-content/uploads/2023/03/%D9%85%D9%8A%D9%83%D8%B1%D9%88%D8%A8%D8%A7%D8%B5-%D9%85%D8%B5%D8%B1-1024x576.jpg" alt="microbus"></div>
               </div>
             </div>
           </li>
           
-          <li class="list-group-item" data-modal="minibus">
+          <li class="list-kata" data-modal="minibus" img>
             <mark>kata benda</mark><mark>kendaraan</mark>
-            <h2>mini bus <br>bus kecil</h2>
+            <h3>mini bus <br>bus kecil</h3>
             <p class="ar">ميني باص</p>
+            <img src="" alt="" class="fitur">
             <div class="modal" id="minibus">
               <div class="modal-content">
                 <div class="modal-title">gambar</div>
-                <div class="modal-body"><img src="https://www.fakartany.net/wp-content/uploads/2024/03/1593281094_845_32511_640-1-1-696x435.jpg" alt=""></div>
+                <div class="modal-body"><img src="https://www.fakartany.net/wp-content/uploads/2024/03/1593281094_845_32511_640-1-1-696x435.jpg" alt="minibus"></div>
               </div>
             </div>
           </li>
           
-          <li class="list-group-item" data-modal="coaster">
+          <li class="list-kata" data-modal="coaster" img>
             <mark>kata benda</mark><mark>kendaraan</mark>
-            <h2>coaster</h2>
+            <h3>coaster</h3>
             <p class="ar">كوستر</p>
+            <img src="" alt="" class="fitur">
             <div class="modal" id="coaster">
               <div class="modal-content">
                 <div class="modal-title">gambar</div>
-                <div class="modal-body"><img src="https://ymimg1.b8cdn.com/uploads/car_model/11325/pictures/13383781/listing_main_2018_Toyota_Coaster.jpg" alt=""></div>
+                <div class="modal-body"><img src="https://ymimg1.b8cdn.com/uploads/car_model/11325/pictures/13383781/listing_main_2018_Toyota_Coaster.jpg" alt="coaster"></div>
               </div>
             </div>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>udah</h2>
+            <h3>udah</h3>
             <p class="ar">خلويص</p>
             <p class="note">aku dapet dari guru DL ku, ini digunakan anak-anak kalo lagi main petak umpet
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>ukuran</h2>
+            <h3>ukuran</h3>
             <p class="ar">مقاص</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>pakaian</h2>
+            <h3>pakaian</h3>
             <p class="ar">هدوم</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>sitausi</h2>
+            <h3>sitausi</h3>
             <p class="ar">موقف</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>terduga <br>diduga</h2>
+            <h3>terduga <br>diduga</h3>
             <p class="ar">متوقغ</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark><mark>perasaan</mark>
-            <h2>marah <span class="or"></span>jengkel <br>gelisah</h2>
+            <h3>marah <span class="or"></span>jengkel <br>gelisah</h3>
             <p class="ar">متنرفز</p>
             <p class="note">diambil dari bahasa inggris "nervous" tapi</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark><mark>perasaan</mark>
-            <h2>naik pitam <br>marah banget</h2>
+            <h3>naik pitam <br>marah banget</h3>
             <p class="ar">متعصب</p>
             <p class="note">bacanya "mit3assab"</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>share <br>bagi</h2>
+            <h3>share <br>bagi</h3>
             <p class="ar">مشير</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata keterangan</mark>
-            <h2><i class="en">corner</i></h2>
+            <h3><i class="en">corner</i></h3>
             <p class="ar">ناصية</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>nemu <br>ketemu <br><i class="en">found</i></h2>
+            <h3>nemu <br>ketemu <br><i class="en">found</i></h3>
             <p class="ar">
               <span class="md">لقى</span><br>
               <span class="me">يلقي</span><br>
@@ -691,134 +1177,149 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>bawa pulang</h3>
+            <p class="ar">تيك اواي</p>
+            <p class="note">diambil dari bahasa inggris langsung</p>
+          </li>
+          
+          <li class="list-kata">
             <mark>kata kerja</mark><mark>harian</mark>
-            <h2>makan</h2>
+            <h3>makan</h3>
             <p class="ar"><span class="md">اكل</span><br><span class="me">ياكل</span><br><span class="fa">واكل</span></p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata keterangan</mark>
-            <h2>kadang-kadang</h2>
+            <h3>kadang-kadang</h3>
             <p class="ar">اوقات <span class="or"></span> ساعات</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>mood</h2>
+            <h3>mood</h3>
             <p class="ar">مزاج</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>spesifikasi</h2>
+            <h3>spesifikasi</h3>
             <p class="ar">مواصفات</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark><mark>harian</mark>
-            <h2>mandi <span class="hide">madni</span></h2>
+            <h3>mandi <span class="hide">madni</span></h3>
             <p class="ar">اخد دوش* <br> استحمام</p>
             <p class="note">*diserap dari bahasa inggris "take a shower"</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>shower</h2>
+            <h3>shower</h3>
             <p class="ar">دوش</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
+            <mark>kata tanya</mark>
+            <h3>buat apa</h3>
+            <p class="ar">اشمعنى</p>
+            <p class="note">ini sering dipake dan bakal sering dengar.
+            </p>
+          </li>
+          
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>kebisingan <br> keributan</h2>
+            <h3>kebisingan <br> keributan</h3>
             <p class="ar">دوشة</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               apa
-            </h2>
+            </h3>
             <p class="ar">
               ايه
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               dimana
-            </h2>
+            </h3>
             <p class="ar">
               فين
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata ekspresi</mark>
-            <h2>
+            <h3>
               serius? <br> seriusan?
-            </h2>
+            </h3>
             <p class="ar">
               بجد؟ <br> جد
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               kapan
-            </h2>
+            </h3>
             <p class="ar">
               امتى
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               siapa
-            </h2>
+            </h3>
             <p class="ar">
               مين
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               bagaimana
-            </h2>
+            </h3>
             <p class="ar">
               ازاي
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               berapa (jumlah)
-            </h2>
+            </h3>
             <p class="ar">
               قد ايه
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata tanya</mark>
-            <h2>
+            <h3>
               atas dasar apa
-            </h2>
+            </h3>
             <p class="ar">
               على ايه
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
+            <h3>
               berada
-            </h2>
+            </h3>
             <p class="ar">
               بقا لـ + ضمير
             </p>
@@ -828,60 +1329,62 @@
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata istilah</mark>
-            <h2>
+            <h3>
               orang kaya <br> <span class="or">orang terpandang</span>
-            </h2>
+            </h3>
             <p class="ar">
               ابن الناس
             </p>
           </li>
           
-          <li class="list-group-item" data-modal="angkot">
+          <li class="list-kata" data-modal="angkot" img>
             <mark>kata benda</mark><mark>kendaraan</mark>
-            <h2>suzuki <br> angkot</h2>
+            <h3>suzuki <br> angkot</h3>
             <p class="ar">سوزوكي <span class="or"></span> تمنية</p>
+            <img src="" alt="" class="fitur">
             <div class="modal" id="angkot">
               <div class="modal-content">
                 <div class="modal-title">gambar</div>
                 <div class="modal-body">
-                  <img src="https://carsemsar.s3.amazonaws.com/cars/2016/11/20/7394797522394285/5832094842b859.93064031/photo-lg.jpg" style="width:350px" alt="">
+                  <img src="https://carsemsar.s3.amazonaws.com/cars/2016/11/20/7394797522394285/5832094842b859.93064031/photo-lg.jpg" alt="">
                 </div>
               </div>
             </div>
           </li>
           
-          <li class="list-group-item" data-modal="taksiJumbo">
+          <li class="list-kata" data-modal="taksiJumbo" img>
             <mark>kata benda</mark><mark>kendaraan</mark>
-            <h2>taksi jumbo</h2>
+            <h3>taksi jumbo</h3>
             <p class="ar">بيجو</p>
             <p class="note">diambil dari merknya "peugeot"</p>
+            <img src="" alt="" class="fitur">
             <div class="modal" id="taksiJumbo">
               <div class="modal-content">
                 <div class="modal-title">gambar</div>
                 <div class="modal-body">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Peugeot_504_R01.jpg/1280px-Peugeot_504_R01.jpg" style="width:350px" alt="">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Peugeot_504_R01.jpg/1280px-Peugeot_504_R01.jpg" alt="">
                 </div>
               </div>
             </div>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata istilah</mark>
-            <h2>gak usah dipikirin</h2>
+            <h3>gak usah dipikirin</h3>
             <p class="ar">كبر دماغك</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata istilah</mark>
-            <h2>selera humormu receh</h2>
+            <h3>selera humormu receh</h3>
             <p class="ar">دمك خفيف</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>bercanda</h2>
+            <h3>bercanda</h3>
             <p class="ar">
               <span class="md">هزر مع</span><br>
               <span class="me">يهزر</span><br>
@@ -889,19 +1392,19 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata ekspresi</mark>
-            <h2>
+            <h3>
               ih!
-            </h2>
+            </h3>
             <p class="ar">
               يخ
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>ternyata <br> naik <br> keluar <span class="or">pergi</span> <br> mengeluarkan</h2>
+            <h3>ternyata <br> naik <br> keluar <span class="or">pergi</span> <br> mengeluarkan</h3>
             <p class="ar">طلع</p>
             <p class="note">cara bedainnya? kayak biasanya, tergantung konteks <br> 
               هو طلع الشغل
@@ -915,192 +1418,265 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>tau <br> kenal <br> bisa</h2>
+            <h3 class="list">
+              <span>tau</span>
+              <span>kenal</span>
+              <span>bisa</span>
+            </h3>
             <p class="ar">عارف</p>
+            <p class="note">satu kata banyak makna, tergantung konteks.</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>bisa</h3>
+            <p class="ar">قادر</p>
+          </li>
+          
+          <li class="list-kata">
             <mark>kata ekspresi</mark>
-            <h2>
+            <h3>
               wah (keren, bagus)
-            </h2>
+            </h3>
             <p class="ar">
               اوبا
             </p>
           </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>melewatkan</h3>
+            <p class="ar">
+              <span class="md">فات</span><br>
+              <span class="me">يفوت</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3 class="list">
+             <span>kelewatan</span>
+             <span>lebih dari*</span>
+             <span>menyebrang</span> 
+            </h3>
+            <p class="ar">
+              <span class="md">عدى</span><br>
+              <span class="me">يعدي</span>
+            </p>
+            <p class="note">
+              *) jika yang dimaksud adalah angka
+            </p>
+          </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata ekspresi</mark>
-            <h2>
+            <h3>
               duh
-            </h2>
+            </h3>
             <p class="ar">
               يووه
             </p>
           </li>
 
-          <li class="list-group-item">
+<!--           <li class="list-kata">
             <mark>kata tanya</mark><mark>formal</mark>
-            <h2>
+            <h3>
               boleh ulangi?
-            </h2>
+            </h3>
             <p class="ar">
               افندم؟
             </p>
-          </li>
+          </li> -->
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark><mark>perasaan</mark>
-            <h2>heran</h2>
+            <h3>heran</h3>
             <p class="ar">مستغرب</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark><mark class="bg-danger"><i class='bx bxs-error'></i> kasar</mark>
-            <h2>
+            <h3>
               bodoh
-            </h2>
+            </h3>
             <p class="ar">
               عبيط
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark><mark class="bg-danger"><i class='bx bxs-error'></i> kasar</mark>
-            <h2>
+            <h3>
               kotor <br> jelek
-            </h2>
+            </h3>
             <p class="ar">
               وسخ
             </p>
             <p class="note"><i class="bx bxs-error"></i>sebaiknya tidak digunakan, sebaiknya gunakan kata nafi seperti: <br><code class="ar">مش نظيف</code> atau <code class="ar">مش حلو</code></p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>pekerjaan</mark>
-            <h2>
+            <h3>
               supir
               <span class="hide">sopir</span>
-            </h2>
+            </h3>
             <p class="ar">
               م\ سواق <br> ج\ سواقين
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>
+            <h3>
               lokasi <br> posisi
-            </h2>
+            </h3>
             <p class="ar">
               حته
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>
+            <h3>
               (lokasi dalam) maps
-            </h2>
+            </h3>
             <p class="ar">
               لوكيشن
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>orang</mark>
-            <h2>
+            <h3>
               perampok <br> pencuri
-            </h2>
+            </h3>
             <p class="ar">
               بلطجي <br> حرامي
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>orang</mark>
-            <h2>penipu</h2>
+            <h3>penipu</h3>
             <p class="ar">نصاب</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>uslub</mark>
-            <h2>aku akan segera di sana <br><i>I'll be there</i></h2>
+            <h3>aku akan segera di sana <br><i>I'll be there</i></h3>
             <p class="ar">هكون هناك</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark><mark>pekerjaan</mark>
-            <h2>
+            <h3>
               kondektur <br> kernet
-            </h2>
+            </h3>
             <p class="ar">
               كومسري
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>
+            <h3>
               seharusnya
-            </h2>
+            </h3>
             <p class="ar">
               المفروض
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark>
-            <h2>
+            <h3>
               11 12 <br> sama aja
-            </h2>
+            </h3>
             <p class="ar">
               هو هو <br> هي هي
             </p>
             <p class="note"><i class="bx bxs-comment-detail"></i> tergantung objek</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata ekspresi</mark><mark>ungkapan</mark>
-            <h2>
+            <h3>
               maaf
-            </h2>
+            </h3>
             <p class="ar">
               آسف <br> معلش <br> حقك عليا
             </p>
             <p class="note">tergantung objek</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>ungkapan</mark>
-            <h2>
-              <span class="hide">segera</span>
-              cepetan (selesaikan)!
-            </h2>
-            <p class="ar">
-              متخلص يا عم
-            </p>
-            <p class="note">tergantung objek</p>
+            <h3 class="list">
+              <span><i class="en">I beg you</i></span>
+              <span>ku mohon</span>
+            </h3>
+            <p class="ar">ابوص ايدك</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>ungkapan</mark>
-            <h2>
+            <h3>ku mohon</h3>
+            <p class="ar">بالله عليك</p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>ungkapan</mark>
+            <h3>
+              <span class="hide">segera</span>
+              cepetan (selesaikan)!
+            </h3>
+            <p class="ar list">
+              <span>متخلص يا عم</span>
+              <span>انجز</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata sifat</mark>
+            <h3>rusak</h3>
+            <p class="ar">
+              <span class="md">باظ</span>
+              <span class="me">يبوظ</span>
+              <span class="fa">بايظ</span>
+              
+            </p>
+          </li>
+    
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>rusak</h3>
+            <p class="ar">
+              <span class="fa">خربان</span>
+            </p>
+            <p class="note">
+              sinonimnya <code>بايظ</code>
+            </p>
+          </li>
+    
+          <li class="list-kata">
+            <mark>ungkapan</mark>
+            <h3>
               ku sumpahin kamu apes!
-            </h2>
+            </h3>
             <p class="ar">
               جاتك النيله
             </p>
             <p class="note">hehe bingung nerjemahinnya, keknya sih gitu ya wkwk</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>ungkapan</mark><mark>kata ekspresi</mark>
-            <h2>
+            <h3>
               <i>oh my god!</i>
-            </h2>
+            </h3>
             <p class="ar">
               يالهوي <br> يانهار اببض
             </p>
@@ -1109,11 +1685,11 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>ungkapan</mark><mark>kata ekspresi</mark>
-            <h2>
+            <h3>
               ah, sial!
-            </h2>
+            </h3>
             <p class="ar">
               يادي النيله <br> يانهار اسود و منيل
             </p>
@@ -1122,12 +1698,27 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>mendorong</h3>
+            <p class="ar">
+              <span class="md">زاق</span><br>
+              <span class="me">يزوق</span>
+            </p>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata kerja</mark>
+            <h3>menarik <br> tarik</h3>
+            <p class="ar">سحب</p>
+          </li>
+          
+          <li class="list-kata">
             <mark>kata ekspresi</mark>
             <mark>ungkapan</mark>
-            <h2>
+            <h3>
               terima kasih
-            </h2>
+            </h3>
             <p class="ar">
               شكرا <br> متشكر <br> تسلم ايدك <br> كتر خيرك
             </p>
@@ -1136,12 +1727,12 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>ungkapan</mark>
-            <h2>
+            <h3>
               jumpa esok hari <br>
               ketemu besok lagi <br>
-            </h2>
+            </h3>
             <p class="ar">
               نشوفك على خير
             </p>
@@ -1150,28 +1741,28 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>ungkapan</mark>
-            <h2>
+            <h3>
               senang berjumpa denganmu <br>
               <i>nice to meet you</i>
-            </h2>
+            </h3>
             <p class="ar">
               مبسوط نشوفك
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>undangan</h2>
+            <h3>undangan</h3>
             <p class="ar">عزومه</p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>ungkapan</mark>
-            <h2>
+            <h3>
               basa-basi
-            </h2>
+            </h3>
             <p class="ar">
               عزومة مركبية
             </p>
@@ -1179,51 +1770,51 @@
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata benda</mark>
-            <h2>korek api</h2>
+            <h3>korek api</h3>
             <p class="ar">مولع</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark>
-            <h2>
+            <h3>
               terserah kamu <br> bebas aja
-            </h2>
+            </h3>
             <p class="ar">
               براحتك <br> على كيفك*
             </p>
             <p class="note"><br> *belum pernah dengar orang mesir pake ini tapi dipake di amiyah syam, tapi dapat dipahami</p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata kerja</mark>
-            <h2>
+            <h3>
               memberikan <br>
               mengasihkan <br>
               <i>kasih</i>
-            </h2>
+            </h3>
             <p class="ar">
               ادي لـ+ضمير
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark>
-            <h2>
+            <h3>
               yakin
-            </h2>
+            </h3>
             <p class="ar">
               متأكد
             </p>
           </li>
           
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>kata sifat</mark>
-            <h2>
+            <h3>
               banyak
               <span class="or">jauh</span> <span class="or">lama</span>
-            </h2>
+            </h3>
             <p class="ar">
               كتير
             </p>
@@ -1237,11 +1828,11 @@
             </p>
           </li>
           
-          <li class="list-group-item" >
+          <li class="list-kata" >
             <mark>kata konjungsi</mark>
-            <h2>
+            <h3>
               barusan
-            </h2>
+            </h3>
             <p class="ar">
               لسه
             </p>
@@ -1253,22 +1844,28 @@
               <code class="ar">جيبت الاكل ولا لسه؟</code><br>
               <i>udah ambil (atau dapet, tergantung konteks) atau belum?</i>
             </p>
-            <hr>
-            <h2>
-              masih <i class="bx bxs-star"></i>
-            </h2>
+          </li>
+          
+          <li class="list-kata">
+            <mark>kata konjungsi</mark>
+            <h3>
+            masih <i class="bx bxs-star"></i>
+            </h3>
             <p class="ar">
               لسه
             </p>
             <p class="note">
               bermakna ini jika bersanding kata kerja nafi, contoh: <br><br>
-              <code class="ar"></code><br>
+              <code class="ar">انا لسه مذاكرتش الانجليزي لحد الدلوقت</code><br>
               <i>aku masih belum belajar bahasa inggris sampai sekarang</i>
             </p>
-            <hr>
-            <h2>
+          </li>
+
+          <li class="list-kata">
+            <mark>kata konjungsi</mark>
+            <h3>
               belum
-            </h2>
+            </h3>
             <p class="ar">
               لسه
             </p>
@@ -1279,116 +1876,116 @@
             </p>
           </li>
 
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>angka</mark>
-            <h2>
+            <h3>
               satu
-            </h2>
+            </h3>
             <p class="ar">
               واحد
             </p><hr>
-            <h2>
+            <h3>
               dua
-            </h2>
+            </h3>
             <p class="ar">
               اتنين
             </p><hr>
-            <h2>
+            <h3>
               tiga
-            </h2>
+            </h3>
             <p class="ar">
               تلاته
             </p><hr>
-            <h2>
+            <h3>
               empat
-            </h2>
+            </h3>
             <p class="ar">
               اربعه
             </p><hr>
-            <h2>
+            <h3>
               lima
-            </h2>
+            </h3>
             <p class="ar">
               خمسه
             </p><hr>
-            <h2>
+            <h3>
               enam
-            </h2>
+            </h3>
             <p class="ar">
               سته
             </p><hr>
-            <h2>
+            <h3>
               tujuh
-            </h2>
+            </h3>
             <p class="ar">
               سبعه
             </p><hr>
-            <h2>
+            <h3>
               delapan
-            </h2>
+            </h3>
             <p class="ar">
               تمانيه
             </p><hr>
-            <h2>
+            <h3>
               sembilan
-            </h2>
+            </h3>
             <p class="ar">
               تسعه
             </p>
           </li>
-          <li class="list-group-item">
+          <li class="list-kata">
             <mark>angka</mark>
-            <h2>
+            <h3>
               sebelas
-            </h2>
+            </h3>
             <p class="ar">
               حداشر
             </p><hr>
-            <h2>
+            <h3>
               dua belas
-            </h2>
+            </h3>
             <p class="ar">
               اتناشر
             </p><hr>
-            <h2>
+            <h3>
               tiga belas
-            </h2>
+            </h3>
             <p class="ar">
               تلاتاشر
             </p><hr>
-            <h2>
+            <h3>
               empat belas
-            </h2>
+            </h3>
             <p class="ar">
               اربعتاشر
             </p><hr>
-            <h2>
+            <h3>
               lima belas
-            </h2>
+            </h3>
             <p class="ar">
               خمستاشر
             </p><hr>
-            <h2>
+            <h3>
               enam belas
-            </h2>
+            </h3>
             <p class="ar">
               ستاشر
             </p><hr>
-            <h2>
+            <h3>
               tujuh belas
-            </h2>
+            </h3>
             <p class="ar">
               سبعتاشر
             </p><hr>
-            <h2>
+            <h3>
               delapan belas
-            </h2>
+            </h3>
             <p class="ar">
               تمانتاشر
             </p><hr>
-            <h2>
+            <h3>
               sembilan belas
-            </h2>
+            </h3>
             <p class="ar">
               سعتاشر
             </p>

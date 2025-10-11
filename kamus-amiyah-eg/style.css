@@ -1,5 +1,7 @@
 @import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
-@import url("https://cdn.hugeicons.com/font/hgi-stroke-rounded.css");
+@import url("https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css");
+@import url("https://cdn.hugeicons.com/font/hgi-stroke-standard.css");
+@import url("https://use.hugeicons.com/font/icons.css");
 :root{
     --dblue:#00393a;
     --lblue:#ebffff;
@@ -8,8 +10,13 @@
     --dgreen: #1abd9b;
     --lgreen: #edfdf9;
 }
-::-webkit-scrollbar{width:7px;background-color:var(--dgreen);}
+::-webkit-scrollbar{width:7px;height:7px;background-color:var(--dgreen);}
 ::-webkit-scrollbar-thumb{border-radius:3px;background-color:var(--dblue);}
+html{color-scheme:dark light;}
+html:has(#light:checked){
+  color-scheme:light;
+}
+html:has(#dark:checked){color-scheme:dark;}
 body{
     background:#fcfcfc;
     user-select:none
@@ -17,13 +24,31 @@ body{
 a{color:var(--dblue)}
 a:hover{color:var(--dgreen)}
 a:focus{color:var(--greybg)}
+abbr{position:relative;text-decoration:underline dotted;text-underline-position:under;cursor:help;display:inline-flex}
+abbr span.popup{
+  position:absolute;
+  top:0;
+  padding:2px 5px;
+  font-size:1rem;
+  font-family:var(--bs-body-font-family);
+  background:var(--dgreen);
+  box-shadow:0 5px 17px ;
+  border-radius:16%;
+  pointer-events:none;
+  opacity:0;
+  transition:all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+abbr:hover span.popup{top:-25px;visibility:visible;opacity:1;}
+p.ar abbr:hover span.popup{top:-32px;visibility:visible;opacity:1;}
+/*        universal code        */
 div.spacer{margin-top:30px;}
 div.alert[x]{display:none;}
 div.alert h4#updateinfo{margin-bottom:0;text-align:center}
 div.alert h4#updateinfo::before{content:"terakhir update: "}
 div.alert h4#updateinfo::after{content:" clt"}
-h2{
-    margin-top:20px;
+h3{
+  margin-top:20px;
+  font-size:1.4rem;
 }
 #sharelink{margin-bottom:12px;margin-top:12px;}
 code#link{
@@ -35,6 +60,8 @@ code#link{
   color:var(--lblue);
   overflow:hidden;
 }
+
+/* filter kiri bawah */
 input#filterkartu{
     background-color:rgba(227, 227, 227,0.4)!important;
     background-filter:blur(1px);
@@ -74,6 +101,7 @@ div#dropdown-filter{
   bottom:75px;
   left:12px;
   z-index:5;
+  overscroll-behavior-y:none;
 }
 div#dropdown-filter input[type="checkbox"]{appearance:none;-webkit-appearance:none;}
 div#dropdown-filter label:hover{background:var(--dgreen)}
@@ -103,25 +131,40 @@ button.filter-btn{
 }
 button.filter-btn:hover{
   background:var(--dgreen);
-  color:var(--grey)
+  color:var(--grey);
 }
 
 /* modal */
 /* Gaya dasar untuk modal */
 .modal {
-  display: none; /* Disembunyikan secara default */
   position: fixed;
+  align-content:center;
   z-index: 10;
   left: 0;
   top: 0;
-  width: 101%;
+  width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.4); /* Latar gelap */
+  display: none; /* Disembunyikan secara default */
+  background-color: rgba(0,0,0,0.8); /* Latar gelap */
+}
+.modal-content {
+  display: flex;
+  margin: 5% auto;
+  width: 340px;
+  max-height: 20em; /* <-- Batas tinggi modal */
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  overscroll-behavior-y:contain; /* mencegah body ikut scroll */
+  touch-action:none; /* mencegah body ikut scroll */
+  flex-direction: column;
+  overflow: hidden;  /* penting untuk kontrol scroll di body saja */
 }
   /* Judul tetap di atas */
 .modal-title {
-  font-size: 20px;
+  font-size: 1.3em;
   font-weight: bold;
   text-transform: capitalize;
   text-align: center;
@@ -134,31 +177,35 @@ button.filter-btn:hover{
   z-index: 1;
 }
 .modal-title i{margin-right:10%;vertical-align:-3px;}
-.modal-content {
-  background-color: #fff;
-  margin: 5% auto;
-  border-radius: 8px;
-  width: 380px;
-  text-align: left;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: column;
-  max-height: 80vh; /* <-- Batas tinggi modal */
-  overflow: hidden;  /* penting untuk kontrol scroll di body saja */
-}
   /* Konten yang bisa discroll */
 .modal-body {
   overflow-y: auto;
   flex-grow: 1;
   padding: 13px;
+  overscroll-behavior-y:none;
 }
+.modal-body>ul>li>i.en:after{content:"en";text-transform:uppercase;font-style:normal;vertical-align:super;font-size:.6rem;}
+.modal-body>ul>li>i.msa:after{content:"ms";text-transform:uppercase;font-style:normal;vertical-align:super;font-size:.6rem;}
+.modal-body>ul>li>i.eg:after{content:"eg";text-transform:uppercase;font-style:normal;vertical-align:super;font-size:.6rem;}
 #profil p{text-align:center;}
 #profil p span{color:var(--dgreen)}
-.modal-content p{margin:0;}
-.modal-content p:first-letter{text-transform:capitalize;}
-.modal-content p i.hgi{margin-right:10px;color:var(--dgreen);vertical-align:-2.5px;}
-.modal-content li i.hgi{vertical-align:-3px;}
-.modal-content img{width:350px;border-radius:10px;}
+/* .modal-content{color:var(--dblue)} */
+.modal-content[translate],.modal-content[tr]{color:var(--dblue)}  /* list kata */
+.modal-body b[soon]{color:var(--dgreen);text-transform:uppercase;} /* update info */
+.modal-body b[soon]:before{content:"\F3F3";font-family:remixicon;margin-right:8px} /* update info */
+li .modal-body{color:var(--dblue)}
+.modal-body p{margin:0;}
+.modal-body p:first-letter{text-transform:capitalize;}
+.modal-body p i.hgi,
+.modal-body p i[class^="ri"]{margin-right:10px;color:var(--dgreen);}
+.modal-body ul{padding-left:13px;list-style:square;}
+.modal-body ul>li{margin-bottom:15px;}
+.modal-body ul li:nth-last-child{margin-bottom:0;}
+.modal-body ul ol{padding-left:20px;}
+.modal-body li i.hgi{vertical-align:-3px;}
+.modal-body img{width:19.5rem;border-radius:10px;}
+.modal-body a[href$="remixicon.com/"]:before{content:"\F06C";font-family:remixicon}
+.modal-body a[href$="hugeicons.com/icons?style=Stroke&type=Rounded"]:before{content:"\49C7";font-family:hugeicons-stroke-rounded;vertical-align:-2px;}
 .close {
   color: #aaa;
   float: center;
@@ -178,63 +225,76 @@ button.moda{
   border:none;
   border-radius:7px;
 }
+@media screen and (max-width: 490px){
+  button.moda:first-of-type{margin-bottom:4px;}
+}
 button.moda:last-of-type{margin-top:4px;}
 button.moda:hover{background:var(--dgreen);color:var(--dblue)}
 button.moda i{margin-right:9px;vertical-align:-2px;}
 /* end modal */
 
-summary{
-  color:#00393a;
-  list-style: none;
-/*     text-decoration: underline; */
-  padding-top: 10px;
-  padding-bottom:10px;
-  margin-bottom: 10px;
-}
-summary:hover{
-  background-color: #00393a;
-  color: #edfdf9;
-  text-decoration:underline;
-}
-summary i{
-  margin-right: 10px;
-  font-variant:normal;
-  font-style:normal;
-}
 p#kotaksaran{margin-top:10px;}
 p#kotaksaran{margin-top:10px;margin-bottom:auto;}
 hr{color:black;}
-li.list-group-item{margin-bottom:10px;background: #00393a;color: #ebffff;}
-li.list-group-item:hover{background:#e3e3e3;color:#00393a;}
-li.list-group-item:hover mark{color:var(--lblue);background: var(--dgreen);}
-li.list-group-item hr{color:white}
-li.list-group-item:hover hr{color:black;}
-li.list-group-item i.hgi{vertical-align:-5px;}
-li.list-group-item i.en:after{content:"[en]";padding-left:10px;font-style:normal;text-transform:capitalize;}
+li.list-kata{border-radius:10px;margin-bottom:10px;background: #00393a;color: #ebffff;padding:15px;list-style:none;}
+li.list-kata:hover{background:#e3e3e3;color:#00393a;}
+li.list-kata:hover mark{color:var(--lblue);background: var(--dgreen);}
+li.list-kata h3.list{
+  list-style:numbers;
+  counter-reset:nomor;
+}
+li.list-kata h3.list>span{display:block}
+li.list-kata h3.list>span:before{
+  counter-increment:nomor;
+  content:counter(nomor) '.' ' ';
+}
+li.list-kata h3 i.en:after{content:"[en]";padding-left:4px;font-style:normal;text-transform:uppercase;font-size:.7rem;vertical-align:super}
+li.list-kata[img] img.fitur:nth-of-type(1):before,
+li.list-kata[img][mic] img.fitur:nth-of-type(1):before{
+  content:"\EE4B";font-family:remixicon;margin-right:6px;background:var(--dgreen);border-radius:50%;padding:.2rem;
+}
+li.list-kata[mic] img.fitur:nth-of-type(1):before,
+li.list-kata[mic][img] img.fitur:nth-of-type(2):before{
+  content:"\EF50";font-family:remixicon;margin-right:6px;background:var(--dgreen);border-radius:50%;padding:.2rem;
+}
+li.list-kata hr{color:white}
+li.list-kata:hover hr{color:black;}
+li.list-kata i.hgi{vertical-align:-5px;}
 div.carousel-inner{
     border-radius:17px;
 }
-.ar{
+span.ms,span.mn,span.mr,span.mz,span.jm,span.mf,span.md,span.me,span.fa{display:block}
+span.ms::before,span.mn::before{content:"مؤ\005C  ";}
+span.mr::before,span.mz::before{content:"مذ\005C  ";}
+span.jm::before{content:"ج\005C  ";}
+span.mf::before{content:"م\005C  ";}
+span.md::before{content:"ماض\005C  ";}
+span.me::before,span.mo::before{content:"مضارع\005C  ";}
+span.fa::before{content:"فاعل\005C  ";}
+p.ar{
   direction: rtl!important;
   text-align: right;
   font-family: "Baloo Bhaijaan 2", sans-serif;
   font-size: 1.3em;
 }
+p.ar.list{
+  unicode-bidi:bidi-override;
+  counter-reset:arab;
+}
+p.ar.list>span{display:block;}
+p.ar.list>span:before{counter-increment:arab;content:counter(arab)'.' ' '}
+p.ar.list>span.eg::after{content:"eg";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
+p.ar.list>span.msa::after{content:"ms";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
+
 span.or:before{
   content: "atau ";
 }
 span.hide, [hide]{display:none;}
-mark:first-child{
-  margin-right:10px;
-}
 mark{
   background: var(--lblue);
   border-radius:6px;
   margin-right:10px;
-}
-mark.no{
-  background:transparent;
-  color: var(--lblue);
+  display:inline;
 }
 mark.formal:after{
   content: "formal";
@@ -243,21 +303,19 @@ p.note{color:darkblue;background-color: lightblue;padding: 3px;}
 p.note::before{
   content: "㸿";
   font-family: hgi-stroke-rounded;
-  font-weight: 600;
+  font-weight: 500;
   margin-right:10px;
   vertical-align:-3px;
 }
 p.note i{margin-right: 10px;}
 p.note i.bxs-error{color:darkred;}
-p.note code{color: lightblue;background: darkblue;padding-right:5px;padding-left:5px;}
-span.ms::before,span.ms::before{content:"مؤ\005C  ";}
-span.mr::before,span.mz::before{content:"مذ\005C  ";}
-span.jm::before{content:"ج\005C  ";}
-span.mf::before{content:"م\005C  ";}
-span.md::before{content:"ماض\005C  ";}
-span.me::before{content:"مضارع\005C  ";}
-span.fa::before{content:"فاعل\005C  ";}
+p.note code{color: lightblue; font-size:.9em;background: darkblue;padding-right:5px;padding-left:5px;font-family: "Baloo Bhaijaan 2", sans-serif}
+p.note span{text-decoration:underline;cursor:pointer;}
+p.note span:hover{color:var(--dblue)}
+p.note span.en{font-style:italic;text-decoration:underline;}
+p.note span.en:after{content:"en";padding-left:.2em; vertical-align:super;font-size:.6em; text-transform:uppercase; font-style:normal;}
 
+/*   footer   */
 footer{
   padding:auto;
   margin-bottom:40px;
