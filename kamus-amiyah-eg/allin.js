@@ -1,5 +1,5 @@
 const sarangan = document.getElementById("filterkartu");
-const bds = document.querySelectorAll("li.list-group-item");
+const bds = document.querySelectorAll("li.list-kata");
 const kartu = document.querySelectorAll("div.card");
 
 sarangan.addEventListener("input", (e) => filterData(e.target.value));
@@ -31,10 +31,10 @@ function filterData(search){
     const words = keyword.split(" ").filter(Boolean); // Memisahkan kata kunci (multikata)
   
 
-    const items = document.querySelectorAll(".list-group .list-group-item");
+    const items = document.querySelectorAll(".list-group .list-kata");
 
     items.forEach(function (item) {
-      const h2Text = normalizeText(item.querySelector("h2")?.innerText || "");
+      const h2Text = normalizeText(item.querySelector("h3")?.innerText || "");
       const arText = normalizeText(item.querySelector(".ar")?.innerText || "");
       const hiddenText = normalizeText(item.querySelector("span.hide")?.innerText || "");
 
@@ -50,7 +50,7 @@ function filterData(search){
   });
 
 
-//        filter berdasarkan mark
+//  =========  filter berdasarkan mark
 // Mendapatkan semua tombol filter
 const filterButtons = document.querySelectorAll('.filter-btn');
 
@@ -60,7 +60,7 @@ filterButtons.forEach(button => {
     const category = this.getAttribute('data-category'); // Mendapatkan kategori yang dipilih
 
     // Mendapatkan semua item list-group
-    const items = document.querySelectorAll('.list-group-item');
+    const items = document.querySelectorAll('.list-kata');
 
     // Looping melalui semua item list-group
     items.forEach(item => {
@@ -77,20 +77,20 @@ filterButtons.forEach(button => {
   });
 });
 
-//              counter li
+//  ==========   counter li
 // Ganti 'li' dengan nama tag HTML yang ingin dihitung
-const tagName = 'li.list-group-item';
+const tagName = 'li.list-kata';
 const count = document.querySelectorAll(tagName).length;
 
 // Buat elemen <p> untuk menampilkan hasilnya
 const output = document.createElement('p');
-output.innerHTML = `Jumlah log kosakata: <strong>${count}</strong>`;
+output.innerHTML = `Jumlah log kosakata: <strong>${count}</strong> kata`;
 output.className = 'count';
 
 // Tambahkan ke dalam body (atau bagian lain sesuai kebutuhan)
 document.body.appendChild(output);
 
-//    modal panduan
+//  =============  modal panduan
   // Buka modal sesuai tombol
   document.querySelectorAll('[data-modal]').forEach(button => {
     button.addEventListener('click', function() {
@@ -135,7 +135,7 @@ document.body.appendChild(output);
   });
 
   // Ambil semua <mark> dan buat set kategori unik
-  const allMarks = document.querySelectorAll('li.list-group-item mark');
+  const allMarks = document.querySelectorAll('li.list-kata mark');
   const categories = [...new Set(Array.from(allMarks).map(mark => mark.innerText.trim()))]
   .sort((a, b) => a.localeCompare(b));
 
@@ -176,7 +176,7 @@ document.body.appendChild(output);
       .filter(cb => cb.checked)
       .map(cb => cb.value);
 
-    const items = document.querySelectorAll('li.list-group-item');
+    const items = document.querySelectorAll('li.list-kata');
 
     items.forEach(item => {
       const marks = Array.from(item.querySelectorAll('mark')).map(m => m.innerText.trim());
