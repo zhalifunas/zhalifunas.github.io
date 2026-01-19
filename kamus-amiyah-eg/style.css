@@ -9,6 +9,7 @@
     --greybg:#e3e3e3;
     --dgreen: #1abd9b;
     --lgreen: #edfdf9;
+    --dred:#BD1F36;
 }
 ::-webkit-scrollbar{width:7px;height:7px;background-color:var(--dgreen);}
 ::-webkit-scrollbar-thumb{border-radius:3px;background-color:var(--dblue);}
@@ -39,8 +40,10 @@ abbr span.popup{
   transition:all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 abbr:hover span.popup{top:-25px;visibility:visible;opacity:1;}
+p.ar abbr span.popup{text-align:left;direction:ltr;max-width:20em}
 p.ar abbr:hover span.popup{top:-32px;visibility:visible;opacity:1;}
-/*        universal code        */
+[del],[none],.none,.del{display:none;}
+/*        end universal code        */
 div.spacer{margin-top:30px;}
 div.alert[x]{display:none;}
 div.alert h4#updateinfo{margin-bottom:0;text-align:center}
@@ -137,8 +140,7 @@ button.filter-btn:hover{
 /* modal */
 /* Gaya dasar untuk modal */
 .modal {
-  position: fixed;
-  align-content:center;
+  position: flex;
   z-index: 10;
   left: 0;
   top: 0;
@@ -150,17 +152,19 @@ button.filter-btn:hover{
 }
 .modal-content {
   display: flex;
-  margin: 5% auto;
-  width: 340px;
-  max-height: 20em; /* <-- Batas tinggi modal */
+  margin: 20% auto;
+  align-self:center;
+  justify-self:center;
+  width: 343px;
+  max-height: 21em; /* <-- Batas tinggi modal */
   background-color: #fff;
   border-radius: 8px;
   text-align: left;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  overscroll-behavior-y:contain; /* mencegah body ikut scroll */
-  touch-action:none; /* mencegah body ikut scroll */
+  overscroll-behavior-y:contain; /* <--- mencegah body ikut scroll */
+  touch-action:none; /* <--- mencegah body ikut scroll */
   flex-direction: column;
-  overflow: hidden;  /* penting untuk kontrol scroll di body saja */
+  overflow: hidden;  /* <-- penting untuk kontrol scroll di body saja */
 }
   /* Judul tetap di atas */
 .modal-title {
@@ -237,8 +241,9 @@ p#kotaksaran{margin-top:10px;}
 p#kotaksaran{margin-top:10px;margin-bottom:auto;}
 hr{color:black;}
 li.list-kata{border-radius:10px;margin-bottom:10px;background: #00393a;color: #ebffff;padding:15px;list-style:none;}
-li.list-kata:hover{background:#e3e3e3;color:#00393a;}
+li.list-kata:hover{background:#e3e3e3;color:#00393a;border: 2px solid var(--dblue)}
 li.list-kata:hover mark{color:var(--lblue);background: var(--dgreen);}
+li.list-kata h3 span.or{display:block}
 li.list-kata h3.list{
   list-style:numbers;
   counter-reset:nomor;
@@ -263,7 +268,7 @@ li.list-kata i.hgi{vertical-align:-5px;}
 div.carousel-inner{
     border-radius:17px;
 }
-span.ms,span.mn,span.mr,span.mz,span.jm,span.mf,span.md,span.me,span.fa{display:block}
+span.ms,span.mn,span.mr,span.mz,span.jm,span.mf,span.md,span.me,span.fa{display:inli}
 span.ms::before,span.mn::before{content:"مؤ\005C  ";}
 span.mr::before,span.mz::before{content:"مذ\005C  ";}
 span.jm::before{content:"ج\005C  ";}
@@ -277,6 +282,7 @@ p.ar{
   font-family: "Baloo Bhaijaan 2", sans-serif;
   font-size: 1.3em;
 }
+p.ar span.or{display:block}
 p.ar.list{
   unicode-bidi:bidi-override;
   counter-reset:arab;
@@ -288,6 +294,8 @@ p.ar.list>span.msa::after{content:"ms";text-transform:uppercase;padding-right:5p
 
 span.or:before{
   content: "atau ";
+  vertical-align:sub;
+  font-size:.6em
 }
 span.hide, [hide]{display:none;}
 mark{
@@ -295,6 +303,18 @@ mark{
   border-radius:6px;
   margin-right:10px;
   display:inline;
+}
+mark.kasar{
+  background:var(--dred);
+  color:var(--lblue);
+  font-family:sans-serif;
+}
+mark.kasar::before{
+  content:"\3B73";
+  font-family: hugeicons-stroke-rounded;
+  font-display:fallback;
+  vertical-align:-2px;
+  margin-right:4px;
 }
 mark.formal:after{
   content: "formal";
@@ -310,8 +330,12 @@ p.note::before{
 p.note i{margin-right: 10px;}
 p.note i.bxs-error{color:darkred;}
 p.note code{color: lightblue; font-size:.9em;background: darkblue;padding-right:5px;padding-left:5px;font-family: "Baloo Bhaijaan 2", sans-serif}
+p.note code[tr]{background:lightblue;color:darkblue;text-decoration:underline;text-underline-position:under}
+p.note code[tr]:before{content:"\0022"}
+p.note code[tr]:after{content:"\0022"}
 p.note span{text-decoration:underline;cursor:pointer;}
 p.note span:hover{color:var(--dblue)}
+p.note span[data-modal]:after{content:"   \4C0F";font-family:hugeicons-stroke-rounded;}
 p.note span.en{font-style:italic;text-decoration:underline;}
 p.note span.en:after{content:"en";padding-left:.2em; vertical-align:super;font-size:.6em; text-transform:uppercase; font-style:normal;}
 
