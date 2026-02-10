@@ -43,7 +43,23 @@ abbr:hover span.popup{top:-25px;visibility:visible;opacity:1;}
 p.ar abbr span.popup{text-align:left;direction:ltr;max-width:20em}
 p.ar abbr:hover span.popup{top:-32px;visibility:visible;opacity:1;}
 [del],[none],.none,.del{display:none;}
-/*        end universal code        */
+span.ref,span.ref1,span.ref2,span.ref3,span.ref4{
+  vertical-align: super;
+  font-size: .4em;
+  text-decoration-line: none!important;
+}
+span.ref:after{
+  content:"*";
+  vertical-align: middle;
+  font-size: 1.4rem;
+}
+span.ref1:before{
+  content: "1";
+}
+span.context:before{content: "("}
+span.context:after{content: ")"}
+/* ========== end universal code ========== */
+
 div.spacer{margin-top:30px;}
 div.alert[x]{display:none;}
 div.alert h4#updateinfo{margin-bottom:0;text-align:center}
@@ -137,7 +153,7 @@ button.filter-btn:hover{
   color:var(--grey);
 }
 
-/* modal */
+/* ========== modal ========== */
 /* Gaya dasar untuk modal */
 .modal {
   position: flex;
@@ -235,14 +251,43 @@ button.moda{
 button.moda:last-of-type{margin-top:4px;}
 button.moda:hover{background:var(--dgreen);color:var(--dblue)}
 button.moda i{margin-right:9px;vertical-align:-2px;}
-/* end modal */
+/* ========== end modal ========== */
 
 p#kotaksaran{margin-top:10px;}
 p#kotaksaran{margin-top:10px;margin-bottom:auto;}
 hr{color:black;}
+
 li.list-kata{border-radius:10px;margin-bottom:10px;background: #00393a;color: #ebffff;padding:15px;list-style:none;}
 li.list-kata:hover{background:#e3e3e3;color:#00393a;border: 2px solid var(--dblue)}
+li.list-kata span.or:before{
+  content: "atau ";
+  vertical-align:sub;
+  font-size:.6em;
+  margin:auto;
+  padding:auto;
+}
+li.list-kata mark{
+  background: var(--lblue);
+  border-radius:6px;
+  margin-right:10px;
+  display:inline;
+}
 li.list-kata:hover mark{color:var(--lblue);background: var(--dgreen);}
+li.list-kata mark.kasar{
+  background:var(--dred);
+  color:var(--lblue);
+  font-family:sans-serif;
+}
+li.list-kata mark.kasar::before{
+  content:"\f0105";
+  font-family: hugeicons-stroke-rounded;
+  font-display:fallback;
+  vertical-align:-2px;
+  margin-right:4px;
+}
+li.list-kata mark.formal:after{
+  content: "formal";
+}
 li.list-kata h3 span.or{display:block}
 li.list-kata h3.list{
   list-style:numbers;
@@ -268,78 +313,52 @@ li.list-kata i.hgi{vertical-align:-5px;}
 div.carousel-inner{
     border-radius:17px;
 }
-span.ms,span.mn,span.mr,span.mz,span.jm,span.mf,span.md,span.me,span.fa{display:inli}
-span.ms::before,span.mn::before{content:"مؤ\005C  ";}
-span.mr::before,span.mz::before{content:"مذ\005C  ";}
-span.jm::before{content:"ج\005C  ";}
-span.mf::before{content:"م\005C  ";}
-span.md::before{content:"ماض\005C  ";}
-span.me::before,span.mo::before{content:"مضارع\005C  ";}
-span.fa::before{content:"فاعل\005C  ";}
-p.ar{
+li.list-kata span.ms,span.mn,span.mr,span.mz,span.jm,span.mf,span.md,span.me,span.fa{display: block;}
+li.list-kata span.ms::before,span.mn::before{content:"مؤ\005C  ";}
+li.list-kata span.mr::before,span.mz::before{content:"مذ\005C  ";}
+li.list-kata span.jm::before{content:"ج\005C  ";}
+li.list-kata span.mf::before{content:"م\005C  ";}
+li.list-kata span.md::before{content:"ماض\005C  ";}
+li.list-kata span.me::before,span.mo::before{content:"مضارع\005C  ";}
+li.list-kata span.fa::before{content:"فاعل\005C  ";}
+li.list-kata p.ar{
   direction: rtl!important;
   text-align: right;
   font-family: "Baloo Bhaijaan 2", sans-serif;
   font-size: 1.3em;
 }
-p.ar span.or{display:block}
-p.ar.list{
+li.list-kata p.ar span.or{display:block}
+li.list-kata p.ar.list{
   unicode-bidi:bidi-override;
   counter-reset:arab;
 }
-p.ar.list>span{display:block;}
-p.ar.list>span:before{counter-increment:arab;content:counter(arab)'.' ' '}
-p.ar.list>span.eg::after{content:"eg";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
-p.ar.list>span.msa::after{content:"ms";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
-
-span.or:before{
-  content: "atau ";
-  vertical-align:sub;
-  font-size:.6em
-}
-span.hide, [hide]{display:none;}
-mark{
-  background: var(--lblue);
-  border-radius:6px;
-  margin-right:10px;
-  display:inline;
-}
-mark.kasar{
-  background:var(--dred);
-  color:var(--lblue);
-  font-family:sans-serif;
-}
-mark.kasar::before{
-  content:"\3B73";
+li.list-kata p.ar.list>span{display:block;}
+li.list-kata p.ar.list>span:before{counter-increment:arab;content:counter(arab)'.' ' '}
+li.list-kata p.ar.list>span.eg::after{content:"eg";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
+li.list-kata p.ar.list>span.msa::after{content:"ms";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
+li.list-kata span.hide, [hide]{display:none;}
+li.list-kata p.note{color:darkblue;background-color: lightblue;padding: 3px;}
+li.list-kata p.note::before{
+  content: "\f0865";
   font-family: hugeicons-stroke-rounded;
-  font-display:fallback;
-  vertical-align:-2px;
-  margin-right:4px;
-}
-mark.formal:after{
-  content: "formal";
-}
-p.note{color:darkblue;background-color: lightblue;padding: 3px;}
-p.note::before{
-  content: "㸿";
-  font-family: hgi-stroke-rounded;
   font-weight: 500;
+  margin-left:3px;
   margin-right:10px;
   vertical-align:-3px;
 }
-p.note i{margin-right: 10px;}
-p.note i.bxs-error{color:darkred;}
-p.note code{color: lightblue; font-size:.9em;background: darkblue;padding-right:5px;padding-left:5px;font-family: "Baloo Bhaijaan 2", sans-serif}
-p.note code[tr]{background:lightblue;color:darkblue;text-decoration:underline;text-underline-position:under}
-p.note code[tr]:before{content:"\0022"}
-p.note code[tr]:after{content:"\0022"}
-p.note span{text-decoration:underline;cursor:pointer;}
-p.note span:hover{color:var(--dblue)}
-p.note span[data-modal]:after{content:"   \4C0F";font-family:hugeicons-stroke-rounded;}
-p.note span.en{font-style:italic;text-decoration:underline;}
-p.note span.en:after{content:"en";padding-left:.2em; vertical-align:super;font-size:.6em; text-transform:uppercase; font-style:normal;}
+li.list-kata p.note i{margin-right: 10px;}
+li.list-kata p.note i.bxs-error{color:darkred;}
+li.list-kata p.note code{color: lightblue; font-size:.9em;background: darkblue;padding-right:5px;padding-left:5px;font-family: "Baloo Bhaijaan 2", sans-serif}
+li.list-kata p.note code[tr]{background:lightblue;color:darkblue;text-decoration:underline;text-underline-position:under}
+li.list-kata p.note code[tr]:before{content:"\0022"}
+li.list-kata p.note code[tr]:after{content:"\0022"}
+li.list-kata p.note span{text-decoration:underline;cursor:pointer;}
+li.list-kata p.note span:hover{color:var(--dblue)}
+li.list-kata p.note span[data-modal]:after{content:"   \4C0F";font-family:hugeicons-stroke-rounded;}
+li.list-kata p.note span.en{font-style:italic;text-decoration:underline;}
+li.list-kata p.note span.en:after{content:"en";padding-left:.2em; vertical-align:super;font-size:.6em; text-transform:uppercase; font-style:normal;}
 
-/*   footer   */
+/* ========== footer ========== */
 footer{
   padding:auto;
   margin-bottom:40px;
