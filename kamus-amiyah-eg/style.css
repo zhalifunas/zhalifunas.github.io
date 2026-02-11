@@ -60,6 +60,7 @@ span.context:before{content: "("}
 span.context:after{content: ")"}
 /* ========== end universal code ========== */
 
+div#container_utama{}
 div.spacer{margin-top:30px;}
 div.alert[x]{display:none;}
 div.alert h4#updateinfo{margin-bottom:0;text-align:center}
@@ -84,6 +85,7 @@ code#link{
 input#filterkartu{
     background-color:rgba(227, 227, 227,0.4)!important;
     background-filter:blur(1px);
+    border:solid var(--dgreen) 3px;
     position: sticky;
     min-width:40px!important;
     top: 15px;
@@ -257,8 +259,8 @@ p#kotaksaran{margin-top:10px;}
 p#kotaksaran{margin-top:10px;margin-bottom:auto;}
 hr{color:black;}
 
-li.list-kata{border-radius:10px;margin-bottom:10px;background: #00393a;color: #ebffff;padding:15px;list-style:none;}
-li.list-kata:hover{background:#e3e3e3;color:#00393a;border: 2px solid var(--dblue)}
+li.list-kata{border-radius:10px;margin-bottom:10px;background: linear-gradient(112deg,rgba(0, 57, 58, 1) 40%, rgba(31, 171, 140, 1) 100%);color: #ebffff;padding:15px;list-style:none;}
+li.list-kata:hover{background:#e3e3e3;color:#00393A;}
 li.list-kata span.or:before{
   content: "atau ";
   vertical-align:sub;
