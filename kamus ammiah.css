@@ -1,0 +1,439 @@
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+@import url("https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css");
+@import url("https://cdn.hugeicons.com/font/hgi-stroke-standard.css");
+@import url("https://use.hugeicons.com/font/icons.css");
+:root{
+    --dblue:#00393a;
+    --lblue:#ebffff;
+    --grey:#fcfcfc;
+    --greybg:#e3e3e3;
+    --dgreen: #1abd9b;
+    --lgreen: #edfdf9;
+    --dred:#BD1F36;
+}
+::-webkit-scrollbar{width:7px;height:7px;background-color:var(--dgreen);}
+::-webkit-scrollbar-thumb{border-radius:3px;background-color:var(--dblue);}
+html{color-scheme:dark light;}
+html:has(#light:checked){
+  color-scheme:light;
+}
+html:has(#dark:checked){color-scheme:dark;}
+body{
+    background:#fcfcfc;
+    user-select:;
+  }
+a{color:var(--dblue)}
+a:hover{color:var(--dgreen)}
+a:focus{color:var(--greybg)}
+a.youtube:after{
+  content: "\f26ec";
+  font-family:hugeicons-stroke-rounded;
+  vertical-align: -3px;
+}
+abbr{position:relative;text-decoration:underline dotted;text-underline-position:under;cursor:help;display:inline-flex}
+abbr span.popup{
+  position:absolute;
+  top:0;
+  padding:2px 5px;
+  font-size:1rem;
+  font-family:var(--bs-body-font-family);
+  background:var(--dgreen);
+  box-shadow:0 5px 17px ;
+  border-radius:16%;
+  pointer-events:none;
+  opacity:0;
+  transition:all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+abbr:hover span.popup{top:-25px;visibility:visible;opacity:1;}
+p.ar abbr span.popup{text-align:left;direction:ltr;max-width:20em}
+p.ar abbr:hover span.popup{top:-32px;visibility:visible;opacity:1;}
+[del],[none],.none,.del{display:none;}
+span.ref,span.ref1,span.ref2,span.ref3,span.ref4{
+  vertical-align: super;
+  font-size: .4em;
+  text-decoration-line: none!important;
+}
+span.ref:after{
+  content:"*";
+  vertical-align: middle;
+  font-size: 1.4rem;
+}
+span.ref1:before{
+  content: "1";
+}
+span.context:before{content: "("}
+span.context:after{content: ")"}
+div.space-20{margin-top:20px;}
+/* ========== end universal code ========== */
+
+div#container_utama{}
+div.spacer{margin-top:30px;}
+div.alert[x]{display:none;}
+div.alert h4#updateinfo{margin-bottom:0;text-align:center}
+div.alert h4#updateinfo::before{content:"terakhir update: "}
+div.alert h4#updateinfo::after{content:" clt"}
+h1#headline{;}
+h1#headline sup{font-size: .5em;}
+h3{
+  margin-top:20px;
+  font-size:1.4rem;   
+}
+#sharelink{margin-bottom:12px;margin-top:12px;}
+code#link{
+  align-content:center;
+  cursor:text;
+  user-select:all;
+  text-decoration:underline;
+  background:var(--dgreen);
+  color:var(--lblue);
+  overflow:hidden;
+}
+
+/* filter kiri bawah */
+input#filterkartu{
+    background-color:rgba(227, 227, 227,0.4)!important;
+    background-filter:blur(1px);
+    border:solid var(--dgreen) 3px;
+    position: sticky;
+    min-width:40px!important;
+    top: 15px;
+    z-index:6;
+}
+@media only screen and (max-width: 992px){
+    input#filterkartu{
+        width: 60dvw !important;
+        height: 20px;
+        position: fixed;
+        bottom: 3dvh;
+        z-index: 2;
+        left: 10%;
+        margin: auto;
+        translate: 15%;
+    }
+}
+input#filterkartu:focus{
+    color:var(--dblue);
+    background:var(--lblue)!important;
+}
+button#toggle-dropdown{position:fixed;bottom:36px;left:13px;z-index:2;border:none;background:var(--dgreen);padding:6px 0.6em;}
+button#toggle-dropdown i.hgi{vertical-align:-3px;}
+div#dropdown-filter{
+  display: none;
+  position:fixed;
+  height:190px;
+  width:9.9em;
+  overflow:auto;
+  background:var(--grey);
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  margin-top: 0.5em;
+  bottom:75px;
+  left:12px;
+  z-index:5;
+  overscroll-behavior-y:none;
+}
+div#dropdown-filter input[type="checkbox"]{appearance:none;-webkit-appearance:none;}
+div#dropdown-filter label:hover{background:var(--dgreen)}
+div#dropdown-filter i.hgi{color:var(--dgreen);vertical-align:-3px;}
+div#dropdown-filter label:hover i.hgi{color:var(--grey)}
+div.filter{
+  margin-bottom:10px;
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 10px; /* opsional, untuk jarak antar tombol */
+  padding: 10px; /* opsional, untuk ruang di dalam */
+  scrollbar-width: thin; /* untuk scroll bar tipis (di Firefox) */
+}
+div.filter{display:none;scrollbar-width: none;-ms-overflow-style: none;position:sticky;top:1vh;z-index:10;background:var(--lblue);}
+div.filter::-webkit-scrollbar{
+  display:none;
+  width: 0;
+  height: 0;
+}
+button.filter-btn{
+  color:var(--lgreen);
+  background:var(--dblue);
+  border:none;
+  border-radius:6px;
+  opacity:100%
+}
+button.filter-btn:hover{
+  background:var(--dgreen);
+  color:var(--grey);
+}
+
+/* ========== modal ========== */
+/* Gaya dasar untuk modal */
+.modal {
+  position: flex;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: none; /* Disembunyikan secara default */
+  background-color: rgba(0,0,0,0.8); /* Latar gelap */
+}
+.modal-content {
+  display: flex;
+  margin: 20% auto;
+  align-self:center;
+  justify-self:center;
+  width: 343px;
+  max-height: 21em; /* <-- Batas tinggi modal */
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  overscroll-behavior-y:contain; /* <--- mencegah body ikut scroll */
+  touch-action:none; /* <--- mencegah body ikut scroll */
+  flex-direction: column;
+  overflow: hidden;  /* <-- penting untuk kontrol scroll di body saja */
+}
+  /* Judul tetap di atas */
+.modal-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  color: var(--lgreen);
+  background: var(--dblue);
+  padding: 12px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.modal-title i{margin-right:10%;vertical-align:-3px;}
+  /* Konten yang bisa discroll */
+.modal-body {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 13px;
+  overscroll-behavior-y:none;
+  color: black;
+}
+.modal-body>ul>li>i.en:after{content:"en";text-transform:uppercase;font-style:normal;vertical-align:super;font-size:.6rem;}
+.modal-body>ul>li>i.msa:after{content:"ms";text-transform:uppercase;font-style:normal;vertical-align:super;font-size:.6rem;}
+.modal-body>ul>li>i.eg:after{content:"eg";text-transform:uppercase;font-style:normal;vertical-align:super;font-size:.6rem;}
+#profil p{text-align:center;}
+#profil p span{color:var(--dgreen)}
+/* .modal-content{color:var(--dblue)} */
+.modal-content[translate],.modal-content[tr]{color:var(--dblue)}  /* list kata */
+.modal-body b[soon]{color:var(--dgreen);text-transform:uppercase;} /* update info */
+.modal-body b[soon]:before{content:"\F3F3";font-family:remixicon;margin-right:8px} /* update info */
+li .modal-body{color:var(--dblue)}
+.modal-body p{margin:0;}
+.modal-body p:first-letter{text-transform:capitalize;}
+.modal-body p i.hgi,
+.modal-body p i[class^="ri"]{margin-right:10px;color:var(--dgreen);}
+.modal-body ul{padding-left:13px;list-style:square;}
+.modal-body ul>li{margin-bottom:15px;}
+.modal-body ul li:nth-last-child{margin-bottom:0;}
+.modal-body ul ol{padding-left:20px;}
+.modal-body li i.hgi{vertical-align:-3px;}
+.modal-body img{
+  align-self: center;
+  width:clamp(100px,100%,400px);
+  border-radius:10px 10px 0 0;
+}
+.modal-body a[href$="remixicon.com/"]:before{content:"\F06C";font-family:remixicon}
+.modal-body a[href$="hugeicons.com/icons?style=Stroke&type=Rounded"]:before{content:"\f1e67";font-family:hugeicons-stroke-rounded;vertical-align:-2px;}
+.close {
+  color: #aaa;
+  float: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+}
+button.moda{
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background:var(--dblue);
+  color:var(--lblue);
+  border:none;
+  border-radius:7px;
+}
+@media screen and (max-width: 490px){
+  button.moda:first-of-type{margin-bottom:4px;}
+}
+button.moda:last-of-type{margin-top:4px;}
+button.moda:hover{background:var(--dgreen);color:var(--dblue)}
+button.moda i{margin-right:9px;vertical-align:-2px;}
+/* ========== end modal ========== */
+
+p#kotaksaran{margin-top:10px;}
+p#kotaksaran{margin-top:10px;margin-bottom:auto;}
+hr{color:black;}
+
+li.list-kata{border-radius:10px;margin-bottom:10px;background: linear-gradient(112deg,rgba(0, 57, 58, 1) 40%, rgba(31, 171, 140, 1) 100%);color: #ebffff;padding:15px;list-style:none;}
+li.list-kata:hover{background:#e3e3e3;color:#00393A;}
+li.list-kata span.or:before{
+  content: "atau ";
+  vertical-align:sub;
+  font-size:.6em;
+  margin:auto;
+  padding:auto;
+}
+li.list-kata mark{
+  background: var(--dgreen);
+  border-radius:6px;
+  margin-right:10px;
+  display:inline;
+}
+li.list-kata:hover mark{color:var(--lblue);background: var(--dblue);}
+li.list-kata mark.kasar{
+  background:var(--dred);
+  color:var(--lblue);
+  font-family:sans-serif;
+}
+li.list-kata mark.kasar::before{
+  content:"\f13c8";
+  font-family: hugeicons-stroke-rounded;
+  font-display:fallback;
+  vertical-align:-2px;
+  margin-right:4px;
+}
+li.list-kata mark.formal:after{
+  content: "formal";
+}
+li.list-kata h3.list{
+  list-style:numbers;
+  counter-reset:nomor;
+}
+li.list-kata h3.list>span{display:block}
+li.list-kata h3.list>span:before{
+  counter-increment:nomor;
+  content:counter(nomor) '.' ' ';
+}
+li.list-kata h3 span.or{display:block}
+li.list-kata img.gambar{
+  margin:auto;
+  padding-top:;
+  display: block;
+  background-color: lightgrey;
+  align-self: center;
+  width:clamp(100px,100%,300px);
+  border-radius:10px 10px 0 0;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+li.list-kata img.gambar[src=""]{
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" class="injected-svg" data-src="https://cdn.hugeicons.com/icons/image-not-found-01-solid-rounded.svg%3Fv=1.0.0" xmlns:xlink="http://www.w3.org/1999/xlink" role="img" color="%23000000"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.54289 1.54289C1.93342 1.15237 2.56658 1.15237 2.95711 1.54289L22.4571 21.0429C22.8476 21.4334 22.8476 22.0666 22.4571 22.4571C22.0666 22.8476 21.4334 22.8476 21.0429 22.4571L1.54289 2.95711C1.15237 2.56658 1.15237 1.93342 1.54289 1.54289Z" fill="grey"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M20.5344 20.5346C20.6428 20.4261 20.747 20.3135 20.8467 20.1968C21.6065 19.3071 21.9389 18.2327 22.0967 16.934C22.25 15.6717 22.25 14.0744 22.25 12.0653C22.25 10.0561 22.25 8.3283 22.0967 7.06598C21.9389 5.76729 21.6065 4.69294 20.8467 3.80323C20.6474 3.56991 20.4301 3.35261 20.1968 3.15334C19.3071 2.39346 18.2327 2.06106 16.934 1.90331C15.6717 1.74997 14.0744 1.74998 12.0653 1.75H12.0653C10.0561 1.74998 8.3283 1.74997 7.06598 1.90331C5.76729 2.06106 4.69294 2.39346 3.80323 3.15334C3.68654 3.253 3.57385 3.35718 3.46543 3.46561L20.5344 20.5346ZM2.16646 5.70218C2.04557 6.12684 1.96225 6.58075 1.90331 7.06598C1.74997 8.3283 1.74998 10.0561 1.75 12.0652V12.0652C1.74998 14.0744 1.74997 15.6717 1.90331 16.934C2.06106 18.2327 2.39346 19.3071 3.15334 20.1968C3.35261 20.4301 3.56991 20.6474 3.80323 20.8467C4.69294 21.6065 5.76729 21.9389 7.06598 22.0967C8.3283 22.25 9.92558 22.25 11.9347 22.25C13.9439 22.25 15.6717 22.25 16.934 22.0967C17.4193 22.0378 17.8732 21.9544 18.2978 21.8335L16.6307 20.1664C15.5087 20.2958 14.0476 20.2975 12.0001 20.2975C9.91094 20.2975 8.43237 20.2958 7.3015 20.1584C6.19337 20.0238 5.55083 19.7715 5.0713 19.3619C4.91575 19.229 4.77088 19.0842 4.63803 18.9286C4.22847 18.4491 3.97614 17.8066 3.84153 16.6984C3.78993 16.2736 3.75747 15.7997 3.73706 15.2629L7.46976 11.5302C7.55859 11.4413 7.65569 11.3627 7.75926 11.295L2.16646 5.70218ZM14.25 7.5C14.25 6.80964 14.8096 6.25 15.5 6.25C16.1904 6.25 16.75 6.80964 16.75 7.5C16.75 8.19036 16.1904 8.75 15.5 8.75C14.8096 8.75 14.25 8.19036 14.25 7.5ZM19.3622 18.9286C19.2957 19.0065 19.2262 19.0816 19.1539 19.1539L14.75 14.75L15.9698 13.5302C16.3093 13.1906 16.7699 12.9998 17.2501 12.9998C17.7303 12.9998 18.1909 13.1906 18.5304 13.5302L20.2631 15.2629C20.2427 15.7997 20.2103 16.2736 20.1587 16.6984C20.024 17.8066 19.7717 18.4491 19.3622 18.9286Z" fill="grey"></path></svg>');
+  /*background-image: url("https://user-images.githubusercontent.com/527865/48599602-3b1ed580-e91d-11e8-9cf3-522260557439.png");*/
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 31vh;
+}
+li.list-kata h3 i.en:after{content:"[en]";padding-left:4px;font-style:normal;text-transform:uppercase;font-size:.7rem;vertical-align:super}
+li.list-kata[img] img.fitur:nth-of-type(1):before,
+li.list-kata[img][mic] img.fitur:nth-of-type(1):before{
+  content:"\EE4B";font-family:remixicon;margin-right:6px;background:var(--dgreen);border-radius:50%;padding:.2rem;
+}
+li.list-kata[mic] img.fitur:nth-of-type(1):before,
+li.list-kata[mic][img] img.fitur:nth-of-type(2):before{
+  content:"\EF50";font-family:remixicon;margin-right:6px;background:var(--dgreen);border-radius:50%;padding:.2rem;
+}
+li.list-kata hr{color:white}
+li.list-kata:hover hr{color:black;}
+li.list-kata i.hgi{vertical-align:-5px;}
+div.carousel-inner{
+    border-radius:17px;
+}
+li.list-kata span.ms,span.mn,span.mr,span.mz,span.jm,span.mf,span.md,span.me,span.fa{display: block;}
+li.list-kata span.ms::before,span.mn::before{content:"مؤ\005C  ";}
+li.list-kata span.mr::before,span.mz::before{content:"مذ\005C  ";}
+li.list-kata span.jm::before{content:"ج\005C  ";}
+li.list-kata span.mf::before{content:"م\005C  ";}
+li.list-kata span.md::before{content:"ماض\005C  ";}
+li.list-kata span.me::before,span.mo::before{content:"مضارع\005C  ";}
+li.list-kata span.fa::before{content:"فاعل\005C  ";}
+li.list-kata p.ar{
+  margin:auto;
+  direction: rtl!important;
+  text-align: right;
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-size: 1.3em;
+}
+li.list-kata p.ar span.or{display:block}
+li.list-kata p.ar.list{
+  unicode-bidi:bidi-override;
+  counter-reset:arab;
+}
+li.list-kata p.ar.list>span{display:block;}
+li.list-kata p.ar.list>span:before{counter-increment:arab;content:counter(arab)'.' ' '}
+li.list-kata p.ar.list>span.eg::after{content:"eg";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
+li.list-kata p.ar.list>span.msa::after{content:"ms";text-transform:uppercase;padding-right:5px;vertical-align:super;font-size:.6rem}
+li.list-kata span.hide, [hide]{display:none;}
+li.list-kata p.note{color:darkblue;background-color: lightblue;padding: 3px;}
+li.list-kata p.note::before{
+  content: "\f180b";
+  font-family: hugeicons-stroke-rounded;
+  font-weight: 500;
+  margin-left:3px;
+  margin-right:10px;
+  vertical-align:-3px;
+}
+li.list-kata p.note i{margin-right: 10px;}
+li.list-kata p.note i.bxs-error{color:darkred;}
+li.list-kata p.note code{color: lightblue; font-size:.9em;background: darkblue;padding-right:5px;padding-left:5px;font-family: "Baloo Bhaijaan 2", sans-serif}
+li.list-kata p.note code[tr]{background:lightblue;color:darkblue;text-decoration:underline;text-underline-position:under}
+li.list-kata p.note code[tr]:before{content:"\0022"}
+li.list-kata p.note code[tr]:after{content:"\0022"}
+li.list-kata p.note span{text-decoration:underline;cursor:pointer;}
+li.list-kata p.note span:hover{color:var(--dblue)}
+li.list-kata p.note span[data-modal]:after{content:"   \4C0F";font-family:hugeicons-stroke-rounded;}
+li.list-kata p.note span.en{font-style:italic;text-decoration:underline;}
+li.list-kata p.note span.en:after{content:"en";padding-left:.2em; vertical-align:super;font-size:.6em; text-transform:uppercase; font-style:normal;}
+
+/* ========== footer ========== */
+footer{
+  padding:auto;
+  margin-bottom:40px;
+  text-align:center;
+}
+footer p.copyright a{
+  text-transform: capitalize;
+  color: var(--dblue);
+}
+footer p.copyright a:hover{
+  color:var(--dgreen);
+  text-decoration:underline;
+}
+footer a{
+  color: var(--dblue);
+  text-decoration:none;;
+}
+footer a i{margin-bottom:10px;font-size:15pt;padding:5px;}
+footer a#linktop{
+  position:fixed;
+  bottom: 6.5dvh;
+  right:10px;
+  z-index:3;
+  color: var(--dblue);
+  background: var(--dgreen);
+  padding:5px;
+  text-decoration:none;
+}
+@media only screen and (min-width: 993px){
+  footer a#linktop::after{
+    content: "top";
+  }
+}
+footer a#linktop i{
+  display:inline;
+}
+p.count{
+  text-align:center;
+  color: var(--dblue)
+}
+p.count strong{color:var(--dgreen)}
