@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Kamus Ammiyah Mesir">
+  <meta name="description" content="solusi cepat ngobrol dengan orang Mesir | zhalifunas.github.io/kamus-amiyah-eg/">
+  <meta property="og:title" content="Kamus Ammiyah Mesir">
+  <meta property="og:description" content="solusi cepat ngobrol dengan orang Mesir | zhalifunas.github.io/kamus-amiyah-eg/">
+  <title>kamus ammiyah mesir</title>
+  <link rel="icon" type="image/png" href="https://i.ibb.co/Q7YDP01w/logo-kamus-kecil.png">
+  <link rel="preconnect" href="https://avatars.githubusercontent.com">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/eliyantosarage/font-awesome-pro@main/fontawesome-pro-6.5.1-web/css/all.min.css.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&amp;display=swap">
+  <link rel="stylesheet" href="kamus ammiah.css">
+  <script src="kamus ammiah.js" defer></script>
+</head>
+<body>
+  <!-- li.list-kata>mark{kata benda}+h3{.}+p.ar{.}+img.fitur*2+.modal>.modal-content>.modal-title{gambar}+.modal-body -->
+<!-- span.or --> 
+<!-- p.note -->
+<!-- <div class="spacer"></div> -->
+<!-- abbr>span.popup -->
+<div class="alert alert-danger" role="alert" x>
+  <h4 class="alert-heading">mohon maaf</h4>
+  <p>sedang kami update</p>
+</div>
+<div class="alert alert-info" role="" >
+  <h4 id="updateinfo"></h4>
+</div>
+<div class="container" id="container_utama">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="text-center" id="headline">Kamus Online Dialek Mesir </h1>
+
+      <div id="sharelink">bagikan tautan: <code id="link">https://zhalifunas.github.io/kamus-amiyah-eg/</code></div>
+     
+      <input placeholder="mau tanya apa?" type="text" class="mb-3 form-control form-control-lg" id="filterkartu">
+
+      <!-- modal button -->
+      <button class="moda" data-modal="panduan"><i class="hgi hgi-stroke hgi-book-open-01"></i>Panduan</button>
+      <button class="moda" data-modal="glosary"><i class="hgi hgi-stroke hgi-information-circle"></i>Glosary</button>
+      <button class="moda" data-modal="pengetahuan"><i class="hgi hgi-stroke hgi-idea"></i>dasar amiyah</button>
+      <button class="moda" data-modal="changelog" del><i class="hgi hgi-stroke hgi-stars"></i>changelog</button>
+      <button class="moda" data-modal="profil"><i class="hgi hgi-stroke hgi-waving-hand-02"></i>developer</button>
+      <button class="moda" data-modal="credit"><i class="hgi hgi-stroke hgi-tag-02"></i>credit</button>
+      <!--     Modal     -->
+      <div id="panduan" class="modal">
+        <div class="modal-content">
+          <div class="modal-title"><i class="hgi hgi-stroke hgi-book-open-01"></i> Panduan</div>
+          <div class="modal-body">
+            <ul>
+              <li data-icon="\43b1">dalam kotak pencarian, kata yang ingin kamu cari cukup masukkan sebagian katanya dan dia akan secara otomatis ter-filter</li>
+              <li>cara kerja kotak pencarian dengan mem-filter huruf pada kata yang ada pada kotak kosa-kata berdasarkan apa yang kamu ketik di kolom pencarian. contoh: jika kamu menuliskan <code>kerja</code>, maka yang akan muncul adalah kata "kerja"</li>
+              <li>daftar kosa kata yang tertampil tidak diurutkan berdasarkan abjad atau apapun, melainkan tertampil secara acak</li>
+    <!--           <li>semua kata yang ada di dalam kotak kosa-kata bisa dijadikan kata kunci pencarian, termasuk yang ada di kolom comment (<i class="bx bxs-comment-detail"></i>)</li> -->
+              <li>mohon maaf, kotak pencarian tidak menolerir <i>typo</i> (kesalahan pengetikan) sehingga kata yang kamu cari tidak muncul.</li>
+              <li><span style="color:var(--dgreen)">[baru]</span> sekarang bisa pakai filter untuk mendapatkan kata yang dicari secara cepat! kalau mau mencari kata yang spesifik dari kategori yang kamu pilih, cukup masukkan kata pencarian di kolom pencari, dia akan muncul.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div id="glosary" class="modal">
+        <div class="modal-content">
+          <div class="modal-title"><i class="hgi hgi-stroke hgi-information-circle"></i>Glosary</div>
+          <div class="modal-body">
+            <ul>
+              <li>(م\) mufrod</li>
+              <li>(ج\) jamak</li>
+              <li>(مذ\) muzakkar</li>
+              <li>(مؤ\) muannas</li>
+              <li>(<i class="bx bxs-star"></i>) lebih sering dipakai</li>
+              <li>(<i class="hgi hgi-stroke hgi-comment-01"></i>) komentar dan/atau contoh</li>
+              <li>(<i class="en"></i>) bahasa inggris</li>
+              <li>(<i class="msa"></i>) bahasa arab standaar</li>
+              <li>(<i class="eg"></i>) dialek mesir</li>
+              <li>(<abbr> <span class="popup"> </span></abbr>) cara baca atau keterangan (untuk android harus di tekan)</li>
+              <li>ejaan yang dipakai di web ini <br><img src="https://teachmideast.org/wp-content/uploads/2023/11/image2-4.png" alt="arabizi" width="50px"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+    
+      <div id="pengetahuan" class="modal">
+        <div class="modal-content">
+          <div class="modal-title">tentang amiyah mesir</div>
+          <div class="modal-body">
+            <ul>
+              <li>Pada amiyah Mesir, ada perubahan pengucapan ق, ج, dan أ dimana jim diucapkan sebagai G, qof diucapkan sebagai hamzah, dan dalam beberapa kasus hamzah dicapkan sebagai و atau ي</li>
+              <li>dalam penulisannya, di semua pengguna bahasa amiyah menyingkat penulisan konjungsi, seperti menulis ع untuk على, menulis م untuk ما, dan menulis ف untuk في.</li>
+              <li>
+                dalam dialek mesir, huruf ب dibubuhkan kepada fiil mudhori untuk 2 kondisi: 
+                <ol>
+                  <li>ketika kegiatan itu sedang kamu lakukan;</li>
+                  <li>ketika kegiatan itu selalu kamu lakukan</li>
+                </ol>
+              </li>
+              <li>dalam dialek mesir, huruf هـ dibubuhkan kepada fiil mudhori untuk menyatakan pekerjaan yang akan kamu lakukan di masa datang.</li>
+              <li>untuk membuat kata kerja pasif (fiil majhul), lumrahnya menggunakan alif ta pada awal kata </li>
+              <li>dalam prakteknya, orang mesir terbiasa memelankan 1 huruf di akhir untuk mempermudah pengucapan. contoh: panggilan muhammad akan terdengar muhamma, kata fein akan terdengar fei, dsb.</li>
+          </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal" id="changelog">
+        <div class="modal-content">
+          <div class="modal-title">
+            <i class="hgi hgi-stroke hgi-stars"></i>catatan perubahan
+          </div>
+          <div class="modal-body">
+            <b soon="">segera hadir</b>
+            <p>cara pengucapan dengan menggunakan suara.</p>
+            <p></p>
+            <br><b>07/10/2025</b>
+            <p><i class="ri-add-line"></i>entri 3 kata</p>
+            <p><i class="ri-add-line"></i>menambahkan gambar untuk beberapa kosakata</p><br>
+            <b>30/09/2025</b>
+              <p><i class="ri-add-line"></i>entri 5 kata</p>
+            <p><i class="ri-tools-line"></i>penyegaran tampilan tatap muka</p>
+            <p><i class="ri-tools-line"></i>fitur <i>filter</i> dipindah ke pojok kiri bawah</p>
+            <br>
+            <b>29/07/2025</b>
+            <p><i class="ri-add-line"></i>entri 29 kata</p>
+            <br><b>21/07/2025</b>
+            <p><i class="ri-add-line"></i>entri 29 kata</p>
+            <p><i class="ri-tools-line"></i>pembaruan antarmuka</p>
+            <br><b>27/01/2025</b>
+            <p><i class="ri-add-line"></i>entri 30 kata</p>
+            <p><i class="ri-add-line"></i>menambahkan fitur <i>filter bar</i></p>
+            <br>
+            <b>20/01/2025</b>
+            <p><i class="ri-window-line"></i>publikasi pertama</p>
+            <p><i class="ri-add-line"></i>entri 20 kata</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="profil" class="modal">
+        <div class="modal-content">
+          <div class="modal-title">pengembang</div>
+          <div class="modal-body">
+            <p>Halo, panggil aja aku <span>Naufal</span>, aku ngembangin web statis kamus ini buat bantu aku dan teman-teman mencari kosakata dialek Mesir supaya lebih efisien dan cepat. <br><br>Web ini aku bangun hanya modal HTML, CSS, dan sedikit JS tanpa menggunakan tekonologi lain karena aku emang baru belajar ini, kalau teman-teman mau bantu aku ngembangin ini (dan barangkali ngajarin aku juga hehe) boleh kabari aku via Direct Message Instagram ya :D<br><br><b>dah gitu aja, selamat menggunakan.</b></p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal" id="credit">
+        <div class="modal-content">
+          <div class="modal-title">Credit</div>
+          <div class="modal-body">
+            <b>icon set:</b>
+            <a href="https://hugeicons.com/icons?style=Stroke&type=Rounded">Huge icons Free</a>
+            <a href="https://v2.boxicons.com/">Box icons</a>
+            <a href="https://remixicon.com/">Remix icons</a><br>
+            <b>font:</b>
+            <a href="https://fonts.google.com/specimen/Baloo+Bhaijaan+2">Baloo Bhaijaan 2</a><br>
+            <b>css framework:</b>
+            <a href="http://bootstrap.com">bootstrap 5.3.2</a>
+          </div>
+        </div>
+      </div>
+      
+      <p id="kotaksaran">Mau kasih saran kata? revisi? kolaborasi? <a href="https://instagram.com/n.zhalifunas">DM saya</a></p>
+      
+      <hr>
+      <div class="filter">filter
+        <button class="filter-btn" data-category="all">Semua</button>
+        <button class="filter-btn" data-category="kata benda">K. Benda</button>
+        <button class="filter-btn" data-category="kata sifat">K. sifat</button>
+        <button class="filter-btn" data-category="kata tanya">K. Tanya</button>
+        <button class="filter-btn" data-category="kata kerja">K. kerja</button>
+        <button class="filter-btn" data-category="kata ekspresi">K. Ekspresi</button>
+        <button class="filter-btn" data-category="kata konjungsi">K. konjungsi</button>
+        <button class="filter-btn" data-category="ungkapan">ungkapan</button>
+        <button class="filter-btn" data-category="uslub">uslub</button>
+        <button class="filter-btn" data-category="pekerjaan">pekerjaan</button>
+        <button class="filter-btn" data-category="kedokteran">kedokteran</button>
+        <button class="filter-btn" data-category="orang">orang</button>
+        <button class="filter-btn" data-category="sayuran">sayuran</button>
+        <button class="filter-btn" data-category="angka">angka</button>
+      </div>
+      
+
+        <ul id="kamus-list" class="list-group">
+        </ul>
+
+        <div class="mb-5"></div>
+        <div class="mb-5"></div>
+        <div class="mb-5"></div>
+    </div>
+  </div>
+</div>
+<!-- Tombol untuk membuka dropdown -->
+<button id="toggle-dropdown"><i class="hgi hgi-stroke hgi-filter"></i></button>
+<!-- Dropdown filter -->
+<div id="dropdown-filter"></div>
+<footer class="justify-content-center">
+  <p class="copyright">dikembangkan oleh <a href="https://zhalifunas.github.io">n. zhalifunas</a></p>
+  <a href="https://instagram.com/n.zhalifunas"><i class="hgi hgi-stroke hgi-instagram"></i></a>
+  <a href="https://x.com/zaidunrebahun"><i class="hgi hgi-stroke hgi-twitter-square"></i></a>
+  <a href="https://facebook.com/"><i class="hgi hgi-stroke hgi-facebook-01"></i></a>
+  <i class="fa-brands fa-square-instagram fa-2x"></i>
+  <a id="linktop" href="#container_utama"><i class="bx bxs-chevron-up"></i></a>
+</footer>
+  <script type="text/javascript">
+
+// Refresh the page after a delay of 3 seconds
+// setTimeout(function(){
+//     location.reload();
+// }, 5000); // 3000 milliseconds = 3 seconds
+  </script>
+</body>
+</html>
