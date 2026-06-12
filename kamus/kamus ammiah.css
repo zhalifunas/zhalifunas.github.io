@@ -20,7 +20,7 @@ html:has(#light:checked){
 html:has(#dark:checked){color-scheme:dark;}
 body{
     background:#fcfcfc;
-    user-select:;
+    user-select:none;
   }
 a{color:var(--dblue)}
 a:hover{color:var(--dgreen)}
