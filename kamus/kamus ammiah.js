@@ -188,14 +188,16 @@ function setUpMark(){
   });
 }
 
-  // Pasang event listener untuk filter
-  const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
-
-  checkboxes.forEach(cb => {
-    cb.addEventListener('change', filterList);
-  });
 
   function filterList() {
+
+    // Pasang event listener untuk filter
+    const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
+
+    checkboxes.forEach(cb => {
+      cb.addEventListener('change', filterList);
+    });
+    
     const selected = Array.from(checkboxes)
       .filter(cb => cb.checked)
       .map(cb => cb.value);
