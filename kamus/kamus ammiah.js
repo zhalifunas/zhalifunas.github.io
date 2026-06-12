@@ -194,7 +194,7 @@ function setUpMark(){
     // Pasang event listener untuk filter
     const checkboxes = dropdown.querySelectorAll('input[type="checkbox"]');
 
-    checkboxes.forEach(cb => {
+    checkboxes.forEach((cb) => {
       cb.addEventListener('change', filterList);
     });
     
