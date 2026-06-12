@@ -1,6 +1,6 @@
 // ======== isi konten otomatis ~~~~~~~~~
 const API_URL =
-"https://script.google.com/macros/s/AKfycbwGIM_BV6G-YMsNEwUfktBBnxipbx4rNLsA9JAgvFGsPW4SpjzCR2EpwHSBPGXBFZDz/exec";
+"https://script.google.com/macros/s/AKfycbwPSLXxe5CEoEsrHfAtWhF2IiBVqkwUQ0tKfnXRIaLAcmyc58u-r5N7rYiRcm3jZMab/exec";
 
 fetch(API_URL)
   .then((res) => res.json())
